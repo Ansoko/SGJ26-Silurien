@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dgsidcwpajmwt"]
 
-[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_jnqcy"]
+[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="1_jnqcy"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_6iljt"]
 [ext_resource type="Texture2D" uid="uid://bv4gjqmsyow4u" path="res://assets_definitif/Plateforme.png" id="2_ibkhe"]
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="9_60736"]
 [ext_resource type="Texture2D" uid="uid://ig05l10iw6p7" path="res://assets_definitif/walkSprite.png" id="10_ibkhe"]
-[ext_resource type="Script" uid="uid://do11pw2kwn4ch" path="res://scenes/echelle.gd" id="10_jl1n7"]
+[ext_resource type="Script" path="res://scenes/echelle.gd" id="10_jl1n7"]
 [ext_resource type="Texture2D" uid="uid://bc6rse2kds585" path="res://assets_alice/echelle_temp.png" id="11_ibkhe"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="12_ibkhe"]
 
@@ -17,6 +17,8 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iljt"]
 texture = ExtResource("2_ibkhe")
+margins = Vector2i(0, 4)
+separation = Vector2i(0, 49)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0

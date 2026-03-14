@@ -59,9 +59,6 @@ func _input(event):
 @onready var dialogPanel = $Dialog
 @export var vitesse_texte = 0.03
 
-signal end_intro()
-signal end_outro()
-
 var tween: Tween
 var speaking: bool = false
 var isInDialogMode: bool = false
@@ -92,9 +89,9 @@ func show_next_line():
 		isInDialogMode = false
 		dialogPanel.hide()
 		if currentState == "intro" :
-			end_intro.emit()
+			SignalManager.end_intro.emit()
 		else:
-			end_outro.emit()
+			SignalManager.end_outro.emit()
 		return
 		
 	if tween:

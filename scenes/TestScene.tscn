@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="5_xpysu"]
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="6_epq12"]
 [ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_fws1a"]
+[ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_xpysu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dm6"]
 
@@ -66,3 +67,6 @@ typeSound = 1
 [node name="Music" type="AudioStreamPlayer" parent="Sound" unique_id=1861636371]
 script = ExtResource("6_fws1a")
 typeSound = 0
+
+[node name="TitleScreen" parent="." unique_id=1554427074 instance=ExtResource("6_xpysu")]
+position = Vector2(-160, 1)

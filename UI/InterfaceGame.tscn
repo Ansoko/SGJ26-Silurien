@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="2_xsnpk"]
+[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
 follow_viewport_enabled = true
@@ -82,6 +83,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_qbaqg")
+TIME = 2
 
 [node name="Timer" type="Timer" parent="Timer_elements" unique_id=31365358]
 wait_time = 120.0
@@ -99,3 +102,5 @@ offset_bottom = 55.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="timeout" from="Timer_elements/Timer" to="Timer_elements" method="_on_timer_timeout"]

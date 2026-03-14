@@ -10,21 +10,26 @@ extends CharacterBody2D
 var screen_size
 var echelle_active = false
 var currentNbJumps = 2
+var canMove = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
 	add_to_group("player")
+	SignalManager.end_intro.connect(unlockMovement)
 
+func unlockMovement():
+	canMove = true
 
 func _physics_process(delta):
-
+	if not canMove:
+		return
+		
 	var direction = 0
 	
 	if is_on_floor():
 		currentNbJumps = NB_JUMPS
 		
 	if Input.is_action_just_pressed("jump") and currentNbJumps>0:
-		print("Jump")
 		currentNbJumps -= 1
 		velocity.y = JUMP_POWER
 	
