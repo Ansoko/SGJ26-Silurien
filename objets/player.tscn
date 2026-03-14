@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://vp8rvdwlxio7"]
 
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="1_afxg2"]
-[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets/idle.png" id="2_0oiki"]
-[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets/jump.png" id="3_od5lm"]
-[ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets/walk.png" id="4_b7etv"]
+[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="2_0oiki"]
+[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="3_od5lm"]
+[ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets_alice/walk.png" id="4_b7etv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
 animations = [{

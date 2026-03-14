@@ -2,7 +2,9 @@ extends CanvasLayer
 
 func _ready() -> void:
 	WordManager.add_word.connect(addNewWordToStory)
+	dialogPanel.hide()
 	allLignes = load_json("res://csv/dialogues.json")
+	SignalManager.start_game.connect(start_intro)
 	
 # --- Story line at the top ---
 @onready var storyLabel = $Control/ScrollContainer/RichTextLabel

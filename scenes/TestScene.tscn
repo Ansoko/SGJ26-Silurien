@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="2_rlkm5"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="3_fws1a"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_n77mx"]
+[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="5_xpysu"]
+[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="6_epq12"]
 [ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_fws1a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dm6"]
@@ -38,6 +40,7 @@ scale = Vector2(8.44, 1)
 [node name="StaticBody2D" type="StaticBody2D" parent="WALL_temp" unique_id=49225906]
 
 [node name="Sprite2D" type="Sprite2D" parent="WALL_temp/StaticBody2D" unique_id=1453190264]
+texture = ExtResource("5_xpysu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D" unique_id=663897029]
 scale = Vector2(5, 5)
@@ -47,6 +50,7 @@ shape = SubResource("RectangleShape2D_m5dm6")
 
 [node name="Sprite2D" type="Sprite2D" parent="WALL_temp/StaticBody2D2" unique_id=774344254]
 position = Vector2(99.88152, 3)
+texture = ExtResource("6_epq12")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D2" unique_id=960033721]
 position = Vector2(100.23697, 2.9999998)

@@ -19,6 +19,10 @@ run/main_scene="uid://df1brdsne0w1w"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets_alice/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://txm4xhse8760"
+
 [autoload]
 
 WordManager="*uid://dn1qqh1on2ih4"
@@ -29,7 +33,6 @@ SignalManager="*res://scenes/global/signal_manager.gd"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [input]
