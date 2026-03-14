@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_6iljt"]
 [ext_resource type="Texture2D" uid="uid://bv4gjqmsyow4u" path="res://assets_definitif/Plateforme.png" id="2_ibkhe"]
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
+[ext_resource type="Texture2D" uid="uid://c263m7q0gpvs7" path="res://assets_definitif/Echelle.png" id="4_6iljt"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_jl1n7"]
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="6_6iljt"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
@@ -33,6 +34,13 @@ terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/10 = SubResource("TileSetAtlasSource_6iljt")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78ros"]
+texture = ExtResource("4_6iljt")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -13.660267, -32, -13.660267)
+1:0/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibkhe"]
 texture = ExtResource("2_ibkhe")
@@ -66,10 +74,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_ibkhe")
-
-[sub_resource type="TileSet" id="TileSet_6iljt"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_78ros")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iljt"]
 
@@ -183,9 +188,6 @@ tile_set = SubResource("TileSet_mipys")
 [node name="TileMap_Grass" type="TileMapLayer" parent="TileMaps" unique_id=1272314322]
 tile_map_data = PackedByteArray("AAABAAcAAgAAAAEAAAACAAcAAgAAAAEAAAADAAcAAgAAAAEAAAAEAAcAAgAAAAEAAAAFAAcAAgAAAAEAAAAGAAcAAgAAAAEAAAAHAAcAAgAAAAEAAAAIAAcAAgAAAAEAAAAJAAcAAgAAAAEAAAAKAAcAAgAAAAEAAAALAAcAAgAAAAEAAAAMAAcAAgAAAAEAAAANAAcAAgAAAAEAAAAOAAcAAgAAAAEAAAAPAAcAAgAAAAEAAAAQAAcAAgAAAAEAAAARAAcAAgAAAAEAAAASAAcAAgAAAAEAAAATAAcAAgAAAAEAAAAUAAcAAgAAAAEAAAAVAAcAAgAAAAEAAAAWAAcAAgAAAAEAAAAXAAcAAgAAAAEAAAAYAAcAAgAAAAEAAAAZAAcAAgAAAAEAAAAIAAQAAgABAAEAAAAJAAQAAgAAAAEAAAAKAAQAAgAAAAEAAAALAAQAAgACAAEAAAA=")
 tile_set = SubResource("TileSet_ibkhe")
-
-[node name="TileMap_Details" type="TileMapLayer" parent="TileMaps" unique_id=517072276]
-tile_set = SubResource("TileSet_6iljt")
 
 [node name="Echelle" type="Area2D" parent="." unique_id=572507755]
 visibility_layer = 3
