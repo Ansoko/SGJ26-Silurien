@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://ctwttu4wng606"]
 
 [ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
+[ext_resource type="AudioStream" uid="uid://cwaki2kpt4ogg" path="res://audio/sound_placeholder.mp3" id="2_quu0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmps"]
 size = Vector2(68.5, 22)
 
 [node name="SpawnerWord" type="Node2D" unique_id=1404252508]
 script = ExtResource("1_lxmps")
+sound_pickup = ExtResource("2_quu0c")
 
 [node name="Label" type="Label" parent="." unique_id=2032079686]
 offset_right = 69.0

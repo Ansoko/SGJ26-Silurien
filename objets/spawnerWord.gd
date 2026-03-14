@@ -4,7 +4,8 @@ extends Node2D
 
 @export_group("Type (1=noun, 2=verb, 3=liaison, 4=adjectif, 5=ponctuation)")
 @export var wordType = 1
-@export var path_sound_pickup : String = "res://audio/sound_placeholder.mp3"
+@export_group("Audio")
+@export var sound_pickup : AudioStream
 var joueur_present: bool = false
 
 func _ready() -> void:
@@ -33,5 +34,6 @@ func _on_body_exited(player):
 		
 func _input(event):
 	if joueur_present and event.is_action_pressed("grab_word"):
+		AudioManager.emit_signal("play_SFX", sound_pickup)
 		WordManager.emit_signal("add_word", label.text)
 		queue_free()
