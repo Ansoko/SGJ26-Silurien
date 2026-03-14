@@ -30,3 +30,26 @@ bbcode_enabled = true
 text = "Chère Mamie,"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Timer_elements" type="Control" parent="." unique_id=513658622]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Timer_elements" unique_id=31365358]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="Texts" type="Control" parent="Timer_elements" unique_id=494914982]
+anchors_preset = 0
+offset_left = 870.0
+offset_top = 15.0
+offset_right = 910.0
+offset_bottom = 55.0
+
+[node name="Timer_label" type="Label" parent="Timer_elements/Texts" unique_id=1496277742]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://df1brdsne0w1w"]
+[gd_scene format=4 uid="uid://df1brdsne0w1w"]
 
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_yqorp"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="2_mipys"]
@@ -145,34 +145,34 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l72w3"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=1274988310]
 script = ExtResource("1_yqorp")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=860608152]
 tile_map_data = PackedByteArray("AAAAAAcAAAAEAAMAAAABAAcAAAAEAAMAAAACAAcAAAAEAAMAAAADAAcAAAAEAAMAAAAEAAcAAAAEAAMAAAAFAAcAAAAEAAMAAAAGAAcAAAAEAAMAAAAHAAcAAAAEAAMAAAAIAAcAAAAEAAMAAAAJAAcAAAAEAAMAAAAKAAcAAAAEAAMAAAALAAcAAAAEAAMAAAAMAAcAAAAEAAMAAAANAAcAAAAEAAMAAAAOAAcAAAAEAAMAAAAKAAQAAAAFAAMAAAALAAQAAAAFAAMAAAAMAAQAAAAFAAMAAAANAAQAAAAFAAMAAAA=")
 tile_set = SubResource("TileSet_mipys")
 
-[node name="TitleScreen" parent="." instance=ExtResource("2_mipys")]
+[node name="TitleScreen" parent="." unique_id=2020015590 instance=ExtResource("2_mipys")]
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1354949002]
 position = Vector2(172, 409)
 scale = Vector2(0.75, 0.75)
 script = ExtResource("3_826wr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1187015420]
 sprite_frames = SubResource("SpriteFrames_ucygd")
 animation = &"walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1475731512]
 scale = Vector2(5.01003, 5.00001)
 shape = SubResource("RectangleShape2D_l72w3")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1102128720]
 wait_time = 120.0
 one_shot = true
 autostart = true
 
-[node name="Texts" type="Control" parent="."]
+[node name="Texts" type="Control" parent="." unique_id=897674047]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 870.0
@@ -180,7 +180,7 @@ offset_top = 15.0
 offset_right = 910.0
 offset_bottom = 55.0
 
-[node name="Timer_label" type="Label" parent="Texts"]
+[node name="Timer_label" type="Label" parent="Texts" unique_id=1365957935]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0

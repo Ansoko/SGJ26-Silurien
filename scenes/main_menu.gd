@@ -1,13 +1,13 @@
 extends Node2D
 
-@onready var timer: Timer = $Timer
+@onready var timer: Timer = $CanvaUI/Timer_elements/Timer
 
 func _ready():
 	SignalManager.start_game.connect(start_timer)
-	$Texts/Timer_label.hide()
+	$CanvaUI/Timer_elements/Texts/Timer_label.hide()
 
 func start_timer():
-	$Texts/Timer_label.show()
+	$CanvaUI/Timer_elements/Texts/Timer_label.show()
 	timer.start()
 	print("Timer démarré")
 	
@@ -17,5 +17,5 @@ func _on_timer_timeout():
 
 func _process(delta):
 	if !timer.is_stopped():
-		$Texts/Timer_label.text = str(int(timer.get_time_left())) + "s left."
+		$CanvaUI/Timer_elements/Texts/Timer_label.text = str(int(timer.get_time_left())) + "s left."
 	
