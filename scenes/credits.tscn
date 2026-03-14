@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://s3vka4yk4gjc"]
+
+[ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
+[ext_resource type="Texture2D" uid="uid://b4av8n4lidf8v" path="res://assets/icon.svg" id="2_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets/background_temp.png" id="3_0ctdu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yeqti"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="Roles" type="Node2D" parent="."]
+
+[node name="Scientifiques" type="Node2D" parent="Roles"]
+position = Vector2(100, 55)
+
+[node name="Scientifiques__titre" type="Label" parent="Roles/Scientifiques"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Scientifiques"
+label_settings = ExtResource("1_0bpdh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Noms" type="Node2D" parent="Roles/Scientifiques"]
+position = Vector2(30, 30)
+
+[node name="Scientifiques__noms" type="Label" parent="Roles/Scientifiques/Noms"]
+offset_right = 226.0
+offset_bottom = 75.0
+text = "Arnaud Moysan
+Claire Doquet
+"
+label_settings = SubResource("LabelSettings_yeqti")
+metadata/_edit_use_anchors_ = true
+
+[node name="GameDesigner" type="Node2D" parent="Roles"]
+position = Vector2(100, 155)
+
+[node name="GameDesigner__titre" type="Label" parent="Roles/GameDesigner"]
+offset_right = 141.0
+offset_bottom = 27.0
+text = "Game Designer"
+label_settings = ExtResource("1_0bpdh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Noms" type="Node2D" parent="Roles/GameDesigner"]
+position = Vector2(30, 30)
+
+[node name="GameDesigner__noms" type="Label" parent="Roles/GameDesigner/Noms"]
+offset_right = 262.0
+offset_bottom = 49.0
+text = "Célia Jaunet"
+label_settings = SubResource("LabelSettings_yeqti")
+metadata/_edit_use_anchors_ = true
+
+[node name="Devs" type="Node2D" parent="Roles"]
+position = Vector2(100, 235)
+
+[node name="Devs__titre" type="Label" parent="Roles/Devs"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Développeuses"
+label_settings = ExtResource("1_0bpdh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Noms" type="Node2D" parent="Roles/Devs/Devs__titre"]
+position = Vector2(30, 30)
+
+[node name="Devs__noms" type="Label" parent="Roles/Devs/Devs__titre/Noms"]
+offset_right = 262.0
+offset_bottom = 49.0
+text = "Anne-Sophie Koch
+Alice Massart"
+label_settings = SubResource("LabelSettings_yeqti")
+metadata/_edit_use_anchors_ = true
+
+[node name="SoundDesigner" type="Node2D" parent="Roles"]
+position = Vector2(100, 335)
+
+[node name="SoundDesigner__titre" type="Label" parent="Roles/SoundDesigner"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Sound Designer"
+label_settings = ExtResource("1_0bpdh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Noms" type="Node2D" parent="Roles/SoundDesigner/SoundDesigner__titre"]
+position = Vector2(30, 30)
+
+[node name="SoundDesigner__noms" type="Label" parent="Roles/SoundDesigner/SoundDesigner__titre/Noms"]
+offset_right = 262.0
+offset_bottom = 49.0
+text = "Aurélie Moiroud"
+label_settings = SubResource("LabelSettings_yeqti")
+metadata/_edit_use_anchors_ = true
+
+[node name="Artistes" type="Node2D" parent="Roles"]
+position = Vector2(100, 405)
+
+[node name="Artistes__titre" type="Label" parent="Roles/Artistes"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Artistes"
+label_settings = ExtResource("1_0bpdh")
+
+[node name="Noms" type="Node2D" parent="Roles/Artistes/Artistes__titre"]
+position = Vector2(30, 30)
+
+[node name="Artistes__noms" type="Label" parent="Roles/Artistes/Artistes__titre/Noms"]
+offset_right = 262.0
+offset_bottom = 49.0
+text = "Mosa Breton
+Lucie Nussbaum"
+label_settings = SubResource("LabelSettings_yeqti")
+
+[node name="Illustration" type="Node2D" parent="."]
+position = Vector2(685, 250)
+
+[node name="Sprite2D" type="Sprite2D" parent="Illustration"]
+texture = ExtResource("2_2ckv8")
+
+[node name="Background" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2(480, 270)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("3_0ctdu")
