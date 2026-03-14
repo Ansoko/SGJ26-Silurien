@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cbf4sjdguasyq"]
+
+[ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="1_jro2o"]
+
+[node name="Parallax" type="Node2D" unique_id=348623257]
+
+[node name="Sky" type="Parallax2D" parent="." unique_id=1838802250]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(234, 0)
+repeat_size = Vector2(1600, 0)
+
+[node name="Sky" type="ColorRect" parent="Sky" unique_id=2000433915]
+offset_left = -261.0
+offset_right = 821.0
+offset_bottom = 540.0
+scale = Vector2(1.5199999, 1.5199999)
+color = Color(0.8156863, 0.90588236, 0.8666667, 1)
+
+[node name="fond" type="Parallax2D" parent="." unique_id=1966563699]
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(303, 1)
+repeat_size = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="fond" unique_id=713580189]
+position = Vector2(-4, 48)
+texture = ExtResource("1_jro2o")
+centered = false

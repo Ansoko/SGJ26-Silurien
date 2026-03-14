@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dverjkr2lbvg0"]
+
+[ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="1_iwa34"]
+
+[node name="Sound" type="Node" unique_id=261311265]
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=927394272]
+script = ExtResource("1_iwa34")
+typeSound = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1869802902]
+script = ExtResource("1_iwa34")
+typeSound = 0
