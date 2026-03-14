@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://dgsidcwpajmwt"]
 
-[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_jnqcy"]
-[ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_6iljt"]
+[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="1_jnqcy"]
+[ext_resource type="PackedScene" uid="uid://cbf4sjdguasyq" path="res://UI/parallax.tscn" id="2_7l7x6"]
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
-[ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_7l7x6"]
-[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_78ros"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="3_7l7x6"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_78ros"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_jl1n7"]
-[ext_resource type="PackedScene" uid="uid://cc6djc3ts2p5y" path="res://scenes/Levels/tile_map_echelle.tscn" id="5_rxrkj"]
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="6_6iljt"]
 [ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="6_78ros"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="9_60736"]
 [ext_resource type="Texture2D" uid="uid://ig05l10iw6p7" path="res://assets_definitif/walkSprite.png" id="10_ibkhe"]
-[ext_resource type="Script" uid="uid://do11pw2kwn4ch" path="res://scenes/echelle.gd" id="10_jl1n7"]
+[ext_resource type="Script" path="res://scenes/echelle.gd" id="10_jl1n7"]
 [ext_resource type="Texture2D" uid="uid://bc6rse2kds585" path="res://assets_alice/echelle_temp.png" id="11_ibkhe"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="12_ibkhe"]
 
@@ -111,29 +110,7 @@ height = 20.625809
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
 script = ExtResource("1_jnqcy")
 
-[node name="Parallax" type="Node2D" parent="." unique_id=1882081994]
-
-[node name="Sky" type="Parallax2D" parent="Parallax" unique_id=136324971]
-scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(234, 0)
-repeat_size = Vector2(1600, 0)
-
-[node name="Sky" type="ColorRect" parent="Parallax/Sky" unique_id=1073589064]
-offset_left = -261.0
-offset_right = 821.0
-offset_bottom = 540.0
-scale = Vector2(1.5199999, 1.5199999)
-color = Color(0.8156863, 0.90588236, 0.8666667, 1)
-
-[node name="fond" type="Parallax2D" parent="Parallax" unique_id=415443931]
-scroll_scale = Vector2(0.2, 0.2)
-scroll_offset = Vector2(303, 1)
-repeat_size = Vector2(2000, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/fond" unique_id=1425151557]
-position = Vector2(-4, 48)
-texture = ExtResource("2_6iljt")
-centered = false
+[node name="Parallax" parent="." unique_id=348623257 instance=ExtResource("2_7l7x6")]
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=797421781]
 
@@ -141,7 +118,7 @@ centered = false
 
 [node name="TileMap_Grass" parent="TileMaps" unique_id=1194936551 instance=ExtResource("4_78ros")]
 
-[node name="TileMap_Echelle" parent="TileMaps" unique_id=37622952 instance=ExtResource("5_rxrkj")]
+[node name="TileMap_Echelle" parent="TileMaps" unique_id=37622952]
 tile_set = SubResource("TileSet_7l7x6")
 
 [node name="Echelle" type="Area2D" parent="." unique_id=572507755]
@@ -194,7 +171,6 @@ shape = SubResource("CapsuleShape2D_ibkhe")
 position = Vector2(331, 403)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("9_60736")]
-follow_viewport_enabled = false
 
 [connection signal="body_entered" from="Echelle" to="Echelle" method="_on_body_entered"]
 [connection signal="body_exited" from="Echelle" to="Echelle" method="_on_body_exited"]
