@@ -34,10 +34,13 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l72w3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afxg2"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1527853081]
 script = ExtResource("1_afxg2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1320141012]
+z_index = 2
 position = Vector2(480, 270)
 sprite_frames = SubResource("SpriteFrames_ucygd")
 animation = &"jump"
@@ -46,3 +49,12 @@ animation = &"jump"
 position = Vector2(480, 270)
 scale = Vector2(5.01003, 5.00001)
 shape = SubResource("RectangleShape2D_l72w3")
+
+[node name="EchelleDetector" type="Area2D" parent="." unique_id=819009273]
+position = Vector2(480, 271)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EchelleDetector" unique_id=1991348061]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_afxg2")

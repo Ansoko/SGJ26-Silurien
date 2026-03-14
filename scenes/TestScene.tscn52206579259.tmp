@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c6v6yy5g86c51"]
+[gd_scene format=4 uid="uid://c6v6yy5g86c51"]
 
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="1_2gju5"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="2_rlkm5"]
@@ -8,10 +8,30 @@
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="6_epq12"]
 [ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_fws1a"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_xpysu"]
-[ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="9_yhikq"]
-[ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="10_c7u1e"]
+[ext_resource type="PackedScene" uid="uid://dms6ki1i83yo4" path="res://scenes/Levels/tile_map_echelle.tscn" id="9_c7u1e"]
+[ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="10_plcqr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dm6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l70m"]
+texture = ExtResource("10_plcqr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+0:1/0 = 0
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/custom_data_0 = true
+
+[sub_resource type="TileSet" id="TileSet_v6sup"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "isClimable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_5l70m")
 
 [node name="TestScene" type="Node2D" unique_id=338478524]
 
@@ -23,6 +43,12 @@ position = Vector2(1242, 450)
 wordType = 2
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("3_n77mx")]
+speed = null
+GRAVITY = null
+JUMP_POWER = null
+NB_JUMPS = null
+ACCELERATION_SOL = null
+AIR_CONTROL = null
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("3_fws1a")]
 position = Vector2(479, 269)
@@ -74,8 +100,6 @@ typeSound = 0
 [node name="TitleScreen" parent="." unique_id=1554427074 instance=ExtResource("6_xpysu")]
 position = Vector2(-160, 1)
 
-[node name="TileMap_Ladder" parent="." unique_id=1181425679 instance=ExtResource("9_yhikq")]
-tile_map_data = PackedByteArray(0, 0, 5, 0, 7, 0, 0, 0, 1, 0, 1, 0, 0, 0, 5, 0, 6, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="TileMap_OneWay" parent="." unique_id=439868489 instance=ExtResource("10_c7u1e")]
-tile_map_data = PackedByteArray(0, 0, 9, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 10, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0)
+[node name="TileMap_Ladder" parent="." unique_id=37622952 instance=ExtResource("9_c7u1e")]
+tile_map_data = PackedByteArray("AAAFAAcAAAABAAEAAAAFAAYAAAAAAAEAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAEAAAAJAAUAAAABAAAAAAAKAAUAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_v6sup")

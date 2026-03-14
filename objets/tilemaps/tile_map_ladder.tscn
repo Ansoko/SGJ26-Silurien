@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://c0wo685pf5qgm"]
+
+[ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="1_8ci43"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l70m"]
+texture = ExtResource("1_8ci43")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0/custom_data_0 = true
+
+[sub_resource type="TileSet" id="TileSet_v6sup"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 4
+custom_data_layer_0/name = "isClimable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_5l70m")
+
+[node name="TileMap_Ladder" type="TileMapLayer" unique_id=1181425679]
+tile_map_data = PackedByteArray("AAAFAAcAAAABAAEAAAAFAAYAAAAAAAEAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAEAAAAJAAUAAAABAAAAAAAKAAUAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_v6sup")
