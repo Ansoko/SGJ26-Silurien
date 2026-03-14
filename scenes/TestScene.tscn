@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6v6yy5g86c51"]
+
+[ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="1_2gju5"]
+[ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="2_rlkm5"]
+
+[node name="TestScene" type="Node2D" unique_id=338478524]
+
+[node name="scenes" parent="." unique_id=27104168 instance=ExtResource("1_2gju5")]
+
+[node name="SpawnerWord" parent="." unique_id=1404252508 instance=ExtResource("2_rlkm5")]
+position = Vector2(256, 152)
+
+[node name="SpawnerWord2" parent="." unique_id=1509642301 instance=ExtResource("2_rlkm5")]
+position = Vector2(383, 156)
+wordType = 2

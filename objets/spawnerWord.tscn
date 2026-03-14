@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ctwttu4wng606"]
+
+[ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
+
+[node name="SpawnerWord" type="Node2D" unique_id=1404252508]
+script = ExtResource("1_lxmps")
+
+[node name="Label" type="Label" parent="." unique_id=2032079686]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "test"

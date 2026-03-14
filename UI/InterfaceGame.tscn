@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://biqof76pf325b"]
+
+[ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
+
+[node name="scenes" type="Control" unique_id=27104168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=1532843106]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.07700001
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -1102.0
+offset_bottom = 0.10399628
+script = ExtResource("1_0xtqc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=1469543874]
+custom_minimum_size = Vector2(600, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 15.000001
+anchor_bottom = 1.0
+offset_right = -6.1035156e-05
+vertical_scroll_mode = 3
+
+[node name="Label" type="Label" parent="Control/ScrollContainer" unique_id=1265231780]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+horizontal_alignment = 2
