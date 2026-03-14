@@ -54,3 +54,9 @@ texture = ExtResource("4_nb1wl")
 position = Vector2(100.23697, 2.9999998)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_m5dm6")
+
+[node name="Sound" type="Node" parent="." unique_id=1282296292]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Sound" unique_id=638446438]
+
+[node name="Musique" type="AudioStreamPlayer" parent="Sound" unique_id=1861636371]

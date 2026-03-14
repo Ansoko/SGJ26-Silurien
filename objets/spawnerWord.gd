@@ -4,10 +4,9 @@ extends Node2D
 
 @export_group("Type (1=noun, 2=verb, 3=conjunction)")
 @export var wordType = 1
-
+@export var path_sound_pickup : String = "res://audio/sound_placeholder.mp3"
 var joueur_present: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	createWord()
 	$Area2D.body_entered.connect(_on_body_entered)
