@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var label = $Label
 
-@export_group("Type (1=noun, 2=verb, 3=conjunction)")
+@export_group("Type (1=noun, 2=verb, 3=liaison, 4=adjectif, 5=ponctuation)")
 @export var wordType = 1
 @export var path_sound_pickup : String = "res://audio/sound_placeholder.mp3"
 var joueur_present: bool = false
