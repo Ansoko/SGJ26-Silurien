@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://s3vka4yk4gjc"]
+[gd_scene load_steps=6 format=3 uid="uid://s3vka4yk4gjc"]
 
 [ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://dc4yrga50fmit" path="res://scenes/credits.gd" id="1_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://b4av8n4lidf8v" path="res://assets_alice/icon.svg" id="2_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets_alice/background_temp.png" id="3_0ctdu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yeqti"]
 
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_2fbfq")
 
 [node name="Roles" type="Node2D" parent="."]
+position = Vector2(155, 0)
 
 [node name="Scientifiques" type="Node2D" parent="Roles"]
 position = Vector2(100, 55)
@@ -124,3 +127,10 @@ position = Vector2(480, 270)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("3_0ctdu")
+
+[node name="RETOUR" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Retour"
+
+[connection signal="pressed" from="RETOUR" to="." method="_on_retour_pressed"]
