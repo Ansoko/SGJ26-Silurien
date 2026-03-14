@@ -16,12 +16,17 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Silurien"
 run/main_scene="uid://df1brdsne0w1w"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets_alice/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://txm4xhse8760"
 
 [autoload]
 
 WordManager="*uid://dn1qqh1on2ih4"
+AudioManager="*uid://id0w3dqcn17y"
 SignalManager="*res://scenes/global/signal_manager.gd"
 
 [display]

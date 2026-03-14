@@ -1,0 +1,147 @@
+[gd_scene format=4 uid="uid://dgsidcwpajmwt"]
+
+[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_jnqcy"]
+[ext_resource type="Texture2D" uid="uid://7obiwymyp6hw" path="res://assets_alice/autotile_tileset.png" id="2_60736"]
+[ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
+[ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_jl1n7"]
+[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="5_ibkhe"]
+[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="6_6iljt"]
+[ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets_alice/walk.png" id="7_7l7x6"]
+[ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
+[ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="9_60736"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_826wr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ucygd"]
+texture = ExtResource("2_60736")
+separation = Vector2i(10, 10)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -16.7649, -32, -16.8752)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 17.0753, 32, 17.0753, 32, 32, -32, 32)
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mipys"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_826wr")
+sources/0 = SubResource("TileSetAtlasSource_ucygd")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ibkhe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6iljt")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7l7x6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l72w3"]
+
+[node name="MainMenu" type="Node2D" unique_id=1244251774]
+script = ExtResource("1_jnqcy")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=579447945]
+tile_map_data = PackedByteArray("AAAAAAcAAAAEAAMAAAABAAcAAAAEAAMAAAACAAcAAAAEAAMAAAADAAcAAAAEAAMAAAAEAAcAAAAEAAMAAAAFAAcAAAAEAAMAAAAGAAcAAAAEAAMAAAAHAAcAAAAEAAMAAAAIAAcAAAAEAAMAAAAJAAcAAAAEAAMAAAAKAAcAAAAEAAMAAAALAAcAAAAEAAMAAAAMAAcAAAAEAAMAAAANAAcAAAAEAAMAAAAOAAcAAAAEAAMAAAAKAAQAAAAFAAMAAAALAAQAAAAFAAMAAAAMAAQAAAAFAAMAAAANAAQAAAAFAAMAAAA=")
+tile_set = SubResource("TileSet_mipys")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=2055563758]
+position = Vector2(172, 409)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("3_5pc6c")
+
+[node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("4_jl1n7")]
+scale = Vector2(1.3333334, 1.3333334)
+offset = Vector2(0, -50)
+limit_left = -161
+limit_top = -498
+limit_right = 1382
+limit_bottom = 617
+limit_smoothed = true
+editor_draw_limits = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=891243700]
+sprite_frames = SubResource("SpriteFrames_ucygd")
+animation = &"jump"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2058821819]
+scale = Vector2(5.01003, 5.00001)
+shape = SubResource("RectangleShape2D_l72w3")
+
+[node name="SpawnerWords" type="Node" parent="." unique_id=1336349515]
+
+[node name="SpawnerWord" parent="SpawnerWords" unique_id=1404252508 instance=ExtResource("8_78ros")]
+position = Vector2(331, 403)
+
+[node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("9_60736")]
+follow_viewport_enabled = false
