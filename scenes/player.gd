@@ -8,6 +8,7 @@ var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	add_to_group("player")
 
 
 func _physics_process(delta):
@@ -51,3 +52,5 @@ func update_animation():
 
 	else:
 		$AnimatedSprite2D.animation = "idle"
+		
+		

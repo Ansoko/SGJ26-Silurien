@@ -2,10 +2,22 @@
 
 [ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmps"]
+size = Vector2(68.5, 22)
+
 [node name="SpawnerWord" type="Node2D" unique_id=1404252508]
 script = ExtResource("1_lxmps")
 
 [node name="Label" type="Label" parent="." unique_id=2032079686]
-offset_right = 40.0
+offset_right = 69.0
 offset_bottom = 23.0
 text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=652347245]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1874193259]
+physics_interpolation_mode = 2
+position = Vector2(34.75, 11)
+shape = SubResource("RectangleShape2D_lxmps")

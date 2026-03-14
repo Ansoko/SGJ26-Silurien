@@ -1,71 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://df1brdsne0w1w"]
+[gd_scene format=3 uid="uid://df1brdsne0w1w"]
 
-[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_yqorp"]
-[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets/idle.png" id="2_ow34m"]
-[ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_826wr"]
-[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets/jump.png" id="3_l72w3"]
-[ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets/walk.png" id="4_826wr"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_yqorp"]
+[ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_2wh52"]
 [ext_resource type="Texture2D" uid="uid://bgqw6tsuq43h5" path="res://assets/solidTile.png" id="5_l72w3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_826wr"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ow34m")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_l72w3")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_826wr")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l72w3"]
-
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=1109397236]
 script = ExtResource("1_yqorp")
 
-[node name="WALL_temp" type="Node2D" parent="."]
+[node name="WALL_temp" type="Node2D" parent="." unique_id=1918513090]
 position = Vector2(480, 535)
 scale = Vector2(8.44, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="WALL_temp"]
+[node name="StaticBody2D" type="StaticBody2D" parent="WALL_temp" unique_id=666684984]
 
-[node name="Sprite2D" type="Sprite2D" parent="WALL_temp/StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="WALL_temp/StaticBody2D" unique_id=323890091]
 texture = ExtResource("5_l72w3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D" unique_id=831020907]
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_826wr")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("3_826wr")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(480, 270)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(480, 270)
-sprite_frames = SubResource("SpriteFrames_ucygd")
-animation = &"jump"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(480, 270)
-scale = Vector2(5.01003, 5.00001)
-shape = SubResource("RectangleShape2D_l72w3")
+[node name="CharacterBody2D" parent="." unique_id=1527853081 instance=ExtResource("3_2wh52")]

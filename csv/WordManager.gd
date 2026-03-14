@@ -8,6 +8,8 @@ var csv_noun: String = "res://csv/nom.csv"
 var csv_verb: String = "res://csv/verbe.csv"
 var csv_conjunction: String = "res://csv/conjonction.csv"
 
+signal add_word(word: String)
+
 func _ready():
 	nouns = loadCSVAsArray(csv_noun)
 	verbs = loadCSVAsArray(csv_verb)
