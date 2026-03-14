@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://s3vka4yk4gjc"]
+[gd_scene format=3 uid="uid://s3vka4yk4gjc"]
 
 [ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://b4av8n4lidf8v" path="res://assets/icon.svg" id="2_2ckv8"]
