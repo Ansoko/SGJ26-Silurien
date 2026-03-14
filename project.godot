@@ -27,6 +27,7 @@ buses/default_bus_layout="uid://txm4xhse8760"
 
 WordManager="*uid://dn1qqh1on2ih4"
 AudioManager="*uid://id0w3dqcn17y"
+SignalManager="*res://scenes/global/signal_manager.gd"
 
 [display]
 
