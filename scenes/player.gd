@@ -3,8 +3,8 @@ extends CharacterBody2D
 var speed = 400
 var GRAVITY = 1000
 var JUMP_POWER = -500
-
 var screen_size
+var echelle_active = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -14,6 +14,7 @@ func _ready():
 func _physics_process(delta):
 
 	var direction = 0
+	print(echelle_active)
 	
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_POWER
@@ -22,6 +23,17 @@ func _physics_process(delta):
 		direction += 1
 	if Input.is_action_pressed("move_left"):
 		direction -= 1
+	
+	if echelle_active == true:
+		GRAVITY = 0
+		if Input.is_action_pressed("climb_up"):
+			velocity.y = -speed
+		elif Input.is_action_pressed("climb_down"):
+			velocity.y = speed
+		else:
+			velocity.y = 0
+	else: GRAVITY = 1000
+
 
 	velocity.x = direction * speed
 	velocity.y += GRAVITY * delta
