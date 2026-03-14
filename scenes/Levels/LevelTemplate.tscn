@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="6_6iljt"]
 [ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets_alice/walk.png" id="7_7l7x6"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
+[ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="9_60736"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_826wr"]
 
@@ -141,3 +142,6 @@ shape = SubResource("RectangleShape2D_l72w3")
 
 [node name="SpawnerWord" parent="SpawnerWords" unique_id=1404252508 instance=ExtResource("8_78ros")]
 position = Vector2(331, 403)
+
+[node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("9_60736")]
+follow_viewport_enabled = false
