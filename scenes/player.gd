@@ -38,16 +38,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		direction -= 1
 	
-	if echelle_active == true:
-		GRAVITY = 0
-		if Input.is_action_pressed("climb_up"):
-			velocity.y = -speed
-		elif Input.is_action_pressed("climb_down"):
-			velocity.y = speed
-		else:
-			velocity.y = 0
-	else: GRAVITY = 1000
-	
 	var acceleration = ACCELERATION_SOL if is_on_floor() else AIR_CONTROL
 	velocity.x = move_toward(velocity.x, direction * speed, acceleration)
 	#velocity.x = direction * speed
