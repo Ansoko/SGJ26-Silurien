@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://biqof76pf325b"]
 
 [ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
+[ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="2_xsnpk"]
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
 follow_viewport_enabled = true
@@ -30,3 +31,48 @@ bbcode_enabled = true
 text = "Chère Mamie,"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Dialog" type="Control" parent="." unique_id=1781372003]
+layout_mode = 3
+anchor_top = 0.69000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Dialog" unique_id=2128561277]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -355.0
+offset_top = 0.39996338
+offset_right = 357.0
+offset_bottom = 126.39996
+
+[node name="characterPicture" type="TextureRect" parent="Dialog/Panel" unique_id=596942788]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 125.0
+offset_bottom = 112.0
+texture = ExtResource("2_xsnpk")
+
+[node name="nameCharacter" type="RichTextLabel" parent="Dialog/Panel" unique_id=1260615161]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 13.0
+offset_right = 696.0
+offset_bottom = 38.0
+text = "Claire"
+scroll_active = false
+
+[node name="line" type="RichTextLabel" parent="Dialog/Panel" unique_id=688046169]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 39.0
+offset_right = 690.0
+offset_bottom = 110.0
+text = "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ? Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois."
+scroll_active = false
+vertical_alignment = 1

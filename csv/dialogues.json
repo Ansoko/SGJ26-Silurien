@@ -1,0 +1,76 @@
+{
+	"intro": [
+		{
+			"character": "CLAIRE",
+			"line": "Papaaaaaa ? Je peux aller jouer dehors ?",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ?",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "CLAIRE",
+			"line": "Ha bah oui, zut. J’avais oublié. Mais ça va, j’ai le temps !",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Pas vraiment, non. La levée du courrier est dans 5 minutes. Si tu veux écrire ta lettre, c’est maintenant ou jamais.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "CLAIRE",
+			"line": "Haaaaan ! Mais comment je vais faire ?!",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Ne t’en fais pas. Tu vas y arriver, n’oublies pas que l’écriture est une aventure.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Pars à la rencontre des mots, laisse-toi porter.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Et surtout, l’erreur fait partie de la vie.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "CLAIRE",
+			"line": "Ha ouais. C’est trop bizarre c’que tu dis, papa. Bon bah moi je vais écrire ma lettre pour mamie, salut.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Reviens à temps pour le dîner, Claire !",
+			"audio":"res://audio/sound_placeholder.mp3"
+		}
+	],
+	"outro":[
+		{
+			"character": "CLAIRE",
+			"line": "Papaaa ! J’ai fini ma lettre, regarde !",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "ARNAUD",
+			"line": "Ouah, c’est super ! Ta plume est magnifique. Une lettre digne des plus grandes écrivaines. Je vais la poster tout de suite.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		},
+		{
+			"character": "CLAIRE",
+			"line": "C’est toujours aussi bizarre c’que tu dis papa.",
+			"audio":"res://audio/sound_placeholder.mp3"
+		}
+	]
+}

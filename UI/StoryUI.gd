@@ -1,12 +1,14 @@
 extends CanvasLayer
 
+func _ready() -> void:
+	WordManager.add_word.connect(addNewWordToStory)
+	allLignes = load_json("res://csv/dialogues.json")
+	
+# --- Story line at the top ---
 @onready var storyLabel = $Control/ScrollContainer/RichTextLabel
 @onready var scrollContainer = $Control/ScrollContainer
 
 var list_words: Array = [{0:"Chère",1: false}, {0:"Mamie,", 1:false}] #word + bool barré
-
-func _ready() -> void:
-	WordManager.add_word.connect(addNewWordToStory)
 
 func addNewWordToStory(newWord: String):
 	storyLabel.text += " "+newWord;
@@ -43,3 +45,89 @@ func scrollToEnd():
 func _input(event):
 	if event.is_action_pressed("erase"):
 			removeLastWord()
+	if isInDialogMode:
+		if event.is_action_pressed("jump"):
+			show_next_line()
+		
+
+#--- dialog system ---
+@onready var nameLabel = $Dialog/Panel/nameCharacter
+@onready var dialogLabel = $Dialog/Panel/line
+@onready var characterPicture = $Dialog/Panel/characterPicture
+@onready var dialogPanel = $Dialog
+@export var vitesse_texte = 0.03
+
+signal end_intro()
+signal end_outro()
+
+var tween: Tween
+var speaking: bool = false
+var isInDialogMode: bool = false
+var allLignes: Dictionary = {}
+var index_courant: int = -1
+var currentState = "intro"
+
+func start_intro():
+	index_courant = -1
+	currentState = "intro"
+	isInDialogMode = true
+	dialogPanel.show()
+	show_next_line()
+	
+func start_outro():
+	index_courant = -1
+	currentState = "outro"
+	isInDialogMode = true
+	dialogPanel.show()
+	show_next_line()
+	
+func show_next_line():
+	index_courant += 1
+	dialogLabel.text = ""
+	var line = allLignes.get(currentState)
+	
+	if(index_courant >= line.size()):
+		isInDialogMode = false
+		dialogPanel.hide()
+		if currentState == "intro" :
+			end_intro.emit()
+		else:
+			end_outro.emit()
+		return
+		
+	if tween:
+		tween.kill()
+		
+	if speaking:
+		speaking = false
+		index_courant -= 1
+		nameLabel.text = line[index_courant]["character"]
+		dialogLabel.text = line[index_courant]["line"]
+		return
+	
+	if(line[index_courant]["audio"] != ""):
+		AudioManager.play_SFX.emit(load(line[index_courant]["audio"]))
+		
+	nameLabel.text = line[index_courant]["character"]
+	var texte_complet = line[index_courant]["line"]
+		
+	speaking = true
+	tween = create_tween()
+	for caractere in texte_complet:
+		tween.tween_callback(_ajouter_caractere.bind(caractere)).set_delay(vitesse_texte)
+	tween.tween_callback(endTween)
+
+func _ajouter_caractere(caractere: String):
+	dialogLabel.text += caractere
+	
+func endTween():
+	speaking = false	
+	
+func load_json(chemin: String) -> Dictionary:
+	var file = FileAccess.open(chemin, FileAccess.READ)
+	if file == null:
+		printerr("Dialogue non trouvé : ", chemin)
+		return {}
+	var json = JSON.new()
+	json.parse(file.get_as_text())
+	return json.get_data()
