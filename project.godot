@@ -15,6 +15,14 @@ run/main_scene="uid://biqof76pf325b"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+WordManager="*uid://dn1qqh1on2ih4"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
