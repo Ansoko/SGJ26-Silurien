@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c6v6yy5g86c51"]
+[gd_scene load_steps=0 format=3 uid="uid://c6v6yy5g86c51"]
 
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="1_2gju5"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="2_rlkm5"]
