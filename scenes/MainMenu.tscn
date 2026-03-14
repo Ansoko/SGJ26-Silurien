@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://df1brdsne0w1w"]
+[gd_scene load_steps=19 format=4 uid="uid://df1brdsne0w1w"]
 
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_yqorp"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="2_mipys"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7obiwymyp6hw" path="res://assets_alice/autotile_tileset.png" id="2_ucygd"]
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_826wr"]
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="3_l72w3"]
-[ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets_alice/walk.png" id="4_826wr"]
+[ext_resource type="Texture2D" uid="uid://ig05l10iw6p7" path="res://assets_definitif/walkSprite.png" id="7_ucygd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_826wr"]
 
@@ -77,6 +77,30 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_826wr")
 sources/0 = SubResource("TileSetAtlasSource_ucygd")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucygd"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(8, 8, 80, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mipys"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(88, 8, 80, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a8k8"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(168, 8, 80, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7la6k"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(248, 8, 80, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nypq"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(328, 8, 80, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bky6r"]
+atlas = ExtResource("7_ucygd")
+region = Rect2(408, 8, 80, 135)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
 animations = [{
 "frames": [{
@@ -97,7 +121,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_826wr")
+"texture": SubResource("AtlasTexture_ucygd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mipys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a8k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7la6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nypq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bky6r")
 }],
 "loop": true,
 "name": &"walk",
@@ -122,22 +161,24 @@ script = ExtResource("3_826wr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_ucygd")
-animation = &"jump"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 scale = Vector2(5.01003, 5.00001)
 shape = SubResource("RectangleShape2D_l72w3")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 120.0
 one_shot = true
 autostart = true
 
 [node name="Texts" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 870.0
+offset_top = 15.0
+offset_right = 910.0
+offset_bottom = 55.0
 
 [node name="Timer_label" type="Label" parent="Texts"]
 layout_mode = 0
