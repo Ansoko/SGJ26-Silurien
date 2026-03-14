@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://obf3fm3wwe0u"]
+
+[ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="1_uvntb"]
+[ext_resource type="PackedScene" uid="uid://dfbvfqe5x0f35" path="res://objets/wordObject.tscn" id="2_lqg2c"]
+
+[node name="TestScene2" type="Node3D" unique_id=1082096277]
+
+[node name="scenes" parent="." unique_id=27104168 instance=ExtResource("1_uvntb")]
+
+[node name="WordObject" parent="." unique_id=362358818 instance=ExtResource("2_lqg2c")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=919673803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
