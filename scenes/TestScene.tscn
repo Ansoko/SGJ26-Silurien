@@ -1,9 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://c6v6yy5g86c51"]
+[gd_scene format=3 uid="uid://c6v6yy5g86c51"]
 
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="1_2gju5"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="2_rlkm5"]
+[ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="3_fws1a"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_n77mx"]
-[ext_resource type="Texture2D" uid="uid://bgqw6tsuq43h5" path="res://assets/solidTile.png" id="4_nb1wl"]
+[ext_resource type="Texture2D" path="res://assets/solidTile.png" id="4_nb1wl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dm6"]
 
@@ -13,15 +14,22 @@
 position = Vector2(206, 454)
 
 [node name="SpawnerWord2" parent="." unique_id=1509642301 instance=ExtResource("2_rlkm5")]
-position = Vector2(661, 455)
+position = Vector2(1242, 450)
 wordType = 2
 
-[node name="CanvaUI" parent="." unique_id=27104168 instance=ExtResource("1_2gju5")]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1619138751]
-position = Vector2(479, 269)
-
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("3_n77mx")]
+
+[node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("3_fws1a")]
+position = Vector2(479, 269)
+limit_left = -161
+limit_top = -498
+limit_right = 1382
+limit_bottom = 617
+limit_smoothed = true
+editor_draw_limits = true
+
+[node name="CanvaUI" parent="." unique_id=27104168 instance=ExtResource("1_2gju5")]
+follow_viewport_enabled = false
 
 [node name="WALL_temp" type="Node2D" parent="." unique_id=1867175927]
 position = Vector2(480, 535)
@@ -33,5 +41,16 @@ scale = Vector2(8.44, 1)
 texture = ExtResource("4_nb1wl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D" unique_id=663897029]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_m5dm6")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WALL_temp" unique_id=300532697]
+
+[node name="Sprite2D" type="Sprite2D" parent="WALL_temp/StaticBody2D2" unique_id=774344254]
+position = Vector2(99.88152, 3)
+texture = ExtResource("4_nb1wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WALL_temp/StaticBody2D2" unique_id=960033721]
+position = Vector2(100.23697, 2.9999998)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_m5dm6")
