@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var speed = 400
-var GRAVITY = 1000
-var JUMP_POWER = -500
+@export var speed = 400
+@export var GRAVITY = 1000
+@export var JUMP_POWER = -500
 
 var screen_size
 
