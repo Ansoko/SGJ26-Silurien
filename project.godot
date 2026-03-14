@@ -18,6 +18,7 @@ config/icon="res://assets_alice/icon.svg"
 [autoload]
 
 WordManager="*uid://dn1qqh1on2ih4"
+SignalManager="*res://scenes/global/signal_manager.gd"
 
 [display]
 

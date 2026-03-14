@@ -53,12 +53,14 @@ position = Vector2(674, 490)
 offset_right = 102.0
 offset_bottom = 31.0
 text = "Commencer"
+metadata/_edit_use_anchors_ = true
 
 [node name="CREDITS" type="Button" parent="Buttons"]
 offset_left = 158.0
 offset_right = 260.0
 offset_bottom = 31.0
 text = "Crédits"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="animation_finished" from="Title/Title__AnimatedSprite2D" to="Title/Title__AnimatedSprite2D" method="_on_animation_finished"]
 [connection signal="pressed" from="Buttons/START" to="." method="_on_start_pressed"]

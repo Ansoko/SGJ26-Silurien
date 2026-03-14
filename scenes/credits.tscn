@@ -129,8 +129,10 @@ position = Vector2(480, 270)
 texture = ExtResource("3_0ctdu")
 
 [node name="RETOUR" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 24.0
+offset_top = 19.0
+offset_right = 85.0
+offset_bottom = 50.0
 text = "Retour"
 
 [connection signal="pressed" from="RETOUR" to="." method="_on_retour_pressed"]
