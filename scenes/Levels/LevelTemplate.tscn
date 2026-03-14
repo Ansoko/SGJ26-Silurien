@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dgsidcwpajmwt"]
 
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_jnqcy"]
+[ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_6iljt"]
 [ext_resource type="Texture2D" uid="uid://bv4gjqmsyow4u" path="res://assets_definitif/Plateforme.png" id="2_ibkhe"]
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_jl1n7"]
@@ -129,8 +130,32 @@ height = 20.625809
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
 script = ExtResource("1_jnqcy")
 
+[node name="Parallax" type="Node2D" parent="." unique_id=1882081994]
+
+[node name="Sky" type="Parallax2D" parent="Parallax" unique_id=136324971]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(234, 0)
+repeat_size = Vector2(1600, 0)
+
+[node name="Sky" type="ColorRect" parent="Parallax/Sky" unique_id=1073589064]
+offset_left = -261.0
+offset_right = 821.0
+offset_bottom = 540.0
+scale = Vector2(1.5199999, 1.5199999)
+color = Color(0.8156863, 0.90588236, 0.8666667, 1)
+
+[node name="fond" type="Parallax2D" parent="Parallax" unique_id=415443931]
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(303, 1)
+repeat_size = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/fond" unique_id=1425151557]
+position = Vector2(-4, 48)
+texture = ExtResource("2_6iljt")
+centered = false
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=579447945]
-tile_map_data = PackedByteArray("AAABAAcACgAAAAAAAAACAAcACgAAAAAAAAADAAcACgAAAAAAAAAEAAcACgAAAAAAAAAFAAcACgAAAAAAAAAGAAcACgAAAAAAAAAHAAcACgAAAAAAAAAIAAcACgAAAAAAAAAJAAcACgAAAAAAAAAKAAcACgAAAAAAAAALAAcACgAAAAAAAAAMAAcACgAAAAAAAAANAAcACgAAAAAAAAAOAAcACgAAAAAAAAAPAAcACgAAAAAAAAAJAAQACgAAAAAAAAAKAAQACgAAAAAAAAAIAAQACgAAAAEAAAALAAQACgACAAEAAAD//wYACgAAAAAAAFD//wUACgAAAAAAAFD//wQACgAAAAAAAFD//wAACgAAAAAAAFD//wEACgAAAAAAAFD//wIACgAAAAAAAFD//wMACgAAAAAAAFAAAAcACgAAAAAAAAD//wcACgACAAEAAAAHAAMACwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAAcACgAAAAAAAAACAAcACgAAAAAAAAADAAcACgAAAAAAAAAEAAcACgAAAAAAAAAFAAcACgAAAAAAAAAGAAcACgAAAAAAAAAHAAcACgAAAAAAAAAIAAcACgAAAAAAAAAJAAcACgAAAAAAAAAKAAcACgAAAAAAAAALAAcACgAAAAAAAAAMAAcACgAAAAAAAAANAAcACgAAAAAAAAAOAAcACgAAAAAAAAAPAAcACgAAAAAAAAAJAAQACgAAAAAAAAAKAAQACgAAAAAAAAAIAAQACgAAAAEAAAALAAQACgACAAEAAAD//wYACgAAAAAAAFD//wUACgAAAAAAAFD//wQACgAAAAAAAFD//wAACgAAAAAAAFD//wEACgAAAAAAAFD//wIACgAAAAAAAFD//wMACgAAAAAAAFAAAAcACgAAAAAAAAD//wcACgACAAEAAAAHAAMACwAAAAAAAAAQAAcACgAAAAAAAAARAAcACgAAAAAAAAASAAcACgAAAAAAAAATAAcACgAAAAAAAAAUAAcACgAAAAAAAAAVAAcACgAAAAAAAAAWAAcACgAAAAAAAAAXAAcACgAAAAAAAAAYAAcACgAAAAAAAAAZAAcACgAAAAAAAAA=")
 tile_set = SubResource("TileSet_mipys")
 
 [node name="Echelle" type="Area2D" parent="." unique_id=572507755]
@@ -157,11 +182,12 @@ scale = Vector2(0.75, 0.75)
 script = ExtResource("3_5pc6c")
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("4_jl1n7")]
+position = Vector2(0, -4.0690105e-05)
 scale = Vector2(1.3333334, 1.3333334)
 offset = Vector2(0, -50)
 limit_left = -161
 limit_top = -498
-limit_right = 1382
+limit_right = 2000
 limit_bottom = 617
 limit_smoothed = true
 editor_draw_limits = true
