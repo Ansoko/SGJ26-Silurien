@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc6rse2kds585"
-path="res://.godot/imported/echelle_temp.png-831cf8b26ac89eb38c10de3fbc008abc.ctex"
+uid="uid://bdflo3hdlygbp"
+path="res://.godot/imported/Echelle.png-bca2133403d5b82c81eb7edaecec028b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_alice/echelle_temp.png"
-dest_files=["res://.godot/imported/echelle_temp.png-831cf8b26ac89eb38c10de3fbc008abc.ctex"]
+source_file="res://assets_definitif/Echelle.png"
+dest_files=["res://.godot/imported/Echelle.png-bca2133403d5b82c81eb7edaecec028b.ctex"]
 
 [params]
 
