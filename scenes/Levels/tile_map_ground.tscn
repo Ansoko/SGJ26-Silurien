@@ -1,0 +1,25 @@
+[gd_scene format=4 uid="uid://b17of16l6os5e"]
+
+[ext_resource type="Texture2D" uid="uid://bv4gjqmsyow4u" path="res://assets_definitif/Plateforme.png" id="1_u436l"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jl1n7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6iljt"]
+texture = ExtResource("1_u436l")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mipys"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_jl1n7")
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/10 = SubResource("TileSetAtlasSource_6iljt")
+
+[node name="TileMap_Ground" type="TileMapLayer" unique_id=1593015106]
+tile_map_data = PackedByteArray("AAABAAcACgACAAAAAAACAAcACgACAAAAAAADAAcACgACAAAAAAAEAAcACgACAAAAAAAFAAcACgACAAAAAAAGAAcACgACAAAAAAAHAAcACgACAAAAAAAIAAcACgACAAAAAAAJAAcACgACAAAAAAAKAAcACgACAAAAAAALAAcACgACAAAAAAAMAAcACgACAAAAAAANAAcACgACAAAAAAAOAAcACgACAAAAAAAPAAcACgACAAAAAAAJAAQACgAAAAAAAAAKAAQACgAAAAAAAAAIAAQACgAAAAAAAAALAAQACgAAAAAAAAAAAAcACgACAAAAAAAQAAcACgACAAAAAAARAAcACgACAAAAAAASAAcACgACAAAAAAATAAcACgACAAAAAAAUAAcACgACAAAAAAAVAAcACgACAAAAAAAWAAcACgACAAAAAAAXAAcACgACAAAAAAAYAAcACgACAAAAAAAZAAcACgACAAAAAAD//wYACgABAAAAAAD//wUACgABAAAAAAD//wQACgABAAAAAAD//wMACgABAAAAAAD//wIACgABAAAAAAD//wEACgABAAAAAAD//wAACgABAAAAAAD//wcACgACAAAAAAA=")
+tile_set = SubResource("TileSet_mipys")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dx5le88j8kh7y"]
+[gd_scene format=4 uid="uid://dx5le88j8kh7y"]
 
 [ext_resource type="Texture2D" uid="uid://7obiwymyp6hw" path="res://assets_alice/autotile_tileset.png" id="1_xmjbw"]
 [ext_resource type="Script" uid="uid://do11pw2kwn4ch" path="res://scenes/echelle.gd" id="2_6bycf"]
@@ -147,34 +147,34 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks0e2"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=2129796395]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1023215034]
 tile_map_data = PackedByteArray("AAAAAAcAAAAEAAMAAAABAAcAAAAEAAMAAAACAAcAAAAEAAMAAAADAAcAAAAEAAMAAAAEAAcAAAAEAAMAAAAFAAcAAAAEAAMAAAAGAAcAAAAEAAMAAAAHAAcAAAAEAAMAAAAIAAcAAAAEAAMAAAAJAAcAAAAEAAMAAAAKAAcAAAAEAAMAAAALAAcAAAAEAAMAAAAMAAcAAAAEAAMAAAANAAcAAAAEAAMAAAAOAAcAAAAEAAMAAAAKAAQAAAAFAAMAAAALAAQAAAAFAAMAAAAMAAQAAAAFAAMAAAANAAQAAAAFAAMAAAA=")
 tile_set = SubResource("TileSet_1j2ve")
 
-[node name="Echelle" type="Area2D" parent="."]
+[node name="Echelle" type="Area2D" parent="." unique_id=419027945]
 position = Vector2(611, 333)
 scale = Vector2(0.360001, 0.360001)
 script = ExtResource("2_6bycf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Echelle"]
+[node name="Sprite2D" type="Sprite2D" parent="Echelle" unique_id=212862276]
 texture = ExtResource("2_w8pf6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Echelle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Echelle" unique_id=1852023618]
 scale = Vector2(6.33332, 32.3333)
 shape = SubResource("RectangleShape2D_xmjbw")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1819493438]
 position = Vector2(172, 409)
 scale = Vector2(0.75, 0.75)
 script = ExtResource("3_6bycf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1400581313]
 sprite_frames = SubResource("SpriteFrames_8lr1l")
 animation = &"walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=17724423]
 scale = Vector2(5.01003, 5.00001)
 shape = SubResource("RectangleShape2D_ks0e2")
 
