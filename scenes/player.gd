@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 600
+@export var speedOnLadder = 400
 @export var GRAVITY = 1000
 @export var JUMP_POWER = -500
 @export var NB_JUMPS = 2
@@ -8,14 +9,30 @@ extends CharacterBody2D
 @export var AIR_CONTROL = 20
 
 var screen_size
-var echelle_active = false
 var currentNbJumps = 2
 var canMove = false
+
+var sur_echelle: bool = false
+var can_climb: bool = false
+
+@onready var echelle_detector = $EchelleDetector
 
 func _ready():
 	screen_size = get_viewport_rect().size
 	add_to_group("player")
 	SignalManager.end_intro.connect(unlockMovement)
+	
+	echelle_detector.body_entered.connect(_on_echelle_entered)
+	echelle_detector.body_exited.connect(_on_echelle_exited)
+	echelle_detector.area_entered.connect(_on_echelle_entered)
+	echelle_detector.area_exited.connect(_on_echelle_exited)
+	
+func _on_echelle_entered(area):
+	sur_echelle = true
+	
+func _on_echelle_exited(area):
+	sur_echelle = false
+	can_climb = false
 
 func unlockMovement():
 	canMove = true
@@ -38,14 +55,27 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		direction -= 1
 	
+	if sur_echelle:
+		if not can_climb and Input.is_action_pressed("climb_up"):
+			can_climb = true
+			
+		if can_climb:
+			GRAVITY = 0
+			if Input.is_action_pressed("climb_up"):
+				velocity.y = -speedOnLadder
+			elif Input.is_action_pressed("climb_down"):
+				velocity.y = speedOnLadder
+			else:
+				velocity.y = 0
+	else: GRAVITY = 1000
+	
 	var acceleration = ACCELERATION_SOL if is_on_floor() else AIR_CONTROL
 	velocity.x = move_toward(velocity.x, direction * speed, acceleration)
 	#velocity.x = direction * speed
 	velocity.y += GRAVITY * delta
 
-	move_and_slide()
+	move_and_slide()	
 	update_animation()
-
 
 func update_animation():
 

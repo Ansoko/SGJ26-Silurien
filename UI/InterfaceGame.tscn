@@ -84,7 +84,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_qbaqg")
-TIME = 2
 
 [node name="Timer" type="Timer" parent="Timer_elements" unique_id=31365358]
 wait_time = 120.0
