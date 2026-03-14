@@ -9,6 +9,9 @@ var csv_verb: String = "res://csv/verbe.csv"
 var csv_conjunction: String = "res://csv/conjonction.csv"
 
 signal add_word(word: String)
+var letterText = ""
+signal saveText()
+
 
 func _ready():
 	nouns = loadCSVAsArray(csv_noun)

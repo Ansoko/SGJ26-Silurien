@@ -26,7 +26,6 @@ offset_bottom = 522.0
 text = "Rejouer"
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("3_vj8vg")]
-position = Vector2(591, 126)
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("4_plosh")]
 position = Vector2(479, 269)
@@ -52,30 +51,5 @@ typeSound = 0
 
 [node name="TileMap_Ground" parent="." unique_id=1593015106 instance=ExtResource("7_plosh")]
 tile_map_data = PackedByteArray("AAABAAcACgACAAAAAAACAAcACgACAAAAAAADAAcACgACAAAAAAAEAAcACgACAAAAAAAFAAcACgACAAAAAAAGAAcACgACAAAAAAAHAAcACgACAAAAAAAIAAcACgACAAAAAAAJAAcACgACAAAAAAAKAAcACgACAAAAAAALAAcACgACAAAAAAAMAAcACgACAAAAAAANAAcACgACAAAAAAAOAAcACgACAAAAAAAPAAcACgACAAAAAAAAAAcACgACAAAAAAAQAAcACgACAAAAAAARAAcACgACAAAAAAASAAcACgACAAAAAAATAAcACgACAAAAAAAUAAcACgACAAAAAAAVAAcACgACAAAAAAAWAAcACgACAAAAAAAXAAcACgACAAAAAAAYAAcACgACAAAAAAAZAAcACgACAAAAAAD//wYACgABAAAAAAD//wUACgABAAAAAAD//wQACgABAAAAAAD//wMACgABAAAAAAD//wIACgABAAAAAAD//wEACgABAAAAAAD//wAACgABAAAAAAD//wcACgACAAAAAAA=")
-
-[node name="EndPos" type="Node2D" parent="." unique_id=316759008]
-position = Vector2(2, 117)
-
-[node name="CanvaLettre" type="CanvasLayer" parent="." unique_id=1839652803]
-
-[node name="Panel" type="Panel" parent="CanvaLettre" unique_id=278432132]
-offset_left = 237.0
-offset_top = 79.0
-offset_right = 742.0
-offset_bottom = 650.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvaLettre/Panel" unique_id=935399303]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 53.0
-offset_top = 51.0
-offset_right = -46.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-bbcode_enabled = true
-text = "ouais"
 
 [connection signal="pressed" from="RESTART" to="." method="_on_restart_pressed"]

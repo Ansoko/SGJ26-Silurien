@@ -16,6 +16,7 @@ func start_timer():
 	print("Timer démarré")
 	
 func _on_timer_timeout() -> void:
+	WordManager.saveText.emit()
 	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 
 func _process(delta):

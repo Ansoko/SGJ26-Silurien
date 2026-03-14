@@ -1,4 +1,47 @@
 extends Node2D
 
+@onready var joueur = $Player
+@onready var end_pos = $EndPos
+@onready var fenetre_finale = $CanvaLettre/Panel
+@onready var letterLabel = $CanvaLettre/Panel/RichTextLabel
+
+func _ready() -> void:
+	fenetre_finale.hide()
+	lancer_sequence_fin.call_deferred()
+
+func lancer_sequence_fin():
+	await _deplacer_joueur_vers_spawn()
+	await _lancer_dialogue()
+	await _afficher_fenetre_finale()
+
+
+func _deplacer_joueur_vers_spawn():
+	joueur.set_physics_process(false)
+	
+	var tween = create_tween()
+	tween.tween_property(
+		joueur,
+		"global_position",
+		end_pos.global_position,
+		2  # durée
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	await tween.finished  # attend la fin du déplacement
+
+func _lancer_dialogue():
+	SignalManager.start_outro.emit()
+	await SignalManager.end_outro
+
+func _afficher_fenetre_finale():
+	letterLabel.text = WordManager.letterText
+	fenetre_finale.show()
+	
+	# Animation d'apparition
+	fenetre_finale.modulate.a = 0.0
+	var tween = create_tween()
+	tween.tween_property(fenetre_finale, "modulate:a", 1.0, 1.0)
+	await tween.finished
+	
+
 func _on_restart_pressed():
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
