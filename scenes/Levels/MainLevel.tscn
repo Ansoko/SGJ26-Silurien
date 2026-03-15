@@ -31,10 +31,10 @@ scale = Vector2(6.88, 6.88)
 color = Color(0.8156863, 0.90588236, 0.8666667, 1)
 
 [node name="fond" type="Parallax2D" parent="Parallax" unique_id=415443931]
-scale = Vector2(4.4491634, 4.4491634)
+scale = Vector2(3.5577211, 3.5577211)
 scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(1274, -1402)
-repeat_size = Vector2(2000, 0)
+scroll_offset = Vector2(-4814, -978)
+repeat_size = Vector2(1500, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/fond" unique_id=1425151557]
 position = Vector2(-4, 48)
