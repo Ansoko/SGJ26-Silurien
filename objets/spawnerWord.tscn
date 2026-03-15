@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
 [ext_resource type="AudioStream" uid="uid://x663h5djgvt" path="res://audio/UI/UI_Bouton_Mots_01.wav" id="2_55dp5"]
 [ext_resource type="AudioStream" uid="uid://cjmct0lvun51n" path="res://audio/UI/UI_Bouton_Mots_02.wav" id="3_y2kgv"]
-[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="4_y2kgv"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="4_y2kgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmps"]
 size = Vector2(122.5, 25)
