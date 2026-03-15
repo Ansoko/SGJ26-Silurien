@@ -63,7 +63,8 @@ func saveStoryText():
 #--- dialog system ---
 @onready var nameLabel = $Dialog/Panel/nameCharacter
 @onready var dialogLabel = $Dialog/Panel/line
-@onready var characterPicture = $Dialog/Panel/characterPicture
+@onready var characterDad = $Dialog/Panel/characterArnaud
+@onready var characterChild = $Dialog/Panel/characterClaire
 @onready var dialogPanel = $Dialog
 @export var vitesse_texte = 0.03
 
@@ -99,8 +100,8 @@ func show_next_line():
 	if speaking:
 		speaking = false
 		index_courant -= 1
-		nameLabel.text = line[index_courant]["character"]
-		dialogLabel.text = line[index_courant]["line"]
+		nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
+		dialogLabel.text = "[shake rate=3 level=5]"+line[index_courant]["line"]+"[/shake]"
 		return
 		
 	if(index_courant >= line.size()):
@@ -115,7 +116,14 @@ func show_next_line():
 	if(line[index_courant]["audio"] != ""):
 		AudioManager.play_SFX.emit(load(line[index_courant]["audio"]))
 		
-	nameLabel.text = line[index_courant]["character"]
+	match line[index_courant]["character"]:
+		"ARNAUD":
+			characterChild.hide()
+			characterDad.show()
+		"CLAIRE":
+			characterDad.hide()
+			characterChild.show()
+	nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
 	var texte_complet = line[index_courant]["line"]
 		
 	speaking = true

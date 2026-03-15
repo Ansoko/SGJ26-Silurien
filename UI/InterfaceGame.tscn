@@ -4,8 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://ctnoo0c1nr4fi" path="res://audio/UI/UI_Rature_01.wav" id="2_hfs4r"]
 [ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
+[ext_resource type="Texture2D" uid="uid://xunftlwaq21c" path="res://assets_definitif/bulle dialogue.png" id="4_8pnaq"]
 [ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
-[ext_resource type="Texture2D" uid="uid://bpibdyp6mknai" path="res://assets_definitif/sprites_menu.png" id="4_nei81"]
 [ext_resource type="Texture2D" uid="uid://cn2jwd3niyf8d" path="res://assets_definitif/characters/tête_arnaud.png" id="5_8pnaq"]
 [ext_resource type="Texture2D" uid="uid://b7eljl5oq8wjw" path="res://assets_definitif/characters/tête_claire.png" id="6_bo5uv"]
 
@@ -70,8 +70,14 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -355.0
 offset_top = 0.39996338
-offset_right = 357.0
-offset_bottom = 126.39996
+offset_right = -355.0
+offset_bottom = 0.39996338
+
+[node name="TextureRect" type="TextureRect" parent="Dialog/Panel" unique_id=1006759823]
+layout_mode = 0
+offset_right = 700.0
+offset_bottom = 125.0
+texture = ExtResource("4_8pnaq")
 
 [node name="characterArnaud" type="TextureRect" parent="Dialog/Panel" unique_id=596942788]
 layout_mode = 0
@@ -84,11 +90,12 @@ stretch_mode = 2
 
 [node name="characterClaire" type="TextureRect" parent="Dialog/Panel" unique_id=1135536683]
 layout_mode = 0
-offset_left = 587.0
-offset_top = 18.0
-offset_right = 687.0
-offset_bottom = 118.0
+offset_left = 580.0
+offset_top = 14.0
+offset_right = 680.0
+offset_bottom = 114.0
 texture = ExtResource("6_bo5uv")
+flip_h = true
 
 [node name="nameCharacter" type="RichTextLabel" parent="Dialog/Panel" unique_id=1260615161]
 layout_mode = 0
@@ -97,16 +104,17 @@ offset_top = 22.0
 offset_right = 566.0
 offset_bottom = 47.0
 bbcode_enabled = true
-text = "[b]Claire[/b][shake rate=3 level=5]test[/shake]"
+text = "[b]Claire[/b]"
 scroll_active = false
 horizontal_alignment = 1
 
 [node name="line" type="RichTextLabel" parent="Dialog/Panel" unique_id=688046169]
 layout_mode = 0
-offset_left = 138.0
-offset_top = 39.0
-offset_right = 568.0
-offset_bottom = 110.0
+offset_left = 170.0
+offset_top = 36.0
+offset_right = 543.0
+offset_bottom = 107.0
+bbcode_enabled = true
 text = "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ? Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois."
 scroll_active = false
 horizontal_alignment = 1
