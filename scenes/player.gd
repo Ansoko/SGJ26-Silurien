@@ -36,6 +36,8 @@ func _ready():
 	echelle_detector.area_entered.connect(_on_echelle_entered)
 	echelle_detector.area_exited.connect(_on_echelle_exited)
 	
+	$AnimatedSprite2D.animation = "idle"
+	
 func _on_echelle_entered(_area):
 	sur_echelle = true
 	
@@ -47,6 +49,7 @@ func unlockMovement():
 	canMove = true
 
 func _physics_process(delta):
+		
 	if not canMove:
 		return
 		
@@ -101,10 +104,11 @@ func update_animation(delta: float):
 
 	elif (velocity.y!=0 or velocity.x!=0) && can_climb:
 		playSFXLadder(delta)
+		$AnimatedSprite2D.animation = "climb"
 
 	elif velocity.y < 0:
 		$AnimatedSprite2D.animation = "jump"
-
+	
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		
