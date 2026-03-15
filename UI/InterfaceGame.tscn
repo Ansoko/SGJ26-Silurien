@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://biqof76pf325b"]
+[gd_scene format=3 uid="uid://biqof76pf325b"]
 
 [ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
 [ext_resource type="AudioStream" uid="uid://ctnoo0c1nr4fi" path="res://audio/UI/UI_Rature_01.wav" id="2_hfs4r"]
@@ -9,20 +9,24 @@
 [ext_resource type="Texture2D" uid="uid://cn2jwd3niyf8d" path="res://assets_definitif/characters/tête_arnaud.png" id="5_8pnaq"]
 [ext_resource type="Texture2D" uid="uid://b7eljl5oq8wjw" path="res://assets_definitif/characters/tête_claire.png" id="6_bo5uv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pnaq"]
-texture = ExtResource("4_nei81")
-texture_region_size = Vector2i(64, 64)
-3:0/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_hfs4r"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_8pnaq")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfs4r"]
+bg_color = Color(0.64705884, 0.8117647, 0.48235294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
 script = ExtResource("1_0xtqc")
 SFXerasure = Array[AudioStream]([ExtResource("2_hfs4r"), ExtResource("3_nei81")])
+
+[node name="Panel" type="Panel" parent="." unique_id=749739401]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 619.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfs4r")
 
 [node name="Control" type="Control" parent="." unique_id=1532843106]
 layout_mode = 3
@@ -33,17 +37,15 @@ offset_top = 10.0
 offset_right = -950.0
 offset_bottom = 0.10399628
 
-[node name="ScrollbarBackground" type="TileMapLayer" parent="Control" unique_id=1403499685]
-tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAAAAAADAAEAAAACAAAAAAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAHAAAAAAADAAEAAAAIAAAAAAADAAEAAAAJAAAAAAADAAIAAAA=")
-tile_set = SubResource("TileSet_hfs4r")
-
 [node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=1469543874]
 custom_minimum_size = Vector2(600, 40)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 15.000001
 anchor_bottom = 1.0
-offset_right = -6.1035156e-05
+offset_left = 5.0
+offset_right = 605.0
+offset_bottom = 8.315998
 vertical_scroll_mode = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/ScrollContainer" unique_id=665661255]

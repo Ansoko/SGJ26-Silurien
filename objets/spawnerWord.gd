@@ -28,15 +28,15 @@ func createWord():
 		_: 
 			label.text = WordManager.get_random_noun()
 			var roll = randf() * 100  # nombre entre 0.0 et 100.0
-			if roll < 40:
+			if roll < 30:
 				label.text = WordManager.get_random_noun()
-			elif roll < 65:    # 40 + 25
+			elif roll < 55:    # 30 + 25
 				label.text = WordManager.get_random_verb()
-			elif roll < 83:    # 65 + 18
+			elif roll < 73:    # 55 + 18
 				label.text = WordManager.get_random_conjunction()
-			elif roll < 95:    # 83 + 12
+			elif roll < 85:    # 73 + 12
 				label.text = WordManager.get_random_adjective()
-			else:              # 95 + 5
+			else:              # 85 + 15
 				label.text = WordManager.get_random_punctuation()
 			
 
