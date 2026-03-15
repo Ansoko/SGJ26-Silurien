@@ -5,12 +5,12 @@
 [ext_resource type="LabelSettings" uid="uid://cogkqhwe5gu4r" path="res://scenes/noms.tres" id="3_8gwij"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="4_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://bur34xyfolb4h" path="res://assets_definitif/CREDITS/célia.png" id="5_qbfqv"]
-[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="6_mah5v"]
 [ext_resource type="Texture2D" uid="uid://bmwjhepayl341" path="res://assets_definitif/CREDITS/anne-so.png" id="6_x5q3x"]
 [ext_resource type="Texture2D" uid="uid://ckqmwpgt72kqy" path="res://assets_definitif/CREDITS/alice.png" id="7_nmdnh"]
 [ext_resource type="Texture2D" uid="uid://bxykguhrqyywl" path="res://assets_definitif/CREDITS/aurélie.png" id="8_83ncp"]
 [ext_resource type="Texture2D" uid="uid://brcwfspin58o6" path="res://assets_definitif/CREDITS/mosa.png" id="9_sxold"]
 [ext_resource type="Texture2D" uid="uid://c71yidxxfw2ml" path="res://assets_definitif/CREDITS/lucie.png" id="10_olp7g"]
+[ext_resource type="Texture2D" uid="uid://c0bu85oia3ybp" path="res://assets_definitif/bouton2.png" id="11_c6kru"]
 
 [node name="Credits" type="Node2D" unique_id=1760564455]
 script = ExtResource("1_2fbfq")
@@ -199,12 +199,15 @@ label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
 
 [node name="RETOUR" type="Button" parent="." unique_id=1577728257]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Menu principal"
-icon = ExtResource("6_mah5v")
+offset_left = 64.99999
+offset_top = 26.000002
+offset_right = 198.0
+offset_bottom = 159.0
+scale = Vector2(0.3687492, 0.3687492)
+theme_override_font_sizes/font_size = 75
+text = "<"
+icon = ExtResource("11_c6kru")
 flat = true
 icon_alignment = 1
-expand_icon = true
 
 [connection signal="pressed" from="RETOUR" to="." method="_on_retour_pressed"]
