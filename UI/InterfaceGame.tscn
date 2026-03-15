@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://biqof76pf325b"]
+[gd_scene format=3 uid="uid://biqof76pf325b"]
 
 [ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
 [ext_resource type="AudioStream" uid="uid://ctnoo0c1nr4fi" path="res://audio/UI/UI_Rature_01.wav" id="2_hfs4r"]
@@ -6,18 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
 [ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
-[ext_resource type="Texture2D" uid="uid://c6o6vpfus4dyd" path="res://assets_definitif/sprites_menu.png" id="4_nei81"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pnaq"]
-texture = ExtResource("4_nei81")
-texture_region_size = Vector2i(64, 64)
-3:0/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_hfs4r"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_8pnaq")
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
 script = ExtResource("1_0xtqc")
@@ -31,10 +19,6 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = -950.0
 offset_bottom = 0.10399628
-
-[node name="ScrollbarBackground" type="TileMapLayer" parent="Control" unique_id=1403499685]
-tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAAAAAADAAEAAAACAAAAAAADAAEAAAADAAAAAAADAAEAAAAEAAAAAAADAAEAAAAFAAAAAAADAAEAAAAGAAAAAAADAAEAAAAHAAAAAAADAAEAAAAIAAAAAAADAAEAAAAJAAAAAAADAAIAAAA=")
-tile_set = SubResource("TileSet_hfs4r")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=1469543874]
 custom_minimum_size = Vector2(600, 40)
