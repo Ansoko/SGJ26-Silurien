@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
 [ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
+[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
@@ -72,11 +72,10 @@ tile_map_data = PackedByteArray("AAArAfv/AAAAAAEAAAArAfz/AAAAAAEAAAArAf3/AAAAAAE
 tile_map_data = PackedByteArray("AABBAQEAAAABAAAAAABCAQEAAAABAAAAAABDAQEAAAABAAAAAABEAQEAAAABAAAAAACKAP7/AAABAAAAAACLAP7/AAABAAAAAACMAP7/AAABAAAAAAAnAAQAAAABAAAAAAAoAAQAAAABAAAAAAApAAQAAAABAAAAAAAqAAQAAAABAAAAAACiAPz/AAABAAAAAACjAPz/AAABAAAAAACkAPz/AAABAAAAAADHAPf/AAABAAAAAADIAPf/AAABAAAAAADJAPf/AAABAAAAAAAiAAQAAAABAAAAAAAiAP//AAABAAAAAABMAPn/AAABAAAAAABWAAIAAAABAAAAAABpAPf/AAABAAAAAACRAP7/AAABAAAAAACiAAQAAAABAAAAAAAIAfL/AAABAAAAAAAUAQQAAAABAAAAAAAVAQQAAAABAAAAAAArAfv/AAABAAAAAAAqAfv/AAABAAAAAAA1AfX/AAABAAAAAABOAQQAAAABAAAAAAA=")
 
 [node name="TitleScreen" parent="." unique_id=706204540 instance=ExtResource("6_nwet0")]
-visible = false
 position = Vector2(-160, 1)
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("7_gvr7s")]
-position = Vector2(-305, 79)
+position = Vector2(-305, 119)
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("8_4cowq")]
 position = Vector2(477, 328)
