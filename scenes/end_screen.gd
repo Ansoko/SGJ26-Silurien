@@ -47,6 +47,5 @@ func _afficher_fenetre_finale():
 	await tween.finished
 	AudioManager.play_SFX.emit(SFXVictory)
 	
-
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://scenes/MainLevel.tscn")
+	get_tree().change_scene_to_file("res://scenes/Levels/MainLevel.tscn")

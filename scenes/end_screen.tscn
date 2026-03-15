@@ -112,7 +112,6 @@ son_hover = ExtResource("10_qyl73")
 son_click = ExtResource("9_fix67")
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("5_4j4el")]
-visible = false
 
 [node name="EndPos" type="Node2D" parent="." unique_id=316759008]
 position = Vector2(2, 117)
@@ -122,3 +121,5 @@ position = Vector2(2, 117)
 [node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=592619856]
 stream = ExtResource("11_fix67")
 bus = &"Music"
+
+[connection signal="pressed" from="Player/Camera/CanvaLettre/RESTART" to="." method="_on_restart_pressed"]
