@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://dverjkr2lbvg0"]
 
 [ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="1_iwa34"]
+[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="2_d5ttr"]
 
 [node name="Sound" type="Node" unique_id=261311265]
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=927394272]
-max_polyphony = 10
+max_polyphony = 50
+bus = &"SFX"
 script = ExtResource("1_iwa34")
 typeSound = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1869802902]
-volume_db = -23.0
+stream = ExtResource("2_d5ttr")
+autoplay = true
+bus = &"Music"
 script = ExtResource("1_iwa34")
 typeSound = 0

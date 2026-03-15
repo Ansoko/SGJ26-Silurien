@@ -5,6 +5,9 @@ extends Node2D
 @onready var fenetre_finale = $CanvaLettre/Panel
 @onready var letterLabel = $CanvaLettre/Panel/RichTextLabel
 
+@export var SFXVictory: AudioStream
+@export var SFXpaper: AudioStream
+
 func _ready() -> void:
 	fenetre_finale.hide()
 	lancer_sequence_fin.call_deferred()
@@ -35,13 +38,15 @@ func _lancer_dialogue():
 func _afficher_fenetre_finale():
 	letterLabel.text = WordManager.letterText+"\n \n\tClaire"
 	fenetre_finale.show()
+	AudioManager.play_SFX.emit(SFXpaper)
 	
 	# Animation d'apparition
 	fenetre_finale.modulate.a = 0.0
 	var tween = create_tween()
 	tween.tween_property(fenetre_finale, "modulate:a", 1.0, 1.0)
 	await tween.finished
+	AudioManager.play_SFX.emit(SFXVictory)
 	
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/MainLevel.tscn")

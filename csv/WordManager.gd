@@ -5,12 +5,14 @@ var verbs: Array = []
 var conjunctions: Array = []
 var adjectives: Array = []
 var punctuation: Array = []
+var expression: Array = []
 
 var csv_noun: String = "res://csv/nom.csv"
 var csv_verb: String = "res://csv/verbe.csv"
 var csv_conjunction: String = "res://csv/conjonction.csv"
 var csv_adjectifs: String = "res://csv/adjectiv.csv"
 var csv_punctuation: String = "res://csv/ponctuation.csv"
+var csv_expression: String = "res://csv/expression.csv"
 
 signal add_word(word: String)
 var letterText = ""
@@ -23,6 +25,7 @@ func _ready():
 	conjunctions = loadCSVAsArray(csv_conjunction)
 	adjectives = loadCSVAsArray(csv_adjectifs)
 	punctuation = loadCSVAsArray(csv_punctuation)
+	expression = loadCSVAsArray(csv_expression)
 	
 func get_random_noun() -> String:
 	return nouns.pick_random()
@@ -35,6 +38,9 @@ func get_random_conjunction() -> String:
 
 func get_random_adjective() -> String:
 	return adjectives.pick_random()
+
+func get_random_expression() -> String:
+	return expression.pick_random()
 
 func get_random_punctuation() -> String:
 	var regex_guillemets = RegEx.new()

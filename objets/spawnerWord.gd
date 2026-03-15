@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var label = $Area2D/CollisionShape2D/TextureRect/Label
 
-@export_group("Type (0=random, 1=noun, 2=verb, 3=liaison, 4=adjectif, 5=ponctuation)")
+@export_group("Type (0=random, 1=noun, 2=verb, 3=liaison, 4=adjectif, 5=ponctuation, 6=expression)")
 @export var wordType = 0
 @export_group("Audio")
 @export var SFXcollect: Array[AudioStream] = []
@@ -28,6 +28,8 @@ func createWord():
 			label.text = WordManager.get_random_adjective()
 		5: 
 			label.text = WordManager.get_random_punctuation()
+		6: 
+			label.text = WordManager.get_random_expression()
 		_: 
 			label.text = WordManager.get_random_noun()
 			var roll = randf() * 100  # nombre entre 0.0 et 100.0
@@ -39,8 +41,10 @@ func createWord():
 				label.text = WordManager.get_random_conjunction()
 			elif roll < 85:    # 73 + 12
 				label.text = WordManager.get_random_adjective()
-			else:              # 85 + 15
+			elif roll < 95:    # 85 + 12
 				label.text = WordManager.get_random_punctuation()
+			else:              # 97 + 3
+				label.text = WordManager.get_random_expression()
 			
 
 func _on_body_entered(player):
