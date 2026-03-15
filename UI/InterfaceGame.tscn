@@ -5,7 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
 [ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
-[ext_resource type="Texture2D" uid="uid://dsv31mafkt0h" path="res://assets_definitif/characters/papa_tete.png" id="5_nei81"]
+[ext_resource type="Texture2D" uid="uid://bpibdyp6mknai" path="res://assets_definitif/sprites_menu.png" id="4_nei81"]
+[ext_resource type="Texture2D" uid="uid://cn2jwd3niyf8d" path="res://assets_definitif/characters/tête_arnaud.png" id="5_8pnaq"]
+[ext_resource type="Texture2D" uid="uid://b7eljl5oq8wjw" path="res://assets_definitif/characters/tête_claire.png" id="6_bo5uv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfs4r"]
 bg_color = Color(0.57240003, 0.72, 0.42480004, 1)
@@ -71,32 +73,43 @@ offset_top = 0.39996338
 offset_right = 357.0
 offset_bottom = 126.39996
 
-[node name="characterPicture" type="TextureRect" parent="Dialog/Panel" unique_id=596942788]
+[node name="characterArnaud" type="TextureRect" parent="Dialog/Panel" unique_id=596942788]
 layout_mode = 0
-offset_left = -70.0
-offset_top = -160.0
-offset_right = 430.0
-offset_bottom = 297.0
-accessibility_name = "Arnaud"
-texture = ExtResource("5_nei81")
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 119.0
+offset_bottom = 110.0
+texture = ExtResource("5_8pnaq")
+stretch_mode = 2
+
+[node name="characterClaire" type="TextureRect" parent="Dialog/Panel" unique_id=1135536683]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 18.0
+offset_right = 687.0
+offset_bottom = 118.0
+texture = ExtResource("6_bo5uv")
 
 [node name="nameCharacter" type="RichTextLabel" parent="Dialog/Panel" unique_id=1260615161]
 layout_mode = 0
 offset_left = 139.0
-offset_top = 13.0
-offset_right = 696.0
-offset_bottom = 38.0
-text = "Claire"
+offset_top = 22.0
+offset_right = 566.0
+offset_bottom = 47.0
+bbcode_enabled = true
+text = "[b]Claire[/b][shake rate=3 level=5]test[/shake]"
 scroll_active = false
+horizontal_alignment = 1
 
 [node name="line" type="RichTextLabel" parent="Dialog/Panel" unique_id=688046169]
 layout_mode = 0
 offset_left = 138.0
 offset_top = 39.0
-offset_right = 690.0
+offset_right = 568.0
 offset_bottom = 110.0
 text = "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ? Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois."
 scroll_active = false
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer_elements" type="Control" parent="." unique_id=513658622]

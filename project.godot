@@ -35,6 +35,10 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom_font="uid://cspqe71urix8p"
+
 [input]
 
 move_right={
