@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bx8bgf36enmlm"]
+
+[ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="1_uw64u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgmyd"]
+texture = ExtResource("1_uw64u")
+texture_region_size = Vector2i(64, 64)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_oa1bb"]
+sources/0 = SubResource("TileSetAtlasSource_rgmyd")
+
+[node name="TileMap_OneWay" type="TileMapLayer" unique_id=37622952]
+tile_set = SubResource("TileSet_oa1bb")

@@ -1,139 +1,20 @@
-[gd_scene format=3 uid="uid://dgsidcwpajmwt"]
+[gd_scene format=4 uid="uid://dgsidcwpajmwt"]
 
-[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_jnqcy"]
-[ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_6iljt"]
-[ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="3_5pc6c"]
-[ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_7l7x6"]
-[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_78ros"]
+[ext_resource type="PackedScene" uid="uid://cbf4sjdguasyq" path="res://UI/parallax.tscn" id="2_7l7x6"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="3_7l7x6"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_78ros"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_jl1n7"]
-[ext_resource type="PackedScene" uid="uid://cc6djc3ts2p5y" path="res://scenes/Levels/tile_map_echelle.tscn" id="5_rxrkj"]
-[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="6_6iljt"]
-[ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="6_78ros"]
+[ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="5_jl1n7"]
+[ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="6_ibkhe"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="8_78ros"]
+[ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="8_jl1n7"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="9_60736"]
-[ext_resource type="Texture2D" uid="uid://ig05l10iw6p7" path="res://assets_definitif/walkSprite.png" id="10_ibkhe"]
-[ext_resource type="Script" uid="uid://do11pw2kwn4ch" path="res://scenes/echelle.gd" id="10_jl1n7"]
-[ext_resource type="Texture2D" uid="uid://bc6rse2kds585" path="res://assets_alice/echelle_temp.png" id="11_ibkhe"]
+[ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="11_jl1n7"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="12_ibkhe"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxrkj"]
-resource_name = "TILE_ECHELLE"
-texture = ExtResource("6_78ros")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.35316, 1.5523033, 22.04271, 1.8627625, 22.04271, 32, -22.35316, 32)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.042702, -32, 21.111328, -32, 22.353165, 32, -22.042702, 32)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-21.42178, -32, 22.663628, -32, 22.663628, 4.967369, -21.732243, 4.346451)
-
-[sub_resource type="TileSet" id="TileSet_7l7x6"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_rxrkj")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iljt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jl1n7"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(10, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6iljt"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(10, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7l7x6"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(90, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_78ros"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(170, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxrkj"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(250, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2vul"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(330, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_htfop"]
-atlas = ExtResource("10_ibkhe")
-region = Rect2(410, 7, 80, 135)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jl1n7")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_6iljt")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6iljt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7l7x6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_78ros")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rxrkj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d2vul")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_htfop")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ibkhe"]
-radius = 10.312904
-height = 20.625809
-
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
-script = ExtResource("1_jnqcy")
 
-[node name="Parallax" type="Node2D" parent="." unique_id=1882081994]
-
-[node name="Sky" type="Parallax2D" parent="Parallax" unique_id=136324971]
-scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(234, 0)
-repeat_size = Vector2(1600, 0)
-
-[node name="Sky" type="ColorRect" parent="Parallax/Sky" unique_id=1073589064]
-offset_left = -261.0
-offset_right = 821.0
-offset_bottom = 540.0
-scale = Vector2(1.5199999, 1.5199999)
-color = Color(0.8156863, 0.90588236, 0.8666667, 1)
-
-[node name="fond" type="Parallax2D" parent="Parallax" unique_id=415443931]
-scroll_scale = Vector2(0.2, 0.2)
-scroll_offset = Vector2(303, 1)
-repeat_size = Vector2(2000, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/fond" unique_id=1425151557]
-position = Vector2(-4, 48)
-texture = ExtResource("2_6iljt")
-centered = false
+[node name="Parallax" parent="." unique_id=348623257 instance=ExtResource("2_7l7x6")]
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=797421781]
 
@@ -141,60 +22,34 @@ centered = false
 
 [node name="TileMap_Grass" parent="TileMaps" unique_id=1194936551 instance=ExtResource("4_78ros")]
 
-[node name="TileMap_Echelle" parent="TileMaps" unique_id=37622952 instance=ExtResource("5_rxrkj")]
-tile_set = SubResource("TileSet_7l7x6")
+[node name="TileMap_Ladder" parent="TileMaps" unique_id=1181425679 instance=ExtResource("5_jl1n7")]
+tile_map_data = PackedByteArray("AAAFAAYAAAAAAAEAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAEAAAA=")
 
-[node name="Echelle" type="Area2D" parent="." unique_id=572507755]
-visibility_layer = 3
-position = Vector2(479.00003, 342)
-scale = Vector2(0.328862, 0.328862)
-script = ExtResource("10_jl1n7")
-
-[node name="Sprite2D" type="Sprite2D" parent="Echelle" unique_id=2110602488]
-texture = ExtResource("11_ibkhe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Echelle" unique_id=591923174]
-position = Vector2(0, 23.59416)
-scale = Vector2(6.33332, 29.030119)
-shape = SubResource("RectangleShape2D_6iljt")
+[node name="TileMap_OneWay" parent="TileMaps" unique_id=1371154450 instance=ExtResource("6_ibkhe")]
+tile_map_data = PackedByteArray("AAAJAAUAAAABAAAAAAAKAAUAAAABAAAAAAAGAAQAAAABAAAAAAAEAAQAAAABAAAAAAADAAQAAAABAAAAAAAHAAQAAAABAAAAAAA=")
 
 [node name="TitleScreen" parent="." unique_id=706204540 instance=ExtResource("12_ibkhe")]
 visible = false
 position = Vector2(-160, 1)
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=2055563758]
-position = Vector2(172, 407.00003)
-scale = Vector2(0.75, 0.75)
-script = ExtResource("3_5pc6c")
+[node name="Player" parent="." unique_id=1527853081 instance=ExtResource("8_jl1n7")]
+position = Vector2(163, -82)
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("4_jl1n7")]
-position = Vector2(0, -4.0690105e-05)
-scale = Vector2(1.3333334, 1.3333334)
+position = Vector2(172, 407)
 offset = Vector2(0, -50)
-limit_left = -161
-limit_top = -498
-limit_right = 2000
-limit_bottom = 617
+limit_left = -320
+limit_top = -1024
+limit_right = 2201
+limit_bottom = 704
 limit_smoothed = true
 editor_draw_limits = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=891243700]
-sprite_frames = SubResource("SpriteFrames_ucygd")
-animation = &"walk"
-frame_progress = 0.8784237
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2058821819]
-position = Vector2(-1.333333, 21.333294)
-scale = Vector2(2.0233564, 2.3908432)
-shape = SubResource("CapsuleShape2D_ibkhe")
 
 [node name="SpawnerWords" type="Node" parent="." unique_id=1336349515]
 
 [node name="SpawnerWord" parent="SpawnerWords" unique_id=1404252508 instance=ExtResource("8_78ros")]
-position = Vector2(331, 403)
+position = Vector2(173, 389)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("9_60736")]
-follow_viewport_enabled = false
 
-[connection signal="body_entered" from="Echelle" to="Echelle" method="_on_body_entered"]
-[connection signal="body_exited" from="Echelle" to="Echelle" method="_on_body_exited"]
+[node name="Sound" parent="." unique_id=261311265 instance=ExtResource("11_jl1n7")]

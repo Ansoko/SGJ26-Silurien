@@ -1,23 +1,94 @@
-[gd_scene format=3 uid="uid://b7goiqyrmw8x0"]
+[gd_scene format=4 uid="uid://b7goiqyrmw8x0"]
 
 [ext_resource type="Script" uid="uid://x83q6kxchhwr" path="res://scenes/end_screen.gd" id="1_6e1uj"]
 [ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets_alice/background_temp.png" id="1_kq7ac"]
+[ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_vj8vg"]
+[ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_plosh"]
+[ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="5_4j4el"]
+[ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_wke0n"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="7_plosh"]
+[ext_resource type="Script" uid="uid://dn3of88xipmoh" path="res://UI/PressePapier.gd" id="8_um0j2"]
+[ext_resource type="AudioStream" uid="uid://devgdi7esyhhw" path="res://audio/UI/UI_Boutons_01.wav" id="9_fix67"]
+[ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="10_qyl73"]
 
-[node name="EndScreen" type="Node2D"]
+[node name="EndScreen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_6e1uj")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=1805845758]
 show_behind_parent = true
 position = Vector2(480, 270)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=667423739]
 texture = ExtResource("1_kq7ac")
 
-[node name="RESTART" type="Button" parent="."]
+[node name="RESTART" type="Button" parent="." unique_id=15722085]
 offset_left = 15.0
 offset_top = 491.0
 offset_right = 83.0
 offset_bottom = 522.0
 text = "Rejouer"
+
+[node name="Player" parent="." unique_id=1527853081 instance=ExtResource("3_vj8vg")]
+position = Vector2(591, 126)
+
+[node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("4_plosh")]
+position = Vector2(479, 269)
+limit_left = -161
+limit_top = -498
+limit_right = 1382
+limit_bottom = 617
+limit_smoothed = true
+editor_draw_limits = true
+
+[node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("5_4j4el")]
+
+[node name="Sound" type="Node" parent="." unique_id=58030761]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Sound" unique_id=262459101]
+script = ExtResource("6_wke0n")
+typeSound = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="Sound" unique_id=629643438]
+script = ExtResource("6_wke0n")
+typeSound = 0
+
+[node name="TileMap_Ground" parent="." unique_id=1593015106 instance=ExtResource("7_plosh")]
+tile_map_data = PackedByteArray("AAABAAcACgACAAAAAAACAAcACgACAAAAAAADAAcACgACAAAAAAAEAAcACgACAAAAAAAFAAcACgACAAAAAAAGAAcACgACAAAAAAAHAAcACgACAAAAAAAIAAcACgACAAAAAAAJAAcACgACAAAAAAAKAAcACgACAAAAAAALAAcACgACAAAAAAAMAAcACgACAAAAAAANAAcACgACAAAAAAAOAAcACgACAAAAAAAPAAcACgACAAAAAAAAAAcACgACAAAAAAAQAAcACgACAAAAAAARAAcACgACAAAAAAASAAcACgACAAAAAAATAAcACgACAAAAAAAUAAcACgACAAAAAAAVAAcACgACAAAAAAAWAAcACgACAAAAAAAXAAcACgACAAAAAAAYAAcACgACAAAAAAAZAAcACgACAAAAAAD//wYACgABAAAAAAD//wUACgABAAAAAAD//wQACgABAAAAAAD//wMACgABAAAAAAD//wIACgABAAAAAAD//wEACgABAAAAAAD//wAACgABAAAAAAD//wcACgACAAAAAAA=")
+
+[node name="EndPos" type="Node2D" parent="." unique_id=316759008]
+position = Vector2(2, 117)
+
+[node name="CanvaLettre" type="CanvasLayer" parent="." unique_id=1839652803]
+
+[node name="Panel" type="Panel" parent="CanvaLettre" unique_id=278432132]
+offset_left = 237.0
+offset_top = 79.0
+offset_right = 742.0
+offset_bottom = 650.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvaLettre/Panel" unique_id=935399303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = 51.0
+offset_right = -46.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "ouais"
+
+[node name="Button" type="Button" parent="CanvaLettre/Panel" unique_id=1934716126]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 387.0
+offset_right = 482.0
+offset_bottom = 418.0
+text = "Copier dans le presse papier"
+script = ExtResource("8_um0j2")
+son_hover = ExtResource("10_qyl73")
+son_click = ExtResource("9_fix67")
 
 [connection signal="pressed" from="RESTART" to="." method="_on_restart_pressed"]

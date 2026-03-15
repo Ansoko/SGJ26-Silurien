@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://biqof76pf325b"]
 
 [ext_resource type="Script" uid="uid://dfenpenjum80e" path="res://UI/StoryUI.gd" id="1_0xtqc"]
+[ext_resource type="AudioStream" uid="uid://ctnoo0c1nr4fi" path="res://audio/UI/UI_Rature_01.wav" id="2_hfs4r"]
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="2_xsnpk"]
+[ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
+[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
+[ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
-follow_viewport_enabled = true
 script = ExtResource("1_0xtqc")
+SFXerasure = Array[AudioStream]([ExtResource("2_hfs4r"), ExtResource("3_nei81")])
 
 [node name="Control" type="Control" parent="." unique_id=1532843106]
 layout_mode = 3
@@ -82,6 +86,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_qbaqg")
+SFXTimer = ExtResource("4_bv2us")
 
 [node name="Timer" type="Timer" parent="Timer_elements" unique_id=31365358]
 wait_time = 120.0
@@ -99,3 +105,5 @@ offset_bottom = 55.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="timeout" from="Timer_elements/Timer" to="Timer_elements" method="_on_timer_timeout"]

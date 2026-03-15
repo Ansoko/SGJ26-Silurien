@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_n77mx"]
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="5_xpysu"]
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="6_epq12"]
-[ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_fws1a"]
+[ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_xpysu"]
+[ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="7_yhikq"]
+[ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="9_yhikq"]
+[ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="10_c7u1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dm6"]
 
@@ -31,6 +34,7 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="CanvaUI" parent="." unique_id=27104168 instance=ExtResource("1_2gju5")]
+visible = false
 follow_viewport_enabled = false
 
 [node name="WALL_temp" type="Node2D" parent="." unique_id=1867175927]
@@ -57,12 +61,13 @@ position = Vector2(100.23697, 2.9999998)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_m5dm6")
 
-[node name="Sound" type="Node" parent="." unique_id=1282296292]
+[node name="Sound" parent="." unique_id=261311265 instance=ExtResource("7_yhikq")]
 
-[node name="SFX" type="AudioStreamPlayer" parent="Sound" unique_id=638446438]
-script = ExtResource("6_fws1a")
-typeSound = 1
+[node name="TitleScreen" parent="." unique_id=1554427074 instance=ExtResource("6_xpysu")]
+position = Vector2(-160, 1)
 
-[node name="Music" type="AudioStreamPlayer" parent="Sound" unique_id=1861636371]
-script = ExtResource("6_fws1a")
-typeSound = 0
+[node name="TileMap_Ladder" parent="." unique_id=1181425679 instance=ExtResource("9_yhikq")]
+tile_map_data = PackedByteArray(0, 0, 5, 0, 7, 0, 0, 0, 1, 0, 1, 0, 0, 0, 5, 0, 6, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="TileMap_OneWay" parent="." unique_id=439868489 instance=ExtResource("10_c7u1e")]
+tile_map_data = PackedByteArray(0, 0, 9, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 10, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0)

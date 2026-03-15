@@ -3,9 +3,15 @@
 [ext_resource type="Script" uid="uid://b7uenp3mtbjv5" path="res://scenes/title_screen.gd" id="1_3yumr"]
 [ext_resource type="Texture2D" uid="uid://dccp0jym0jte3" path="res://assets_alice/titleAnim_1.png" id="1_dc4i4"]
 [ext_resource type="Texture2D" uid="uid://bbd2ufr0r2nlq" path="res://assets_alice/titleAnim_2.png" id="2_e54dn"]
+[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="2_ib7db"]
 [ext_resource type="Texture2D" uid="uid://pgiralnbwkag" path="res://assets_alice/titleAnim_3.png" id="3_3yumr"]
 [ext_resource type="Texture2D" uid="uid://djjjn7v3ynymv" path="res://assets_alice/titleStatic_1.png" id="4_cs5ya"]
 [ext_resource type="Script" uid="uid://dlu3xrn5l26a3" path="res://scenes/title__animated_sprite_2d.gd" id="5_e54dn"]
+[ext_resource type="Script" uid="uid://cxt8brg3ecx2g" path="res://audio/UI/UIButton.gd" id="7_u26n3"]
+[ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="8_ib7db"]
+[ext_resource type="AudioStream" uid="uid://devgdi7esyhhw" path="res://audio/UI/UI_Boutons_01.wav" id="9_frs5l"]
+[ext_resource type="AudioStream" uid="uid://c400tsokv2k3q" path="res://audio/UI/UI_Boutons_Over_02.wav" id="10_mynnq"]
+[ext_resource type="AudioStream" uid="uid://kntadtytdwtm" path="res://audio/UI/UI_Boutons_02.wav" id="11_e8tpv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fgkus"]
 animations = [{
@@ -34,6 +40,8 @@ animations = [{
 
 [node name="TitleScreen" type="Node2D" unique_id=1554427074]
 script = ExtResource("1_3yumr")
+music_menu = ExtResource("2_ib7db")
+music_game = ExtResource("2_ib7db")
 
 [node name="Title" type="Node2D" parent="." unique_id=218026018]
 top_level = true
@@ -54,6 +62,9 @@ offset_top = 490.0
 offset_right = 776.0
 offset_bottom = 521.0
 text = "Commencer"
+script = ExtResource("7_u26n3")
+son_hover = ExtResource("8_ib7db")
+son_click = ExtResource("9_frs5l")
 metadata/_edit_use_anchors_ = true
 
 [node name="CREDITS" type="Button" parent="CanvasLayer" unique_id=501484111]
@@ -62,6 +73,9 @@ offset_top = 490.0
 offset_right = 934.0
 offset_bottom = 521.0
 text = "Crédits"
+script = ExtResource("7_u26n3")
+son_hover = ExtResource("10_mynnq")
+son_click = ExtResource("11_e8tpv")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="animation_finished" from="Title/Title__AnimatedSprite2D" to="Title/Title__AnimatedSprite2D" method="_on_animation_finished"]

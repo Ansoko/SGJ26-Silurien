@@ -2,8 +2,23 @@
 
 [ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="1_afxg2"]
 [ext_resource type="Texture2D" uid="uid://bqy6rncujo3sh" path="res://assets_alice/idle.png" id="2_0oiki"]
+[ext_resource type="AudioStream" uid="uid://fdi1lkohqv7y" path="res://audio/player/Footsteps_Saut_Herbe-001.wav" id="2_8gobf"]
+[ext_resource type="AudioStream" uid="uid://baexmjwxyi1rc" path="res://audio/player/Footsteps_Saut_Herbe-002.wav" id="3_2c8kr"]
 [ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="3_od5lm"]
 [ext_resource type="Texture2D" uid="uid://b1cr4graghwag" path="res://assets_alice/walk.png" id="4_b7etv"]
+[ext_resource type="AudioStream" uid="uid://cupvm70fntvxu" path="res://audio/player/Footsteps_Saut_Herbe-003.wav" id="4_ofy8q"]
+[ext_resource type="AudioStream" uid="uid://btx48w8v0wtm4" path="res://audio/player/Footsteps_Herbe-001.wav" id="5_anhh0"]
+[ext_resource type="AudioStream" uid="uid://drn3j6r5cqsds" path="res://audio/player/Footsteps_Herbe-002.wav" id="6_rkc08"]
+[ext_resource type="AudioStream" uid="uid://868ybxgregeh" path="res://audio/player/Footsteps_Herbe-003.wav" id="7_2k2ek"]
+[ext_resource type="AudioStream" uid="uid://bvuswa6m01igj" path="res://audio/player/Footsteps_Herbe-004.wav" id="8_r7f6y"]
+[ext_resource type="AudioStream" uid="uid://bjka2ne52gw0g" path="res://audio/player/Footsteps_Herbe-005.wav" id="9_f4a0r"]
+[ext_resource type="AudioStream" uid="uid://bbtmiwpkuglvb" path="res://audio/player/Footsteps_Herbe-006.wav" id="10_nn6w7"]
+[ext_resource type="AudioStream" uid="uid://gfkd1tqtujnf" path="res://audio/player/Footsteps_Bois-001.wav" id="11_r7f6y"]
+[ext_resource type="AudioStream" uid="uid://cmir1a50lpufg" path="res://audio/player/Footsteps_Bois-002.wav" id="12_f4a0r"]
+[ext_resource type="AudioStream" uid="uid://gv7ntt2ieklr" path="res://audio/player/Footsteps_Bois-003.wav" id="13_nn6w7"]
+[ext_resource type="AudioStream" uid="uid://0cmq3ncaxwb" path="res://audio/player/Footsteps_Bois-004.wav" id="14_61xml"]
+[ext_resource type="AudioStream" uid="uid://cv80e0x53mus3" path="res://audio/player/Footsteps_Bois-005.wav" id="15_rv3vl"]
+[ext_resource type="AudioStream" uid="uid://bltenvylricmn" path="res://audio/player/Footsteps_Bois-006.wav" id="16_16p4b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
 animations = [{
@@ -34,10 +49,19 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l72w3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afxg2"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1527853081]
 script = ExtResource("1_afxg2")
+speed = 400
+GRAVITY = 1200
+JUMP_POWER = -520
+SFXJumps = Array[AudioStream]([ExtResource("2_8gobf"), ExtResource("3_2c8kr"), ExtResource("4_ofy8q")])
+SFXFootsteps = Array[AudioStream]([ExtResource("5_anhh0"), ExtResource("6_rkc08"), ExtResource("7_2k2ek"), ExtResource("8_r7f6y"), ExtResource("9_f4a0r"), ExtResource("10_nn6w7")])
+SFXLadder = Array[AudioStream]([ExtResource("11_r7f6y"), ExtResource("12_f4a0r"), ExtResource("13_nn6w7"), ExtResource("14_61xml"), ExtResource("15_rv3vl"), ExtResource("16_16p4b")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1320141012]
+z_index = 2
 position = Vector2(480, 270)
 sprite_frames = SubResource("SpriteFrames_ucygd")
 animation = &"jump"
@@ -46,3 +70,12 @@ animation = &"jump"
 position = Vector2(480, 270)
 scale = Vector2(5.01003, 5.00001)
 shape = SubResource("RectangleShape2D_l72w3")
+
+[node name="EchelleDetector" type="Area2D" parent="." unique_id=819009273]
+position = Vector2(480, 271)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EchelleDetector" unique_id=1991348061]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_afxg2")

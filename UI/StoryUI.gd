@@ -1,10 +1,14 @@
 extends CanvasLayer
 
+@export var SFXerasure: Array[AudioStream] = []
+
 func _ready() -> void:
 	WordManager.add_word.connect(addNewWordToStory)
+	WordManager.saveText.connect(saveStoryText)
 	dialogPanel.hide()
 	allLignes = load_json("res://csv/dialogues.json")
 	SignalManager.start_game.connect(start_intro)
+	SignalManager.start_outro.connect(start_outro)
 	
 # --- Story line at the top ---
 @onready var storyLabel = $Control/ScrollContainer/RichTextLabel
@@ -37,6 +41,8 @@ func removeLastWord():
 	var debut = storyLabel.text.substr(0, dernier.get_start())
 	var fin = storyLabel.text.substr(dernier.get_end())
 	storyLabel.text = debut + "[s]" + dernier.get_string() + "[/s]" + fin
+	
+	AudioManager.play_SFX.emit(SFXerasure.pick_random())
 	scrollToEnd.call_deferred()
 
 func scrollToEnd():
@@ -50,7 +56,9 @@ func _input(event):
 	if isInDialogMode:
 		if event.is_action_pressed("jump"):
 			show_next_line()
-		
+
+func saveStoryText():
+	WordManager.letterText = storyLabel.text
 
 #--- dialog system ---
 @onready var nameLabel = $Dialog/Panel/nameCharacter
@@ -58,9 +66,6 @@ func _input(event):
 @onready var characterPicture = $Dialog/Panel/characterPicture
 @onready var dialogPanel = $Dialog
 @export var vitesse_texte = 0.03
-
-signal end_intro()
-signal end_outro()
 
 var tween: Tween
 var speaking: bool = false
@@ -87,15 +92,6 @@ func show_next_line():
 	index_courant += 1
 	dialogLabel.text = ""
 	var line = allLignes.get(currentState)
-	
-	if(index_courant >= line.size()):
-		isInDialogMode = false
-		dialogPanel.hide()
-		if currentState == "intro" :
-			end_intro.emit()
-		else:
-			end_outro.emit()
-		return
 		
 	if tween:
 		tween.kill()
@@ -105,6 +101,15 @@ func show_next_line():
 		index_courant -= 1
 		nameLabel.text = line[index_courant]["character"]
 		dialogLabel.text = line[index_courant]["line"]
+		return
+		
+	if(index_courant >= line.size()):
+		isInDialogMode = false
+		dialogPanel.hide()
+		if currentState == "intro" :
+			SignalManager.end_intro.emit()
+		else:
+			SignalManager.end_outro.emit()
 		return
 	
 	if(line[index_courant]["audio"] != ""):
