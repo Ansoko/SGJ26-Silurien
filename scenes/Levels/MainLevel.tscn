@@ -37,14 +37,14 @@ sources/0 = SubResource("TileSetAtlasSource_p0b77")
 
 [node name="Sky" type="Parallax2D" parent="Parallax" unique_id=136324971]
 scroll_scale = Vector2(0.1, 0.1)
-scroll_offset = Vector2(234, 0)
+scroll_offset = Vector2(-1366, -1770)
 repeat_size = Vector2(1600, 0)
 
 [node name="Sky" type="ColorRect" parent="Parallax/Sky" unique_id=1073589064]
 offset_left = -261.0
 offset_right = 821.0
 offset_bottom = 540.0
-scale = Vector2(1.5199999, 1.5199999)
+scale = Vector2(6.88, 6.88)
 color = Color(0.8156863, 0.90588236, 0.8666667, 1)
 
 [node name="fond" type="Parallax2D" parent="Parallax" unique_id=415443931]
