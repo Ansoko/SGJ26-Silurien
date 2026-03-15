@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
 [ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="12_n7cjv"]
 [ext_resource type="AudioStream" uid="uid://6y4c3o77cska" path="res://audio/music/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
+[ext_resource type="PackedScene" uid="uid://thckph8dnnsa" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
