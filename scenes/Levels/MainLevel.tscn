@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
 [ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
+[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
 [ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="12_n7cjv"]
 [ext_resource type="AudioStream" uid="uid://6y4c3o77cska" path="res://audio/music/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
+[ext_resource type="PackedScene" uid="uid://thckph8dnnsa" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
@@ -39,6 +39,7 @@ scroll_offset = Vector2(-4814, -978)
 repeat_size = Vector2(1500, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/fond" unique_id=1425151557]
+texture_filter = 1
 position = Vector2(-4, 48)
 texture = ExtResource("2_p0b77")
 centered = false
