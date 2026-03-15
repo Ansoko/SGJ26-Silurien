@@ -30,6 +30,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	add_to_group("player")
 	SignalManager.end_intro.connect(unlockMovement)
+	SignalManager.start_outro.connect(playAnimationEnd)
 	
 	echelle_detector.body_entered.connect(_on_echelle_entered)
 	echelle_detector.body_exited.connect(_on_echelle_exited)
@@ -112,7 +113,13 @@ func update_animation(delta: float):
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		
-		
+func playAnimationEnd():
+	canMove=false
+	$AnimatedSprite2D.flip_h = true
+	$AnimatedSprite2D.play("walk")
+	await get_tree().create_timer(2).timeout
+	$AnimatedSprite2D.play("idle")
+
 func playSFXFootprint(delta):
 	timer_ladder = 0
 	timer_pas += delta

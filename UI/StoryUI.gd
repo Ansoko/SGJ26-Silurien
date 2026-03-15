@@ -6,13 +6,17 @@ func _ready() -> void:
 	WordManager.add_word.connect(addNewWordToStory)
 	WordManager.saveText.connect(saveStoryText)
 	dialogPanel.hide()
+	hideStory()
 	allLignes = load_json("res://csv/dialogues.json")
 	SignalManager.start_game.connect(start_intro)
 	SignalManager.start_outro.connect(start_outro)
+	SignalManager.start_outro.connect(hideStory)
+	SignalManager.end_intro.connect(showStory)
 	
 # --- Story line at the top ---
 @onready var storyLabel = $Control/ScrollContainer/RichTextLabel
 @onready var scrollContainer = $Control/ScrollContainer
+@onready var storyPanel = $Control
 
 var list_words: Array = [{0:"Chère",1: false}, {0:"Mamie,", 1:false}] #word + bool barré
 
@@ -49,6 +53,12 @@ func scrollToEnd():
 	var stb := func():
 		scrollContainer.scroll_horizontal = scrollContainer.get_h_scroll_bar().max_value
 	stb.call_deferred()
+	
+func hideStory():
+	storyPanel.hide()
+	
+func showStory():
+	storyPanel.show()
 
 func _input(event):
 	if event.is_action_pressed("erase"):
