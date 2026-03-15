@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
+[ext_resource type="PackedScene" uid="uid://chaayiekc3yh3" path="res://objets/tilemaps/tile_map_deco.tscn" id="6_awij6"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
 [ext_resource type="Texture2D" uid="uid://c1b6vg188xoh6" path="res://assets_definitif/maison.png" id="6_p0b77"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="7_gvr7s"]
@@ -58,6 +59,8 @@ tile_map_data = PackedByteArray("AAArAfv/AAAAAAEAAAArAfz/AAAAAAEAAAArAf3/AAAAAAE
 
 [node name="TileMap_OneWay" parent="TileMaps" unique_id=1129511222 instance=ExtResource("5_pgkmv")]
 tile_map_data = PackedByteArray("AABBAQEAAAABAAAAAABCAQEAAAABAAAAAABDAQEAAAABAAAAAABEAQEAAAABAAAAAACKAP7/AAABAAAAAACLAP7/AAABAAAAAACMAP7/AAABAAAAAAAnAAQAAAABAAAAAAAoAAQAAAABAAAAAAApAAQAAAABAAAAAAAqAAQAAAABAAAAAACiAPz/AAABAAAAAACjAPz/AAABAAAAAACkAPz/AAABAAAAAADHAPf/AAABAAAAAADIAPf/AAABAAAAAADJAPf/AAABAAAAAAAiAAQAAAABAAAAAAAiAP//AAABAAAAAABMAPn/AAABAAAAAABWAAIAAAABAAAAAABpAPf/AAABAAAAAACRAP7/AAABAAAAAACiAAQAAAABAAAAAAAIAfL/AAABAAAAAAAUAQQAAAABAAAAAAAVAQQAAAABAAAAAAArAfv/AAABAAAAAAAqAfv/AAABAAAAAAA1AfX/AAABAAAAAABOAQQAAAABAAAAAAA=")
+
+[node name="TileMap_Deco" parent="TileMaps" unique_id=1015431222 instance=ExtResource("6_awij6")]
 
 [node name="Sprite2D" type="Sprite2D" parent="TileMaps" unique_id=1021184007]
 position = Vector2(366, 363)
