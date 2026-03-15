@@ -53,6 +53,9 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1527853081]
 script = ExtResource("1_afxg2")
+speed = 400
+GRAVITY = 1200
+JUMP_POWER = -520
 SFXJumps = Array[AudioStream]([ExtResource("2_8gobf"), ExtResource("3_2c8kr"), ExtResource("4_ofy8q")])
 SFXFootsteps = Array[AudioStream]([ExtResource("5_anhh0"), ExtResource("6_rkc08"), ExtResource("7_2k2ek"), ExtResource("8_r7f6y"), ExtResource("9_f4a0r"), ExtResource("10_nn6w7")])
 SFXLadder = Array[AudioStream]([ExtResource("11_r7f6y"), ExtResource("12_f4a0r"), ExtResource("13_nn6w7"), ExtResource("14_61xml"), ExtResource("15_rv3vl"), ExtResource("16_16p4b")])

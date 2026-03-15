@@ -1,110 +1,18 @@
-[gd_scene format=4 uid="uid://cpyybqin11bq5"]
+[gd_scene format=4 uid="uid://cupbwy5slbmun"]
 
-[ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://scenes/main_menu.gd" id="1_pgkmv"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
-[ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_echelle.tscn" id="5_nwet0"]
-[ext_resource type="Texture2D" uid="uid://bdflo3hdlygbp" path="res://assets_definitif/Echelle.png" id="6_awij6"]
+[ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
+[ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
-[ext_resource type="Script" uid="uid://dfw5r087d6pu3" path="res://scenes/player.gd" id="7_awij6"]
+[ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="7_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="8_4cowq"]
-[ext_resource type="Texture2D" uid="uid://ig05l10iw6p7" path="res://assets_definitif/walkSprite.png" id="9_1bmur"]
-[ext_resource type="Texture2D" uid="uid://c1u6cdmxowkds" path="res://assets_alice/jump.png" id="10_gxenh"]
+[ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxrkj"]
-resource_name = "TILE_ECHELLE"
-texture = ExtResource("6_awij6")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.35316, 1.5523033, 22.04271, 1.8627625, 22.04271, 32, -22.35316, 32)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.042702, -32, 21.111328, -32, 22.353165, 32, -22.042702, 32)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-21.42178, -32, 22.663628, -32, 22.663628, 4.967369, -21.732243, 4.346451)
-
-[sub_resource type="TileSet" id="TileSet_7l7x6"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_rxrkj")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jl1n7"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(10, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6iljt"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(10, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7l7x6"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(90, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_78ros"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(170, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxrkj"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(250, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2vul"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(330, 7, 80, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_htfop"]
-atlas = ExtResource("9_1bmur")
-region = Rect2(410, 7, 80, 135)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ucygd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jl1n7")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_gxenh")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6iljt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7l7x6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_78ros")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rxrkj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d2vul")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_htfop")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7cjv"]
-size = Vector2(20, 23.942078)
-
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
-script = ExtResource("1_pgkmv")
 
 [node name="Parallax" type="Node2D" parent="." unique_id=1882081994]
 
@@ -138,25 +46,21 @@ tile_map_data = PackedByteArray("AAABAAcAAQACAAEAAAACAAcAAQACAAEAAAADAAcAAQACAAE
 [node name="TileMap_Grass" parent="TileMaps" unique_id=1194936551 instance=ExtResource("4_7ik1l")]
 tile_map_data = PackedByteArray()
 
-[node name="TileMap_Echelle" parent="TileMaps" unique_id=37622952 instance=ExtResource("5_nwet0")]
-tile_map_data = PackedByteArray("AAAiAAgAAQAAAAEAAAAiAAcAAQAAAAEAAAAiAAYAAQAAAAEAAAAiAAUAAQAAAAEAAAAiAAQAAQAAAAEAAAAiAAAAAQAAAAEAAAAiAAEAAQAAAAEAAAAiAAIAAQAAAAEAAAAiAP//AQAAAAEAAABSAPb/AQAAAAEAAABSAPf/AQAAAAEAAABSAPj/AQAAAAEAAABSAPn/AQAAAAEAAABSAPr/AQAAAAEAAABSAPv/AQAAAAEAAABSAPz/AQAAAAEAAABSAP3/AQAAAAEAAABSAPT/AQAAAAEAAABSAPX/AQAAAAEAAABnAPf/AQAAAAEAAABnAPj/AQAAAAEAAABnAPn/AQAAAAEAAABnAPr/AQAAAAEAAABnAPv/AQAAAAEAAABnAPz/AQAAAAEAAABnAP3/AQAAAAEAAABnAP7/AQAAAAEAAABnAP//AQAAAAEAAABnAAAAAQAAAAEAAABnAAEAAQAAAAEAAABWAAIAAQAAAAEAAABWAAMAAQAAAAEAAABWAAQAAQAAAAEAAABWAAUAAQAAAAEAAABWAAYAAQAAAAEAAABWAAcAAQAAAAEAAACRAP7/AQAAAAEAAACRAP//AQAAAAEAAACRAAAAAQAAAAEAAACRAAEAAQAAAAEAAACRAAIAAQAAAAEAAACiAAQAAQAAAAEAAACiAAUAAQAAAAEAAACiAAYAAQAAAAEAAACiAAcAAQAAAAEAAABOAQQAAQAAAAEAAABOAQUAAQAAAAEAAABOAQYAAQAAAAEAAAA2AfX/AQAAAAEAAAA2Afb/AQAAAAEAAAA2Aff/AQAAAAEAAAA2Afj/AQAAAAEAAAA2Afn/AQAAAAEAAAA2Afr/AQAAAAEAAAA2Afv/AQAAAAEAAAA2Afz/AQAAAAEAAAC+APr/AQAAAAEAAAC+APv/AQAAAAEAAAC+APz/AQAAAAEAAAC+AP3/AQAAAAEAAAC+AP7/AQAAAAEAAAC+AP//AQAAAAEAAAA=")
-tile_set = SubResource("TileSet_7l7x6")
+[node name="TileMap_Ladder" parent="TileMaps" unique_id=1181425679 instance=ExtResource("4_i5ud2")]
+tile_map_data = PackedByteArray()
+
+[node name="TileMap_OneWay" parent="TileMaps" unique_id=1129511222 instance=ExtResource("5_pgkmv")]
+tile_map_data = PackedByteArray()
 
 [node name="TitleScreen" parent="." unique_id=706204540 instance=ExtResource("6_nwet0")]
 visible = false
 position = Vector2(-160, 1)
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=2055563758]
-position = Vector2(172, 407.00003)
-scale = Vector2(0.75, 0.75)
-script = ExtResource("7_awij6")
-speed = 400
-GRAVITY = 1200
-JUMP_POWER = -520
+[node name="Player" parent="." unique_id=1527853081 instance=ExtResource("7_gvr7s")]
+position = Vector2(-305, 79)
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("8_4cowq")]
-position = Vector2(0, -4.0690105e-05)
-scale = Vector2(1.3333334, 1.3333334)
+position = Vector2(477, 328)
 offset = Vector2(0, -50)
 limit_left = -320
 limit_top = -1024
@@ -165,23 +69,12 @@ limit_bottom = 704
 limit_smoothed = true
 editor_draw_limits = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=891243700]
-sprite_frames = SubResource("SpriteFrames_ucygd")
-animation = &"walk"
-frame_progress = 0.8784237
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2058821819]
-position = Vector2(-1.3333435, 26.045654)
-scale = Vector2(2.0233564, 2.3908432)
-shape = SubResource("RectangleShape2D_n7cjv")
-
 [node name="SpawnerWords" type="Node" parent="." unique_id=1336349515]
 
 [node name="SpawnerWord" parent="SpawnerWords" unique_id=1404252508 instance=ExtResource("11_6r8n1")]
 position = Vector2(331, 403)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("12_xfaxn")]
-follow_viewport_enabled = false
 
 [node name="Label" type="Label" parent="." unique_id=1649487922]
 offset_left = 2280.0
@@ -217,3 +110,5 @@ offset_right = 657.0
 offset_bottom = -323.0
 text = "Panneau tuto
 Objectif du jeu"
+
+[node name="Sound" parent="." unique_id=261311265 instance=ExtResource("10_gvr7s")]

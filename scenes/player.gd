@@ -22,6 +22,7 @@ var sur_echelle: bool = false
 var can_climb: bool = false
 var timer_pas: float = 0.0
 var timer_ladder: float = 0.0
+var currentGravity = 1200
 
 @onready var echelle_detector = $EchelleDetector
 
@@ -35,10 +36,10 @@ func _ready():
 	echelle_detector.area_entered.connect(_on_echelle_entered)
 	echelle_detector.area_exited.connect(_on_echelle_exited)
 	
-func _on_echelle_entered(area):
+func _on_echelle_entered(_area):
 	sur_echelle = true
 	
-func _on_echelle_exited(area):
+func _on_echelle_exited(_area):
 	sur_echelle = false
 	can_climb = false
 
@@ -69,19 +70,19 @@ func _physics_process(delta):
 			can_climb = true
 			
 		if can_climb:
-			GRAVITY = 0
+			currentGravity = 0
 			if Input.is_action_pressed("climb_up"):
 				velocity.y = -speedOnLadder
 			elif Input.is_action_pressed("climb_down"):
 				velocity.y = speedOnLadder
 			else:
 				velocity.y = 0
-	else: GRAVITY = 1000
+	else: currentGravity = GRAVITY
 	
 	var acceleration = ACCELERATION_SOL if is_on_floor() else AIR_CONTROL
 	velocity.x = move_toward(velocity.x, direction * speed, acceleration)
 	#velocity.x = direction * speed
-	velocity.y += GRAVITY * delta
+	velocity.y += currentGravity * delta
 
 	move_and_slide()
 	update_animation(delta)
