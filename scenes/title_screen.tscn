@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://yti7dsiieph2"]
 
 [ext_resource type="Script" uid="uid://b7uenp3mtbjv5" path="res://scenes/title_screen.gd" id="1_3yumr"]
-[ext_resource type="Texture2D" uid="uid://crl2e6tdee8jm" path="res://assets_definitif/texture_papier.png" id="2_x64qd"]
+[ext_resource type="Texture2D" uid="uid://weutkjuulnca" path="res://assets_definitif/texture_papier.png" id="2_x64qd"]
 [ext_resource type="Texture2D" uid="uid://do5l23pxxqrfa" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-1.png" id="3_d7hws"]
 [ext_resource type="Texture2D" uid="uid://ds7ytgjchbxfs" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-1.png" id="3_ve8tt"]
 [ext_resource type="Texture2D" uid="uid://dqiv3o8kdg4l5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-2.png" id="4_cwyqm"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bqjfwgm6q3ae" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-5.png" id="7_x2goh"]
 [ext_resource type="Texture2D" uid="uid://jq4vg5jobhgx" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-6.png" id="8_1a42j"]
 [ext_resource type="Texture2D" uid="uid://bw5sg4vqus5ie" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-6.png" id="8_5f42m"]
-[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="8_frs5l"]
+[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="8_frs5l"]
 [ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="8_ib7db"]
 [ext_resource type="Texture2D" uid="uid://cuhyil2s7rcq4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-7.png" id="9_ch8py"]
 [ext_resource type="Texture2D" uid="uid://bum0kmfitkn8i" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-7.png" id="9_f35m0"]
@@ -178,7 +178,7 @@
 [ext_resource type="Texture2D" uid="uid://df0nsytha5po6" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-84.png" id="86_mpex6"]
 [ext_resource type="Texture2D" uid="uid://jbkatfvx5ilr" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-84.png" id="86_r7iod"]
 [ext_resource type="Texture2D" uid="uid://du7c73ykra7a5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-85.png" id="87_ajbxl"]
-[ext_resource type="Texture2D" uid="uid://b7a1t5s5kqwtc" path="res://assets_definitif/AnimationTitre/AnimationTitre_fond.png" id="88_388bl"]
+[ext_resource type="Texture2D" uid="uid://b5tgt08jam0yp" path="res://assets_definitif/AnimationTitre/AnimationTitre_fond.png" id="88_388bl"]
 [ext_resource type="Texture2D" uid="uid://wn8waap8s726" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-86.png" id="88_ugec1"]
 [ext_resource type="Texture2D" uid="uid://j55whrmkak21" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-87.png" id="89_b8ebi"]
 [ext_resource type="Texture2D" uid="uid://cynfxs7ppg1ra" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-88.png" id="90_wao5u"]
@@ -1100,21 +1100,33 @@ sprite_frames = SubResource("SpriteFrames_vjib4")
 animation = &"static"
 script = ExtResource("101_o4iee")
 
-[node name="Boutons" type="Node2D" parent="Control" unique_id=62579173]
-position = Vector2(13, 158)
-
-[node name="Panel" type="Panel" parent="Control/Boutons" unique_id=273095688]
+[node name="Boutons" type="Control" parent="Control" unique_id=1654813469]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control/Boutons" unique_id=273095688]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 158.0
+offset_right = 53.0
+offset_bottom = 198.0
 scale = Vector2(6.7999973, 5.480003)
 theme_override_styles/panel = SubResource("StyleBoxFlat_247lh")
 metadata/_edit_use_anchors_ = true
 
 [node name="START" type="Button" parent="Control/Boutons" unique_id=238603257]
-offset_right = 102.0
-offset_bottom = 31.000015
-scale = Vector2(2.6452022, 2.640394)
-theme_override_font_sizes/font_size = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.1
+anchor_top = 0.4
+anchor_right = 1.1
+anchor_bottom = 0.4
+offset_left = 13.0
+offset_top = 158.0
+offset_right = 191.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 22
 text = "Commencer"
 icon = ExtResource("8_frs5l")
 flat = true
@@ -1126,12 +1138,17 @@ son_click = ExtResource("9_frs5l")
 metadata/_edit_use_anchors_ = true
 
 [node name="CREDITS" type="Button" parent="Control/Boutons" unique_id=545395760]
-offset_left = 21.0
-offset_top = 79.0
-offset_right = 122.99997
-offset_bottom = 110.0
-scale = Vector2(2.2397218, 2.2356508)
-theme_override_font_sizes/font_size = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 1.9000008
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 237.0
+offset_right = 155.99997
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 22
 text = "Crédits"
 icon = ExtResource("8_frs5l")
 flat = true
@@ -1143,12 +1160,17 @@ son_click = ExtResource("11_e8tpv")
 metadata/_edit_use_anchors_ = true
 
 [node name="QUIT" type="Button" parent="Control/Boutons" unique_id=1148172325]
-offset_left = 21.0
-offset_top = 146.0
-offset_right = 122.99997
-offset_bottom = 177.0
-scale = Vector2(2.2397218, 2.2356508)
-theme_override_font_sizes/font_size = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = 3.2
+anchor_right = -0.16666107
+anchor_bottom = 3.25
+offset_left = 57.0
+offset_top = 174.0
+offset_right = 239.66644
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 22
 text = "Quitter"
 icon = ExtResource("8_frs5l")
 flat = true
