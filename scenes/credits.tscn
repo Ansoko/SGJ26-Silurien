@@ -6,7 +6,6 @@
 [ext_resource type="LabelSettings" uid="uid://cogkqhwe5gu4r" path="res://scenes/noms.tres" id="3_8gwij"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="4_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://qam46rqwvqwo" path="res://assets_definitif/sprite_bouton.png" id="6_mah5v"]
-[ext_resource type="Script" uid="uid://bn4dryupwxm7h" path="res://scenes/credits_retour.gd" id="7_kyhnv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyhnv"]
 content_margin_left = 10.0
@@ -180,7 +179,7 @@ scale = Vector2(24.257881, 13.777882)
 color = Color(0.8156863, 0.90588236, 0.8666667, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=979910036]
-position = Vector2(736, 410)
+position = Vector2(780, 316)
 texture = ExtResource("4_2fbfq")
 
 [node name="RETOUR" type="Button" parent="." unique_id=1046205165]
@@ -201,7 +200,6 @@ text = "<"
 icon = ExtResource("6_mah5v")
 flat = true
 icon_alignment = 1
-script = ExtResource("7_kyhnv")
 
 [node name="Remerciements" type="Node2D" parent="." unique_id=1950705355]
 position = Vector2(515, 55)
