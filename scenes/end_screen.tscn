@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_vj8vg"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_plosh"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="5_4j4el"]
-[ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_wke0n"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="7_plosh"]
+[ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="7_plosh"]
 [ext_resource type="Script" uid="uid://dn3of88xipmoh" path="res://UI/PressePapier.gd" id="8_um0j2"]
 [ext_resource type="AudioStream" uid="uid://devgdi7esyhhw" path="res://audio/UI/UI_Boutons_01.wav" id="9_fix67"]
 [ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="10_qyl73"]
+[ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_um0j2"]
 
 [node name="EndScreen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_6e1uj")
@@ -41,16 +41,6 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("5_4j4el")]
-
-[node name="Sound" type="Node" parent="." unique_id=58030761]
-
-[node name="SFX" type="AudioStreamPlayer" parent="Sound" unique_id=262459101]
-script = ExtResource("6_wke0n")
-typeSound = 1
-
-[node name="Music" type="AudioStreamPlayer" parent="Sound" unique_id=629643438]
-script = ExtResource("6_wke0n")
-typeSound = 0
 
 [node name="TileMap_Ground" parent="." unique_id=1593015106 instance=ExtResource("7_plosh")]
 tile_map_data = PackedByteArray("AAABAAcACgACAAAAAAACAAcACgACAAAAAAADAAcACgACAAAAAAAEAAcACgACAAAAAAAFAAcACgACAAAAAAAGAAcACgACAAAAAAAHAAcACgACAAAAAAAIAAcACgACAAAAAAAJAAcACgACAAAAAAAKAAcACgACAAAAAAALAAcACgACAAAAAAAMAAcACgACAAAAAAANAAcACgACAAAAAAAOAAcACgACAAAAAAAPAAcACgACAAAAAAAAAAcACgACAAAAAAAQAAcACgACAAAAAAARAAcACgACAAAAAAASAAcACgACAAAAAAATAAcACgACAAAAAAAUAAcACgACAAAAAAAVAAcACgACAAAAAAAWAAcACgACAAAAAAAXAAcACgACAAAAAAAYAAcACgACAAAAAAAZAAcACgACAAAAAAD//wYACgABAAAAAAD//wUACgABAAAAAAD//wQACgABAAAAAAD//wMACgABAAAAAAD//wIACgABAAAAAAD//wEACgABAAAAAAD//wAACgABAAAAAAD//wcACgACAAAAAAA=")
@@ -90,5 +80,7 @@ text = "Copier dans le presse papier"
 script = ExtResource("8_um0j2")
 son_hover = ExtResource("10_qyl73")
 son_click = ExtResource("9_fix67")
+
+[node name="Sound" parent="." unique_id=261311265 instance=ExtResource("10_um0j2")]
 
 [connection signal="pressed" from="RESTART" to="." method="_on_restart_pressed"]

@@ -5,7 +5,7 @@ extends Control
 
 @onready var timer: Timer = $Timer
 @onready var timerCanva: Control = $Texts
-var alarmPlayed: bool=false
+var alarmPlayed: bool=true
 
 func _ready():
 	SignalManager.end_intro.connect(start_timer)
@@ -16,6 +16,7 @@ func start_timer():
 	$Texts.show()
 	timer.wait_time = TIME
 	timer.start()
+	alarmPlayed = false
 	
 func _on_timer_timeout() -> void:
 	WordManager.saveText.emit()
