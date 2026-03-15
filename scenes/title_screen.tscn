@@ -1138,13 +1138,17 @@ son_click = ExtResource("9_frs5l")
 metadata/_edit_use_anchors_ = true
 
 [node name="CREDITS" type="Button" parent="Control/Boutons" unique_id=545395760]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 1.9000008
+anchor_bottom = 1.0
 offset_left = 34.0
 offset_top = 237.0
-offset_right = 135.99997
-offset_bottom = 268.0
-scale = Vector2(2.2397218, 2.2356508)
-theme_override_font_sizes/font_size = 11
+offset_right = 155.99997
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 22
 text = "Crédits"
 icon = ExtResource("8_frs5l")
 flat = true
