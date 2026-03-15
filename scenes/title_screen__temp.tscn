@@ -1,0 +1,1146 @@
+[gd_scene format=3 uid="uid://dp6q02605wigq"]
+
+[ext_resource type="Script" uid="uid://b7uenp3mtbjv5" path="res://scenes/title_screen.gd" id="1_j344v"]
+[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="2_adjdo"]
+[ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets_alice/background_temp.png" id="3_lvp80"]
+[ext_resource type="Texture2D" uid="uid://b7a1t5s5kqwtc" path="res://assets_definitif/AnimationTitre/AnimationTitre_fond.png" id="4_efc2x"]
+[ext_resource type="Texture2D" uid="uid://do5l23pxxqrfa" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-1.png" id="5_uynhr"]
+[ext_resource type="Texture2D" uid="uid://kjtp7n1awrat" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-2.png" id="6_boh6k"]
+[ext_resource type="Texture2D" uid="uid://cud4pgdx1f880" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-3.png" id="7_d0bu3"]
+[ext_resource type="Texture2D" uid="uid://vksjq86ondni" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-4.png" id="8_5ri2u"]
+[ext_resource type="Texture2D" uid="uid://bsqsl36yf6x0r" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-5.png" id="9_26cfi"]
+[ext_resource type="Texture2D" uid="uid://bw5sg4vqus5ie" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-6.png" id="10_c6fmg"]
+[ext_resource type="Texture2D" uid="uid://cuhyil2s7rcq4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-7.png" id="11_k47si"]
+[ext_resource type="Texture2D" uid="uid://c4bwnucoevqf4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-8.png" id="12_f4kdu"]
+[ext_resource type="Texture2D" uid="uid://tb00bc416g1q" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-9.png" id="13_4bk22"]
+[ext_resource type="Texture2D" uid="uid://cqcjwn8ec4v16" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-10.png" id="14_04bvn"]
+[ext_resource type="Texture2D" uid="uid://dl2xtemcqnrhy" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-11.png" id="15_x0pxj"]
+[ext_resource type="Texture2D" uid="uid://j61jjobc71fl" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-12.png" id="16_q7v3k"]
+[ext_resource type="Texture2D" uid="uid://tglwssjluhq6" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-13.png" id="17_x4ogx"]
+[ext_resource type="Texture2D" uid="uid://da0lobla74rhv" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-14.png" id="18_k5od2"]
+[ext_resource type="Texture2D" uid="uid://d2tbfscml2t2q" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-15.png" id="19_i4v8r"]
+[ext_resource type="Texture2D" uid="uid://bwvih5xeue2by" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-16.png" id="20_txas7"]
+[ext_resource type="Texture2D" uid="uid://clff6jc6l6jss" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-17.png" id="21_dh48s"]
+[ext_resource type="Texture2D" uid="uid://c8bauyekyybu8" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-18.png" id="22_k8d2x"]
+[ext_resource type="Texture2D" uid="uid://bcpa7oro101rg" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-19.png" id="23_2m2hg"]
+[ext_resource type="Texture2D" uid="uid://csomg8g5ewxe6" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-20.png" id="24_da78w"]
+[ext_resource type="Texture2D" uid="uid://yyodqo4kajgs" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-21.png" id="25_5omnk"]
+[ext_resource type="Texture2D" uid="uid://dv4n3t42457o6" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-22.png" id="26_k6y8f"]
+[ext_resource type="Texture2D" uid="uid://djlxi4fuq5nnd" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-23.png" id="27_mlvdq"]
+[ext_resource type="Texture2D" uid="uid://dld2l727erhht" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-24.png" id="28_g2kaq"]
+[ext_resource type="Texture2D" uid="uid://bef67bda1bbw4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-25.png" id="29_g22cm"]
+[ext_resource type="Texture2D" uid="uid://ic4lb7vab7yk" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-26.png" id="30_cfsi2"]
+[ext_resource type="Texture2D" uid="uid://cuy5tspa1sevi" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-27.png" id="31_kiv5i"]
+[ext_resource type="Texture2D" uid="uid://bd0scjnstv1kj" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-28.png" id="32_634nq"]
+[ext_resource type="Texture2D" uid="uid://c1va5crhnshgy" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-29.png" id="33_3kgyt"]
+[ext_resource type="Texture2D" uid="uid://dfs87iudbq7uf" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-30.png" id="34_bfv24"]
+[ext_resource type="Texture2D" uid="uid://6je4hr2irmi3" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-31.png" id="35_fdm4y"]
+[ext_resource type="Texture2D" uid="uid://b4weqgwvp0seq" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-32.png" id="36_4fslb"]
+[ext_resource type="Texture2D" uid="uid://bk2o8c80fl7dj" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-33.png" id="37_vsu7m"]
+[ext_resource type="Texture2D" uid="uid://dyrda60jtrrmg" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-34.png" id="38_kg5qh"]
+[ext_resource type="Texture2D" uid="uid://ddl6hmbo43ita" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-35.png" id="39_vd7cg"]
+[ext_resource type="Texture2D" uid="uid://dei65jn6msbxh" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-36.png" id="40_43oft"]
+[ext_resource type="Texture2D" uid="uid://dhr1i4yt1ssv4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-37.png" id="41_8q4yq"]
+[ext_resource type="Texture2D" uid="uid://drm24er7bdrb4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-38.png" id="42_lbybs"]
+[ext_resource type="Texture2D" uid="uid://cub0aqwidgoux" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-39.png" id="43_waeqy"]
+[ext_resource type="Texture2D" uid="uid://dypkmpnbye0k5" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-40.png" id="44_p78wy"]
+[ext_resource type="Texture2D" uid="uid://b3ksni3iver8" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-41.png" id="45_r7vq5"]
+[ext_resource type="Texture2D" uid="uid://cernnit7ardk5" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-42.png" id="46_m0j66"]
+[ext_resource type="Texture2D" uid="uid://bmmoihd8rppmy" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-43.png" id="47_28pxi"]
+[ext_resource type="Texture2D" uid="uid://qbml1qocsa2x" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-44.png" id="48_qihlm"]
+[ext_resource type="Texture2D" uid="uid://dkgxr2flyjfr7" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-45.png" id="49_infm2"]
+[ext_resource type="Texture2D" uid="uid://biyahhpj1c1up" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-46.png" id="50_gyb7c"]
+[ext_resource type="Texture2D" uid="uid://bb5oplrr6tnml" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-47.png" id="51_31hbi"]
+[ext_resource type="Texture2D" uid="uid://dpunxqk8j4uql" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-48.png" id="52_blshp"]
+[ext_resource type="Texture2D" uid="uid://b1bygfsf8pes0" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-49.png" id="53_5hnrf"]
+[ext_resource type="Texture2D" uid="uid://bcmyt0q016cdu" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-50.png" id="54_40ssk"]
+[ext_resource type="Texture2D" uid="uid://d1pe0iojfsvuo" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-51.png" id="55_cn7f4"]
+[ext_resource type="Texture2D" uid="uid://tpjp584y7rfc" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-52.png" id="56_n55pp"]
+[ext_resource type="Texture2D" uid="uid://qdrxnho3igrm" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-53.png" id="57_yvua1"]
+[ext_resource type="Texture2D" uid="uid://0h1tr3if0fu2" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-54.png" id="58_netok"]
+[ext_resource type="Texture2D" uid="uid://dmubi5w5odxnm" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-55.png" id="59_wino3"]
+[ext_resource type="Texture2D" uid="uid://bokch7npbisl6" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-56.png" id="60_byn8x"]
+[ext_resource type="Texture2D" uid="uid://cs7o7dv0dmaxo" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-57.png" id="61_3tmjc"]
+[ext_resource type="Texture2D" uid="uid://cq3j0kqa52d3l" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-58.png" id="62_6n47d"]
+[ext_resource type="Texture2D" uid="uid://dvkpqruk6eexy" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-59.png" id="63_uif4q"]
+[ext_resource type="Texture2D" uid="uid://dk6u53s8kny74" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-60.png" id="64_c40ru"]
+[ext_resource type="Texture2D" uid="uid://do0wmcomj2bat" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-61.png" id="65_cy73p"]
+[ext_resource type="Texture2D" uid="uid://6qnko24haptj" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-62.png" id="66_jbsgi"]
+[ext_resource type="Texture2D" uid="uid://nokf1bp52jnt" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-63.png" id="67_ilot4"]
+[ext_resource type="Texture2D" uid="uid://mat28u2sgrxu" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-64.png" id="68_nsjkt"]
+[ext_resource type="Texture2D" uid="uid://drpm4coae2q07" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-65.png" id="69_h0enf"]
+[ext_resource type="Texture2D" uid="uid://ccm3cgcnjtume" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-66.png" id="70_nw7f2"]
+[ext_resource type="Texture2D" uid="uid://c0gcw7iy168if" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-67.png" id="71_k7hdq"]
+[ext_resource type="Texture2D" uid="uid://ciuamlcjijges" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-68.png" id="72_2ivut"]
+[ext_resource type="Texture2D" uid="uid://dngbqgqx3rdeo" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-69.png" id="73_1kfy6"]
+[ext_resource type="Texture2D" uid="uid://b75yl5h4joryn" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-70.png" id="74_2ly2q"]
+[ext_resource type="Texture2D" uid="uid://dkvl40b0lfnyg" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-71.png" id="75_e1nyx"]
+[ext_resource type="Texture2D" uid="uid://cj4kokj1qbioi" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-72.png" id="76_143g1"]
+[ext_resource type="Texture2D" uid="uid://bmxx2iydxmfq2" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-73.png" id="77_u2g2c"]
+[ext_resource type="Texture2D" uid="uid://dvhl8xkxv36ib" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-74.png" id="78_he8m7"]
+[ext_resource type="Texture2D" uid="uid://yagq71myssk7" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-75.png" id="79_3tr6n"]
+[ext_resource type="Texture2D" uid="uid://c2kdlm2geooln" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-76.png" id="80_jae0a"]
+[ext_resource type="Texture2D" uid="uid://ia42r2llsbis" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-77.png" id="81_w6nkl"]
+[ext_resource type="Texture2D" uid="uid://c6vn4solohv4v" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-78.png" id="82_sfe30"]
+[ext_resource type="Texture2D" uid="uid://bncqj21x5co52" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-79.png" id="83_ek0mn"]
+[ext_resource type="Texture2D" uid="uid://cxwj8yo3j4gb2" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-80.png" id="84_5ulf4"]
+[ext_resource type="Texture2D" uid="uid://bckmwnafb1c5r" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-81.png" id="85_nyypg"]
+[ext_resource type="Texture2D" uid="uid://drm4028erfdom" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-82.png" id="86_riwef"]
+[ext_resource type="Texture2D" uid="uid://bhmndqcs77yq6" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-83.png" id="87_a5rql"]
+[ext_resource type="Texture2D" uid="uid://jbkatfvx5ilr" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-84.png" id="88_oan83"]
+[ext_resource type="Script" uid="uid://dlu3xrn5l26a3" path="res://scenes/title__animated_sprite_2d.gd" id="89_ef5tv"]
+[ext_resource type="Texture2D" uid="uid://ds7ytgjchbxfs" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-1.png" id="90_ii5ax"]
+[ext_resource type="Texture2D" uid="uid://dqiv3o8kdg4l5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-2.png" id="91_c4140"]
+[ext_resource type="Texture2D" uid="uid://d3glp44fi2i4m" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-3.png" id="92_0baag"]
+[ext_resource type="Texture2D" uid="uid://dklrdh01dtqta" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-4.png" id="93_b1x0d"]
+[ext_resource type="Texture2D" uid="uid://bqjfwgm6q3ae" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-5.png" id="94_am3bl"]
+[ext_resource type="Texture2D" uid="uid://jq4vg5jobhgx" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-6.png" id="95_tkt7f"]
+[ext_resource type="Texture2D" uid="uid://bum0kmfitkn8i" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-7.png" id="96_e01fe"]
+[ext_resource type="Texture2D" uid="uid://cttcswp1eejvb" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-8.png" id="97_x46f3"]
+[ext_resource type="Texture2D" uid="uid://bk0s5ntdo6dxv" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-9.png" id="98_k7sb2"]
+[ext_resource type="Texture2D" uid="uid://chgq3nixb3uaf" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-10.png" id="99_scj7u"]
+[ext_resource type="Texture2D" uid="uid://ccy3uxo3ge5p0" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-11.png" id="100_fcu84"]
+[ext_resource type="Texture2D" uid="uid://bem321ey1p0wi" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-12.png" id="101_ogauj"]
+[ext_resource type="Texture2D" uid="uid://xfrjp5cj3ty4" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-13.png" id="102_6k7yu"]
+[ext_resource type="Texture2D" uid="uid://btn0xx4rub4xo" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-14.png" id="103_7rspi"]
+[ext_resource type="Texture2D" uid="uid://duoj0rn6eg5nt" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-15.png" id="104_ep64r"]
+[ext_resource type="Texture2D" uid="uid://baw6v3vk3ywn8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-16.png" id="105_fecnq"]
+[ext_resource type="Texture2D" uid="uid://dglh1sbv5k4b6" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-17.png" id="106_x7813"]
+[ext_resource type="Texture2D" uid="uid://8d1r4ifx8f13" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-18.png" id="107_q4051"]
+[ext_resource type="Texture2D" uid="uid://b5jfkgumu2s5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-19.png" id="108_s2yml"]
+[ext_resource type="Texture2D" uid="uid://bfrup51pw8ea1" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-20.png" id="109_a8wvb"]
+[ext_resource type="Texture2D" uid="uid://4f0qdnyy6dq6" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-21.png" id="110_kxcbs"]
+[ext_resource type="Texture2D" uid="uid://xwrwk0qb37ov" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-22.png" id="111_78gto"]
+[ext_resource type="Texture2D" uid="uid://dgkovpfrvt6ja" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-23.png" id="112_mnpb6"]
+[ext_resource type="Texture2D" uid="uid://bof2ykbr2evsb" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-24.png" id="113_fa7f1"]
+[ext_resource type="Texture2D" uid="uid://r2qxbsefegct" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-25.png" id="114_w0lyc"]
+[ext_resource type="Texture2D" uid="uid://qs0g52cs1882" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-26.png" id="115_n37fx"]
+[ext_resource type="Texture2D" uid="uid://lyg68obg85q2" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-27.png" id="116_wlfg5"]
+[ext_resource type="Texture2D" uid="uid://p8khbfkgr8vl" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-28.png" id="117_mgli2"]
+[ext_resource type="Texture2D" uid="uid://lu45370q3gyv" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-29.png" id="118_262go"]
+[ext_resource type="Texture2D" uid="uid://bgs0hxnx44on8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-30.png" id="119_0iqyj"]
+[ext_resource type="Texture2D" uid="uid://csm6l355rylao" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-31.png" id="120_nocr4"]
+[ext_resource type="Texture2D" uid="uid://dd7cg8an7nq4e" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-32.png" id="121_sbltr"]
+[ext_resource type="Texture2D" uid="uid://cs8drdfhu1ddo" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-33.png" id="122_0l7xj"]
+[ext_resource type="Texture2D" uid="uid://c5n1p457td0ae" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-34.png" id="123_mqg57"]
+[ext_resource type="Texture2D" uid="uid://0mh8fvdlhwjm" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-35.png" id="124_5o6vr"]
+[ext_resource type="Texture2D" uid="uid://d2lhh8yt8ywmx" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-36.png" id="125_evo0w"]
+[ext_resource type="Texture2D" uid="uid://d2s0jpxg8g8b5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-37.png" id="126_wg2si"]
+[ext_resource type="Texture2D" uid="uid://bgwvyoqls3ghp" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-38.png" id="127_qmsuq"]
+[ext_resource type="Texture2D" uid="uid://biwu3nbu2ect8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-39.png" id="128_g3o3s"]
+[ext_resource type="Texture2D" uid="uid://cwfcohw0lgjb0" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-40.png" id="129_3mjxb"]
+[ext_resource type="Texture2D" uid="uid://bj3sbe1mtokvk" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-41.png" id="130_rupoe"]
+[ext_resource type="Texture2D" uid="uid://cc3sivpcctgdi" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-42.png" id="131_5epkv"]
+[ext_resource type="Texture2D" uid="uid://bg3a1ilcsbgwn" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-43.png" id="132_mkarc"]
+[ext_resource type="Texture2D" uid="uid://cgkmcg518acgy" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-44.png" id="133_uxr3h"]
+[ext_resource type="Texture2D" uid="uid://cqqgu8mhb0vfw" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-45.png" id="134_pcr2x"]
+[ext_resource type="Texture2D" uid="uid://1jmfpe0aour4" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-46.png" id="135_8hfwi"]
+[ext_resource type="Texture2D" uid="uid://5kxeeerjsgll" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-47.png" id="136_wcilx"]
+[ext_resource type="Texture2D" uid="uid://br40u4q1wodvs" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-48.png" id="137_f6r1s"]
+[ext_resource type="Texture2D" uid="uid://b802qfob1l3ho" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-49.png" id="138_gpyur"]
+[ext_resource type="Texture2D" uid="uid://7smg7457p4q2" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-50.png" id="139_paecf"]
+[ext_resource type="Texture2D" uid="uid://devbjodl6rwje" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-51.png" id="140_jphwn"]
+[ext_resource type="Texture2D" uid="uid://bjcxsd3bfmvq4" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-52.png" id="141_2u6c6"]
+[ext_resource type="Texture2D" uid="uid://1hn65qbenykv" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-53.png" id="142_oa4ib"]
+[ext_resource type="Texture2D" uid="uid://b8fk7or6b7y32" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-54.png" id="143_7vu8r"]
+[ext_resource type="Texture2D" uid="uid://drv8qxefdb2r8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-55.png" id="144_aux5a"]
+[ext_resource type="Texture2D" uid="uid://msflm0ejllou" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-56.png" id="145_nxt1v"]
+[ext_resource type="Texture2D" uid="uid://i3aax5ybryvf" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-57.png" id="146_jl0rw"]
+[ext_resource type="Texture2D" uid="uid://dfc6245p8ip8d" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-58.png" id="147_yehb2"]
+[ext_resource type="Texture2D" uid="uid://dp573t5augbiq" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-59.png" id="148_v0h3q"]
+[ext_resource type="Texture2D" uid="uid://cg3r4ufaas0th" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-60.png" id="149_wp76b"]
+[ext_resource type="Texture2D" uid="uid://di6o1b8858b3w" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-61.png" id="150_uwjab"]
+[ext_resource type="Texture2D" uid="uid://chht2b2pk0udb" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-62.png" id="151_ek0sb"]
+[ext_resource type="Texture2D" uid="uid://bvw437eyrodok" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-63.png" id="152_2woyi"]
+[ext_resource type="Texture2D" uid="uid://cdtsy4hoidia" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-64.png" id="153_wn1ea"]
+[ext_resource type="Texture2D" uid="uid://dh8b211omhi5t" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-65.png" id="154_hb56o"]
+[ext_resource type="Texture2D" uid="uid://drw73wx1a8spu" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-66.png" id="155_jnqk8"]
+[ext_resource type="Texture2D" uid="uid://dyyswsnproj7x" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-67.png" id="156_lxwot"]
+[ext_resource type="Texture2D" uid="uid://bfhxvhe18xaag" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-68.png" id="157_mn2fp"]
+[ext_resource type="Texture2D" uid="uid://1bct1phlpm7a" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-69.png" id="158_65vyg"]
+[ext_resource type="Texture2D" uid="uid://brymo1g21d0hy" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-70.png" id="159_2bh3b"]
+[ext_resource type="Texture2D" uid="uid://cbt58u0anyrf0" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-71.png" id="160_81kv3"]
+[ext_resource type="Texture2D" uid="uid://c51kheqqlpmp8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-72.png" id="161_s2up8"]
+[ext_resource type="Texture2D" uid="uid://c7nl1o74b3hg3" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-73.png" id="162_s4yqr"]
+[ext_resource type="Texture2D" uid="uid://dhmghrfjsph2v" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-74.png" id="163_cpfir"]
+[ext_resource type="Texture2D" uid="uid://dpm386pili67t" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-75.png" id="164_botsd"]
+[ext_resource type="Texture2D" uid="uid://3bf8m5ybh7eq" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-76.png" id="165_jn23j"]
+[ext_resource type="Texture2D" uid="uid://3jnsd2xag6pg" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-77.png" id="166_mtmfq"]
+[ext_resource type="Texture2D" uid="uid://ct5jo51c7rtne" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-78.png" id="167_e810x"]
+[ext_resource type="Texture2D" uid="uid://c3mnbhfwoa6h7" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-79.png" id="168_y0yci"]
+[ext_resource type="Texture2D" uid="uid://xynpmrjby1wu" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-80.png" id="169_gblga"]
+[ext_resource type="Texture2D" uid="uid://bbktim7yi7q38" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-81.png" id="170_jt3h1"]
+[ext_resource type="Texture2D" uid="uid://b01h2rag546d0" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-82.png" id="171_gpd22"]
+[ext_resource type="Texture2D" uid="uid://ylw8l0o67onu" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-83.png" id="172_05tx6"]
+[ext_resource type="Texture2D" uid="uid://df0nsytha5po6" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-84.png" id="173_nu8ym"]
+[ext_resource type="Texture2D" uid="uid://du7c73ykra7a5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-85.png" id="174_xea7b"]
+[ext_resource type="Texture2D" uid="uid://wn8waap8s726" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-86.png" id="175_ka8i0"]
+[ext_resource type="Texture2D" uid="uid://j55whrmkak21" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-87.png" id="176_okujg"]
+[ext_resource type="Texture2D" uid="uid://cynfxs7ppg1ra" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-88.png" id="177_cn8eh"]
+[ext_resource type="Texture2D" uid="uid://bmny0j8cf565h" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-89.png" id="178_6k2mo"]
+[ext_resource type="Texture2D" uid="uid://oxnat6fskhbu" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-90.png" id="179_vx16e"]
+[ext_resource type="Texture2D" uid="uid://d0jgs2xdljx22" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-91.png" id="180_x24am"]
+[ext_resource type="Texture2D" uid="uid://c01ceff4r67ya" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-92.png" id="181_a0cw4"]
+[ext_resource type="Texture2D" uid="uid://d4jr7ukxdp2j8" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-93.png" id="182_jmq04"]
+[ext_resource type="Texture2D" uid="uid://dqva0658msa5g" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-94.png" id="183_6piqs"]
+[ext_resource type="Texture2D" uid="uid://b3etkpoc4j8e7" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-95.png" id="184_f2v2a"]
+[ext_resource type="Script" uid="uid://drvm1fom2d4gb" path="res://scenes/title__animated_sprite_2d__2.gd" id="185_a7ap7"]
+[ext_resource type="Texture2D" uid="uid://pqhxnbrlphqd" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-1.png" id="186_o5v4q"]
+[ext_resource type="Texture2D" uid="uid://df2u57url6aue" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-2.png" id="187_flg15"]
+[ext_resource type="Texture2D" uid="uid://c0hlyvo22431g" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-3.png" id="188_cr6sh"]
+[ext_resource type="Texture2D" uid="uid://dte2e44ihkamu" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-4.png" id="189_6smff"]
+[ext_resource type="Texture2D" uid="uid://c7u7nuvddh8ko" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-5.png" id="190_thu34"]
+[ext_resource type="Texture2D" uid="uid://d4ews6h5342el" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-6.png" id="191_c0ead"]
+[ext_resource type="Texture2D" uid="uid://cffc5ofg08fd1" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-7.png" id="192_l44th"]
+[ext_resource type="Texture2D" uid="uid://dbjj8g7k6y07l" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-8.png" id="193_f08xu"]
+[ext_resource type="Texture2D" uid="uid://cn4o8oxng8e0" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-9.png" id="194_m5wbc"]
+[ext_resource type="Texture2D" uid="uid://b1read315ysxw" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-10.png" id="195_srlo1"]
+[ext_resource type="Texture2D" uid="uid://csbkc4vb6vh2f" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-11.png" id="196_bpf0r"]
+[ext_resource type="Texture2D" uid="uid://b41i1lqybupq4" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-12.png" id="197_dq2e1"]
+[ext_resource type="Texture2D" uid="uid://citgmvtm5jfar" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-13.png" id="198_w0ubc"]
+[ext_resource type="Texture2D" uid="uid://drtcudft1qcgq" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-14.png" id="199_idouc"]
+[ext_resource type="Texture2D" uid="uid://bgokba3anl4vg" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-15.png" id="200_vi8u0"]
+[ext_resource type="Texture2D" uid="uid://dytchy22eq1r3" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-16.png" id="201_yd7dw"]
+[ext_resource type="Texture2D" uid="uid://ctiedyv0pjod5" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-17.png" id="202_55vy2"]
+[ext_resource type="Texture2D" uid="uid://6mlvi7pkbxkb" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-18.png" id="203_0kh5h"]
+[ext_resource type="Texture2D" uid="uid://vgcpfubxt5qh" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-19.png" id="204_3cpcd"]
+[ext_resource type="Texture2D" uid="uid://0ve43mn1q1vm" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-20.png" id="205_jcejl"]
+[ext_resource type="Texture2D" uid="uid://5r1yj2ebpsws" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-21.png" id="206_s1wnb"]
+[ext_resource type="Texture2D" uid="uid://bl1g7o7wvsscn" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-22.png" id="207_0oydw"]
+[ext_resource type="Texture2D" uid="uid://c7f2wybq3cw6i" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-23.png" id="208_meg1r"]
+[ext_resource type="Texture2D" uid="uid://gepudiaoteby" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-24.png" id="209_3e8s4"]
+[ext_resource type="Texture2D" uid="uid://jf0q8uxnjik4" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-25.png" id="210_u70wy"]
+[ext_resource type="Texture2D" uid="uid://324rl3n6lav6" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-26.png" id="211_a3xym"]
+[ext_resource type="Texture2D" uid="uid://boxbdfnh0owmk" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-27.png" id="212_6ncbp"]
+[ext_resource type="Texture2D" uid="uid://dhot2i1e4k0mi" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-28.png" id="213_nj0sy"]
+[ext_resource type="Texture2D" uid="uid://diqydxv0px2xc" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-29.png" id="214_uqxmb"]
+[ext_resource type="Texture2D" uid="uid://drysnr2dswg5y" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-30.png" id="215_1jygp"]
+[ext_resource type="Texture2D" uid="uid://cnmqm4c5kw3gb" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-31.png" id="216_xspu0"]
+[ext_resource type="Texture2D" uid="uid://bu0q2tdu08wwg" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-32.png" id="217_mjdc7"]
+[ext_resource type="Texture2D" uid="uid://bl10v0hta0gan" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-33.png" id="218_unpdk"]
+[ext_resource type="Texture2D" uid="uid://diqtc1g0asaws" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-34.png" id="219_kjjiu"]
+[ext_resource type="Texture2D" uid="uid://5k0nxlx0a37m" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-35.png" id="220_5yfal"]
+[ext_resource type="Texture2D" uid="uid://bwr5sm7r1b01u" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-36.png" id="221_tf2b6"]
+[ext_resource type="Texture2D" uid="uid://vac280mb3vrf" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-37.png" id="222_8n4uu"]
+[ext_resource type="Texture2D" uid="uid://bveqvlbdukn0e" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-38.png" id="223_hwegt"]
+[ext_resource type="Texture2D" uid="uid://v4whqoxiun1x" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-39.png" id="224_5kt3c"]
+[ext_resource type="Texture2D" uid="uid://dbqd5cyqa6k52" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-40.png" id="225_7muff"]
+[ext_resource type="Texture2D" uid="uid://byn03e8lmcd6l" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-41.png" id="226_k6eb7"]
+[ext_resource type="Texture2D" uid="uid://dsrpqbj0jb3aa" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-42.png" id="227_snhq7"]
+[ext_resource type="Texture2D" uid="uid://mhy5rtdex2hg" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-43.png" id="228_xvpy5"]
+[ext_resource type="Texture2D" uid="uid://cxu7u6bndwtks" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-44.png" id="229_if38q"]
+[ext_resource type="Texture2D" uid="uid://dmvvwg4jgk73u" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-45.png" id="230_6co3t"]
+[ext_resource type="Texture2D" uid="uid://ddp0m3jrktehk" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-46.png" id="231_woa5q"]
+[ext_resource type="Texture2D" uid="uid://cqaaelcw7a4mi" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-47.png" id="232_wwj2q"]
+[ext_resource type="Texture2D" uid="uid://rib7d8ytdqsj" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-48.png" id="233_aaqrr"]
+[ext_resource type="Texture2D" uid="uid://u7i7kox7mn4h" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-49.png" id="234_5gxxv"]
+[ext_resource type="Texture2D" uid="uid://cbylihsv4v6nl" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-50.png" id="235_xaqc3"]
+[ext_resource type="Texture2D" uid="uid://caalps16oeole" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-51.png" id="236_moocf"]
+[ext_resource type="Texture2D" uid="uid://dlyjvjyblnn82" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-52.png" id="237_lg388"]
+[ext_resource type="Texture2D" uid="uid://doxr7v52trubx" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-53.png" id="238_fmse6"]
+[ext_resource type="Texture2D" uid="uid://78ocxowhdknl" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-54.png" id="239_3m8rf"]
+[ext_resource type="Texture2D" uid="uid://dixrr8fv6y6p0" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-55.png" id="240_0ikoe"]
+[ext_resource type="Texture2D" uid="uid://dyxry3s34vuom" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-56.png" id="241_63aa5"]
+[ext_resource type="Texture2D" uid="uid://doasomd4n272h" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-57.png" id="242_im46j"]
+[ext_resource type="Texture2D" uid="uid://dvkqcvw8bqlhc" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-58.png" id="243_r4ciw"]
+[ext_resource type="Texture2D" uid="uid://bups6b5qy4o3h" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-59.png" id="244_l2bld"]
+[ext_resource type="Texture2D" uid="uid://dhavf3rijy7wt" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-60.png" id="245_scdtv"]
+[ext_resource type="Texture2D" uid="uid://dkvw7e0davvwa" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-61.png" id="246_yp2ek"]
+[ext_resource type="Script" uid="uid://3i826d3sxdno" path="res://scenes/title__animated_sprite_2d__3.gd" id="247_o86lm"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="248_hbgkm"]
+[ext_resource type="Script" uid="uid://cxt8brg3ecx2g" path="res://audio/UI/UIButton.gd" id="249_o7bd6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgkus"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("5_uynhr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("6_boh6k")
+}, {
+"duration": 0.2,
+"texture": ExtResource("7_d0bu3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("8_5ri2u")
+}, {
+"duration": 0.2,
+"texture": ExtResource("9_26cfi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("10_c6fmg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("11_k47si")
+}, {
+"duration": 0.2,
+"texture": ExtResource("12_f4kdu")
+}, {
+"duration": 0.2,
+"texture": ExtResource("13_4bk22")
+}, {
+"duration": 0.2,
+"texture": ExtResource("14_04bvn")
+}, {
+"duration": 0.2,
+"texture": ExtResource("15_x0pxj")
+}, {
+"duration": 0.2,
+"texture": ExtResource("16_q7v3k")
+}, {
+"duration": 0.2,
+"texture": ExtResource("17_x4ogx")
+}, {
+"duration": 0.2,
+"texture": ExtResource("18_k5od2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("19_i4v8r")
+}, {
+"duration": 0.2,
+"texture": ExtResource("20_txas7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("21_dh48s")
+}, {
+"duration": 0.2,
+"texture": ExtResource("22_k8d2x")
+}, {
+"duration": 0.2,
+"texture": ExtResource("23_2m2hg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("24_da78w")
+}, {
+"duration": 0.2,
+"texture": ExtResource("25_5omnk")
+}, {
+"duration": 0.2,
+"texture": ExtResource("26_k6y8f")
+}, {
+"duration": 0.2,
+"texture": ExtResource("27_mlvdq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("28_g2kaq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("29_g22cm")
+}, {
+"duration": 0.2,
+"texture": ExtResource("30_cfsi2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("31_kiv5i")
+}, {
+"duration": 0.2,
+"texture": ExtResource("32_634nq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("33_3kgyt")
+}, {
+"duration": 0.2,
+"texture": ExtResource("34_bfv24")
+}, {
+"duration": 0.2,
+"texture": ExtResource("35_fdm4y")
+}, {
+"duration": 0.2,
+"texture": ExtResource("36_4fslb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("37_vsu7m")
+}, {
+"duration": 0.2,
+"texture": ExtResource("38_kg5qh")
+}, {
+"duration": 0.2,
+"texture": ExtResource("39_vd7cg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("40_43oft")
+}, {
+"duration": 0.2,
+"texture": ExtResource("41_8q4yq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("42_lbybs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("43_waeqy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("44_p78wy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("45_r7vq5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("46_m0j66")
+}, {
+"duration": 0.2,
+"texture": ExtResource("47_28pxi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("48_qihlm")
+}, {
+"duration": 0.2,
+"texture": ExtResource("49_infm2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("50_gyb7c")
+}, {
+"duration": 0.2,
+"texture": ExtResource("51_31hbi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("52_blshp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("53_5hnrf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("54_40ssk")
+}, {
+"duration": 0.2,
+"texture": ExtResource("55_cn7f4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("56_n55pp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("57_yvua1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("58_netok")
+}, {
+"duration": 0.2,
+"texture": ExtResource("59_wino3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("60_byn8x")
+}, {
+"duration": 0.2,
+"texture": ExtResource("61_3tmjc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("62_6n47d")
+}, {
+"duration": 0.2,
+"texture": ExtResource("63_uif4q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("64_c40ru")
+}, {
+"duration": 0.2,
+"texture": ExtResource("65_cy73p")
+}, {
+"duration": 0.2,
+"texture": ExtResource("66_jbsgi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("67_ilot4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("68_nsjkt")
+}, {
+"duration": 0.2,
+"texture": ExtResource("69_h0enf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("70_nw7f2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("71_k7hdq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("72_2ivut")
+}, {
+"duration": 0.2,
+"texture": ExtResource("73_1kfy6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("74_2ly2q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("75_e1nyx")
+}, {
+"duration": 0.2,
+"texture": ExtResource("76_143g1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("77_u2g2c")
+}, {
+"duration": 0.2,
+"texture": ExtResource("78_he8m7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("79_3tr6n")
+}, {
+"duration": 0.2,
+"texture": ExtResource("80_jae0a")
+}, {
+"duration": 0.2,
+"texture": ExtResource("81_w6nkl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("82_sfe30")
+}, {
+"duration": 0.2,
+"texture": ExtResource("83_ek0mn")
+}, {
+"duration": 0.2,
+"texture": ExtResource("84_5ulf4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("85_nyypg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("86_riwef")
+}, {
+"duration": 0.2,
+"texture": ExtResource("87_a5rql")
+}, {
+"duration": 0.2,
+"texture": ExtResource("88_oan83")
+}],
+"loop": false,
+"name": &"animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("88_oan83")
+}],
+"loop": true,
+"name": &"static",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7itg5"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("90_ii5ax")
+}, {
+"duration": 0.2,
+"texture": ExtResource("91_c4140")
+}, {
+"duration": 0.2,
+"texture": ExtResource("92_0baag")
+}, {
+"duration": 0.2,
+"texture": ExtResource("93_b1x0d")
+}, {
+"duration": 0.2,
+"texture": ExtResource("94_am3bl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("95_tkt7f")
+}, {
+"duration": 0.2,
+"texture": ExtResource("96_e01fe")
+}, {
+"duration": 0.2,
+"texture": ExtResource("97_x46f3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("98_k7sb2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("99_scj7u")
+}, {
+"duration": 0.2,
+"texture": ExtResource("100_fcu84")
+}, {
+"duration": 0.2,
+"texture": ExtResource("101_ogauj")
+}, {
+"duration": 0.2,
+"texture": ExtResource("102_6k7yu")
+}, {
+"duration": 0.2,
+"texture": ExtResource("103_7rspi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("104_ep64r")
+}, {
+"duration": 0.2,
+"texture": ExtResource("105_fecnq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("106_x7813")
+}, {
+"duration": 0.2,
+"texture": ExtResource("107_q4051")
+}, {
+"duration": 0.2,
+"texture": ExtResource("108_s2yml")
+}, {
+"duration": 0.2,
+"texture": ExtResource("109_a8wvb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("110_kxcbs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("111_78gto")
+}, {
+"duration": 0.2,
+"texture": ExtResource("112_mnpb6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("113_fa7f1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("114_w0lyc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("115_n37fx")
+}, {
+"duration": 0.2,
+"texture": ExtResource("116_wlfg5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("117_mgli2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("118_262go")
+}, {
+"duration": 0.2,
+"texture": ExtResource("119_0iqyj")
+}, {
+"duration": 0.2,
+"texture": ExtResource("120_nocr4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("121_sbltr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("122_0l7xj")
+}, {
+"duration": 0.2,
+"texture": ExtResource("123_mqg57")
+}, {
+"duration": 0.2,
+"texture": ExtResource("124_5o6vr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("125_evo0w")
+}, {
+"duration": 0.2,
+"texture": ExtResource("126_wg2si")
+}, {
+"duration": 0.2,
+"texture": ExtResource("127_qmsuq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("128_g3o3s")
+}, {
+"duration": 0.2,
+"texture": ExtResource("129_3mjxb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("130_rupoe")
+}, {
+"duration": 0.2,
+"texture": ExtResource("131_5epkv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("132_mkarc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("133_uxr3h")
+}, {
+"duration": 0.2,
+"texture": ExtResource("134_pcr2x")
+}, {
+"duration": 0.2,
+"texture": ExtResource("135_8hfwi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("136_wcilx")
+}, {
+"duration": 0.2,
+"texture": ExtResource("137_f6r1s")
+}, {
+"duration": 0.2,
+"texture": ExtResource("138_gpyur")
+}, {
+"duration": 0.2,
+"texture": ExtResource("139_paecf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("140_jphwn")
+}, {
+"duration": 0.2,
+"texture": ExtResource("141_2u6c6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("142_oa4ib")
+}, {
+"duration": 0.2,
+"texture": ExtResource("143_7vu8r")
+}, {
+"duration": 0.2,
+"texture": ExtResource("144_aux5a")
+}, {
+"duration": 0.2,
+"texture": ExtResource("145_nxt1v")
+}, {
+"duration": 0.2,
+"texture": ExtResource("146_jl0rw")
+}, {
+"duration": 0.2,
+"texture": ExtResource("147_yehb2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("148_v0h3q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("149_wp76b")
+}, {
+"duration": 0.2,
+"texture": ExtResource("150_uwjab")
+}, {
+"duration": 0.2,
+"texture": ExtResource("151_ek0sb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("152_2woyi")
+}, {
+"duration": 0.2,
+"texture": ExtResource("153_wn1ea")
+}, {
+"duration": 0.2,
+"texture": ExtResource("154_hb56o")
+}, {
+"duration": 0.2,
+"texture": ExtResource("155_jnqk8")
+}, {
+"duration": 0.2,
+"texture": ExtResource("156_lxwot")
+}, {
+"duration": 0.2,
+"texture": ExtResource("157_mn2fp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("158_65vyg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("159_2bh3b")
+}, {
+"duration": 0.2,
+"texture": ExtResource("160_81kv3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("161_s2up8")
+}, {
+"duration": 0.2,
+"texture": ExtResource("162_s4yqr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("163_cpfir")
+}, {
+"duration": 0.2,
+"texture": ExtResource("164_botsd")
+}, {
+"duration": 0.2,
+"texture": ExtResource("165_jn23j")
+}, {
+"duration": 0.2,
+"texture": ExtResource("166_mtmfq")
+}, {
+"duration": 0.2,
+"texture": ExtResource("167_e810x")
+}, {
+"duration": 0.2,
+"texture": ExtResource("168_y0yci")
+}, {
+"duration": 0.2,
+"texture": ExtResource("169_gblga")
+}, {
+"duration": 0.2,
+"texture": ExtResource("170_jt3h1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("171_gpd22")
+}, {
+"duration": 0.2,
+"texture": ExtResource("172_05tx6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("173_nu8ym")
+}, {
+"duration": 0.2,
+"texture": ExtResource("174_xea7b")
+}, {
+"duration": 0.2,
+"texture": ExtResource("175_ka8i0")
+}, {
+"duration": 0.2,
+"texture": ExtResource("176_okujg")
+}, {
+"duration": 0.2,
+"texture": ExtResource("177_cn8eh")
+}, {
+"duration": 0.2,
+"texture": ExtResource("178_6k2mo")
+}, {
+"duration": 0.2,
+"texture": ExtResource("179_vx16e")
+}, {
+"duration": 0.2,
+"texture": ExtResource("180_x24am")
+}, {
+"duration": 0.2,
+"texture": ExtResource("181_a0cw4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("182_jmq04")
+}, {
+"duration": 0.2,
+"texture": ExtResource("183_6piqs")
+}, {
+"duration": 0.2,
+"texture": ExtResource("184_f2v2a")
+}],
+"loop": false,
+"name": &"animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("184_f2v2a")
+}],
+"loop": true,
+"name": &"static",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_621tv"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("186_o5v4q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("187_flg15")
+}, {
+"duration": 0.2,
+"texture": ExtResource("188_cr6sh")
+}, {
+"duration": 0.2,
+"texture": ExtResource("189_6smff")
+}, {
+"duration": 0.2,
+"texture": ExtResource("190_thu34")
+}, {
+"duration": 0.2,
+"texture": ExtResource("191_c0ead")
+}, {
+"duration": 0.2,
+"texture": ExtResource("192_l44th")
+}, {
+"duration": 0.2,
+"texture": ExtResource("193_f08xu")
+}, {
+"duration": 0.2,
+"texture": ExtResource("194_m5wbc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("195_srlo1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("196_bpf0r")
+}, {
+"duration": 0.2,
+"texture": ExtResource("197_dq2e1")
+}, {
+"duration": 0.2,
+"texture": ExtResource("198_w0ubc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("199_idouc")
+}, {
+"duration": 0.2,
+"texture": ExtResource("200_vi8u0")
+}, {
+"duration": 0.2,
+"texture": ExtResource("201_yd7dw")
+}, {
+"duration": 0.2,
+"texture": ExtResource("202_55vy2")
+}, {
+"duration": 0.2,
+"texture": ExtResource("203_0kh5h")
+}, {
+"duration": 0.2,
+"texture": ExtResource("204_3cpcd")
+}, {
+"duration": 0.2,
+"texture": ExtResource("205_jcejl")
+}, {
+"duration": 0.2,
+"texture": ExtResource("206_s1wnb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("207_0oydw")
+}, {
+"duration": 0.2,
+"texture": ExtResource("208_meg1r")
+}, {
+"duration": 0.2,
+"texture": ExtResource("209_3e8s4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("210_u70wy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("211_a3xym")
+}, {
+"duration": 0.2,
+"texture": ExtResource("212_6ncbp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("213_nj0sy")
+}, {
+"duration": 0.2,
+"texture": ExtResource("214_uqxmb")
+}, {
+"duration": 0.2,
+"texture": ExtResource("215_1jygp")
+}, {
+"duration": 0.2,
+"texture": ExtResource("216_xspu0")
+}, {
+"duration": 0.2,
+"texture": ExtResource("217_mjdc7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("218_unpdk")
+}, {
+"duration": 0.2,
+"texture": ExtResource("219_kjjiu")
+}, {
+"duration": 0.2,
+"texture": ExtResource("220_5yfal")
+}, {
+"duration": 0.2,
+"texture": ExtResource("221_tf2b6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("222_8n4uu")
+}, {
+"duration": 0.2,
+"texture": ExtResource("223_hwegt")
+}, {
+"duration": 0.2,
+"texture": ExtResource("224_5kt3c")
+}, {
+"duration": 0.2,
+"texture": ExtResource("225_7muff")
+}, {
+"duration": 0.2,
+"texture": ExtResource("226_k6eb7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("227_snhq7")
+}, {
+"duration": 0.2,
+"texture": ExtResource("228_xvpy5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("229_if38q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("230_6co3t")
+}, {
+"duration": 0.2,
+"texture": ExtResource("231_woa5q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("232_wwj2q")
+}, {
+"duration": 0.2,
+"texture": ExtResource("233_aaqrr")
+}, {
+"duration": 0.2,
+"texture": ExtResource("234_5gxxv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("235_xaqc3")
+}, {
+"duration": 0.2,
+"texture": ExtResource("236_moocf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("237_lg388")
+}, {
+"duration": 0.2,
+"texture": ExtResource("238_fmse6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("239_3m8rf")
+}, {
+"duration": 0.2,
+"texture": ExtResource("240_0ikoe")
+}, {
+"duration": 0.2,
+"texture": ExtResource("241_63aa5")
+}, {
+"duration": 0.2,
+"texture": ExtResource("242_im46j")
+}, {
+"duration": 0.2,
+"texture": ExtResource("243_r4ciw")
+}, {
+"duration": 0.2,
+"texture": ExtResource("244_l2bld")
+}, {
+"duration": 0.2,
+"texture": ExtResource("245_scdtv")
+}, {
+"duration": 0.2,
+"texture": ExtResource("246_yp2ek")
+}],
+"loop": false,
+"name": &"animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("246_yp2ek")
+}],
+"loop": false,
+"name": &"static",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
+bg_color = Color(0.46716, 0.4029, 0.51, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.22800002)
+shadow_size = 1
+shadow_offset = Vector2(0, 1)
+anti_aliasing_size = 0.01
+
+[node name="TitleScreen" type="Node2D" unique_id=1554427074]
+script = ExtResource("1_j344v")
+music_menu = ExtResource("2_adjdo")
+music_game = ExtResource("2_adjdo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=119539054]
+
+[node name="Fond_Titre" type="Sprite2D" parent="CanvasLayer" unique_id=50810772]
+position = Vector2(479, 266)
+scale = Vector2(1.2594737, 1.326271)
+texture = ExtResource("3_lvp80")
+
+[node name="Title" type="Node2D" parent="CanvasLayer" unique_id=218026018]
+top_level = true
+position = Vector2(647, 281)
+scale = Vector2(0.27637482, 0.27637482)
+
+[node name="AnimationTitreFond_1" type="Sprite2D" parent="CanvasLayer/Title" unique_id=1323778158]
+position = Vector2(-119.16675, -526.32025)
+rotation = -0.2500601
+scale = Vector2(5, 5)
+texture = ExtResource("4_efc2x")
+
+[node name="Title__AnimatedSprite2D__1" type="AnimatedSprite2D" parent="CanvasLayer/Title" unique_id=987536876]
+scale = Vector2(1.0003133, 1.0003133)
+sprite_frames = SubResource("SpriteFrames_fgkus")
+animation = &"static"
+script = ExtResource("89_ef5tv")
+
+[node name="AnimationTitreFond_2" type="Sprite2D" parent="CanvasLayer/Title" unique_id=1190982942]
+position = Vector2(-59.583252, -213.5072)
+rotation = -0.25675714
+scale = Vector2(5, 5)
+texture = ExtResource("4_efc2x")
+
+[node name="Title__AnimatedSprite2D__2" type="AnimatedSprite2D" parent="CanvasLayer/Title" unique_id=1320980220]
+position = Vector2(-26.83435, 345.86496)
+sprite_frames = SubResource("SpriteFrames_7itg5")
+animation = &"static"
+script = ExtResource("185_a7ap7")
+
+[node name="AnimationTitreFond_3" type="Sprite2D" parent="CanvasLayer/Title" unique_id=25162]
+position = Vector2(-27.830856, 191.2815)
+rotation = -0.31456456
+scale = Vector2(5, 5)
+texture = ExtResource("4_efc2x")
+
+[node name="Title__AnimatedSprite2D__3" type="AnimatedSprite2D" parent="CanvasLayer/Title" unique_id=752296100]
+position = Vector2(143.2875, 763.905)
+sprite_frames = SubResource("SpriteFrames_621tv")
+animation = &"static"
+script = ExtResource("247_o86lm")
+
+[node name="Boutons" type="Node2D" parent="CanvasLayer" unique_id=228344737]
+position = Vector2(13, 158)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Boutons" unique_id=451065660]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.7999973, 5.480003)
+theme_override_styles/panel = SubResource("StyleBoxFlat_mykxm")
+metadata/_edit_use_anchors_ = true
+
+[node name="START" type="Button" parent="CanvasLayer/Boutons" unique_id=232034570]
+offset_right = 102.0
+offset_bottom = 31.000015
+scale = Vector2(2.6452022, 2.640394)
+theme_override_font_sizes/font_size = 11
+text = "Commencer"
+icon = ExtResource("248_hbgkm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("249_o7bd6")
+metadata/_edit_use_anchors_ = true
+
+[node name="CREDITS" type="Button" parent="CanvasLayer/Boutons" unique_id=501484111]
+offset_left = 21.0
+offset_top = 79.0
+offset_right = 122.99997
+offset_bottom = 110.0
+scale = Vector2(2.2397218, 2.2356508)
+theme_override_font_sizes/font_size = 11
+text = "Crédits"
+icon = ExtResource("248_hbgkm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("249_o7bd6")
+metadata/_edit_use_anchors_ = true
+
+[node name="QUIT" type="Button" parent="CanvasLayer/Boutons" unique_id=1081561958]
+offset_left = 21.0
+offset_top = 146.0
+offset_right = 122.99997
+offset_bottom = 177.0
+scale = Vector2(2.2397218, 2.2356508)
+theme_override_font_sizes/font_size = 11
+text = "Quitter"
+icon = ExtResource("248_hbgkm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("249_o7bd6")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D__1" to="CanvasLayer/Title/Title__AnimatedSprite2D__1" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D__1" to="CanvasLayer/Title/Title__AnimatedSprite2D__2" method="_on_title__animated_sprite_2d__1_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D__2" to="CanvasLayer/Title/Title__AnimatedSprite2D__2" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D__2" to="CanvasLayer/Title/Title__AnimatedSprite2D__3" method="_on_title__animated_sprite_2d__2_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D__3" to="CanvasLayer/Title/Title__AnimatedSprite2D__3" method="_on_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/Boutons/START" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Boutons/CREDITS" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Boutons/QUIT" to="CanvasLayer/Boutons/QUIT" method="_on_pressed"]
