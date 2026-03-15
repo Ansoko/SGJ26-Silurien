@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
 [ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
-[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
-[ext_resource type="PackedScene" path="res://objets/tilemaps/tile_map_deco.tscn" id="6_awij6"]
+[ext_resource type="PackedScene" uid="uid://chaayiekc3yh3" path="res://objets/tilemaps/tile_map_deco.tscn" id="6_awij6"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
 [ext_resource type="Texture2D" uid="uid://c1b6vg188xoh6" path="res://assets_definitif/maison.png" id="6_p0b77"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="7_gvr7s"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
 [ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="12_n7cjv"]
-[ext_resource type="AudioStream" uid="uid://6y4c3o77cska" path="res://audio/Ambiance/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
+[ext_resource type="AudioStream" path="res://audio/music/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
 [ext_resource type="PackedScene" uid="uid://thckph8dnnsa" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 [ext_resource type="AudioStream" uid="uid://bmi5rabgsoc2k" path="res://audio/music/Musique_Jeu_Relax_Ultraviolet.wav" id="13_7ik1l"]
@@ -640,7 +640,6 @@ position = Vector2(2855, -618)
 position = Vector2(2052, -108)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("12_xfaxn")]
-visible = false
 
 [node name="TitleScreen" parent="CanvaUI" unique_id=706204540 instance=ExtResource("6_nwet0")]
 music_menu = ExtResource("12_n7cjv")

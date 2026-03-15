@@ -1162,7 +1162,7 @@ metadata/_edit_use_anchors_ = true
 [node name="QUIT" type="Button" parent="Control/Boutons" unique_id=1148172325]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.05
+anchor_left = -0.16666107
 anchor_top = 3.2
 anchor_right = -0.16666107
 anchor_bottom = 3.25
