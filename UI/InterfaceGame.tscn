@@ -5,23 +5,26 @@
 [ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
 [ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
-[ext_resource type="Texture2D" uid="uid://c6o6vpfus4dyd" path="res://assets_definitif/sprites_menu.png" id="4_nei81"]
-[ext_resource type="Texture2D" uid="uid://ccrl37etavgpl" path="res://assets_definitif/characters/papa_tete.png" id="5_nei81"]
+[ext_resource type="Texture2D" uid="uid://dsv31mafkt0h" path="res://assets_definitif/characters/papa_tete.png" id="5_nei81"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pnaq"]
-texture = ExtResource("4_nei81")
-texture_region_size = Vector2i(64, 64)
-3:0/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_hfs4r"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_8pnaq")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfs4r"]
+bg_color = Color(0.64705884, 0.8117647, 0.48235294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
 
 [node name="UI" type="CanvasLayer" unique_id=1976557452]
 script = ExtResource("1_0xtqc")
 SFXerasure = Array[AudioStream]([ExtResource("2_hfs4r"), ExtResource("3_nei81")])
+
+[node name="Panel" type="Panel" parent="." unique_id=749739401]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 619.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfs4r")
 
 [node name="Control" type="Control" parent="." unique_id=1532843106]
 layout_mode = 3

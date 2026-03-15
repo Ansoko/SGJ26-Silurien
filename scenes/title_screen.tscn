@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://djjjn7v3ynymv" path="res://assets_alice/titleStatic_1.png" id="4_cs5ya"]
 [ext_resource type="Script" uid="uid://dlu3xrn5l26a3" path="res://scenes/title__animated_sprite_2d.gd" id="5_e54dn"]
 [ext_resource type="Script" uid="uid://cxt8brg3ecx2g" path="res://audio/UI/UIButton.gd" id="7_u26n3"]
-[ext_resource type="Texture2D" uid="uid://b2s7byebonihm" path="res://assets_definitif/bouton.png" id="8_frs5l"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="8_frs5l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fgkus"]
 animations = [{
@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
-bg_color = Color(0.64705884, 0.8117647, 0.48235294, 1)
+bg_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3

@@ -2,15 +2,15 @@
 
 [ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://dc4yrga50fmit" path="res://scenes/credits.gd" id="1_2fbfq"]
-[ext_resource type="Texture2D" uid="uid://b4av8n4lidf8v" path="res://assets_alice/icon.svg" id="2_2ckv8"]
 [ext_resource type="LabelSettings" uid="uid://cogkqhwe5gu4r" path="res://scenes/noms.tres" id="3_8gwij"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="4_2fbfq"]
-[ext_resource type="Texture2D" uid="uid://qam46rqwvqwo" path="res://assets_definitif/sprite_bouton.png" id="6_mah5v"]
-[ext_resource type="Script" uid="uid://bn4dryupwxm7h" path="res://scenes/credits_retour.gd" id="7_kyhnv"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyhnv"]
-content_margin_left = 10.0
-content_margin_top = 10.0
+[ext_resource type="Texture2D" uid="uid://bur34xyfolb4h" path="res://assets_definitif/CREDITS/célia.png" id="5_qbfqv"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="6_mah5v"]
+[ext_resource type="Texture2D" uid="uid://bmwjhepayl341" path="res://assets_definitif/CREDITS/anne-so.png" id="6_x5q3x"]
+[ext_resource type="Texture2D" uid="uid://ckqmwpgt72kqy" path="res://assets_definitif/CREDITS/alice.png" id="7_nmdnh"]
+[ext_resource type="Texture2D" uid="uid://bxykguhrqyywl" path="res://assets_definitif/CREDITS/aurélie.png" id="8_83ncp"]
+[ext_resource type="Texture2D" uid="uid://brcwfspin58o6" path="res://assets_definitif/CREDITS/mosa.png" id="9_sxold"]
+[ext_resource type="Texture2D" uid="uid://c71yidxxfw2ml" path="res://assets_definitif/CREDITS/lucie.png" id="10_olp7g"]
 
 [node name="Credits" type="Node2D" unique_id=1760564455]
 script = ExtResource("1_2fbfq")
@@ -130,45 +130,35 @@ label_settings = ExtResource("3_8gwij")
 
 [node name="Illustration" type="Node2D" parent="." unique_id=1135688223]
 
-[node name="Sprite2D" type="Sprite2D" parent="Illustration" unique_id=1290459289]
-position = Vector2(50.772472, 188.87912)
-scale = Vector2(0.5745699, 0.5745699)
-texture = ExtResource("2_2ckv8")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Illustration" unique_id=40472577]
-position = Vector2(130.77248, 138.8791)
-scale = Vector2(0.5762361, 0.5762361)
-texture = ExtResource("2_2ckv8")
+[node name="Sprite2D4" type="Sprite2D" parent="Illustration" unique_id=378549777]
+position = Vector2(131, 176)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_qbfqv")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Illustration" unique_id=1945221952]
-position = Vector2(50.772472, 288.87912)
-scale = Vector2(0.57456964, 0.57456964)
-texture = ExtResource("2_2ckv8")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Illustration" unique_id=378549777]
-position = Vector2(130.77248, 238.87912)
-scale = Vector2(0.5745694, 0.5745694)
-texture = ExtResource("2_2ckv8")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Illustration" unique_id=724481179]
-position = Vector2(50.772472, 388.87912)
-scale = Vector2(0.57456964, 0.57456964)
-texture = ExtResource("2_2ckv8")
+position = Vector2(51, 226)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_x5q3x")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Illustration" unique_id=1731490213]
-position = Vector2(130.77248, 338.87912)
-scale = Vector2(0.57456964, 0.57456964)
-texture = ExtResource("2_2ckv8")
+position = Vector2(131, 276)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_nmdnh")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Illustration" unique_id=891770095]
-position = Vector2(50.772472, 488.87912)
-scale = Vector2(0.5745694, 0.5745694)
-texture = ExtResource("2_2ckv8")
+[node name="Sprite2D5" type="Sprite2D" parent="Illustration" unique_id=724481179]
+position = Vector2(51, 326)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_83ncp")
 
 [node name="Sprite2D8" type="Sprite2D" parent="Illustration" unique_id=1479206626]
-position = Vector2(130.77248, 438.87912)
-scale = Vector2(0.5745694, 0.5745694)
-texture = ExtResource("2_2ckv8")
+position = Vector2(131, 376)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_sxold")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Illustration" unique_id=891770095]
+position = Vector2(51, 426)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_olp7g")
 
 [node name="Background" type="Node2D" parent="." unique_id=1819566210]
 show_behind_parent = true
@@ -182,26 +172,6 @@ color = Color(0.8156863, 0.90588236, 0.8666667, 1)
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=979910036]
 position = Vector2(736, 410)
 texture = ExtResource("4_2fbfq")
-
-[node name="RETOUR" type="Button" parent="." unique_id=1046205165]
-offset_left = 23.000002
-offset_top = 10.999999
-offset_right = 94.0
-offset_bottom = 82.0
-scale = Vector2(0.8801006, 0.8801006)
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-theme_override_colors/font_focus_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-theme_override_colors/font_pressed_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-theme_override_colors/font_hover_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/hover = SubResource("StyleBoxFlat_kyhnv")
-text = "<"
-icon = ExtResource("6_mah5v")
-flat = true
-icon_alignment = 1
-script = ExtResource("7_kyhnv")
 
 [node name="Remerciements" type="Node2D" parent="." unique_id=1950705355]
 position = Vector2(515, 55)
@@ -227,5 +197,14 @@ Jonathan Lafont et David \"Blackmagic\"​ Elahee ;
 "
 label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
+
+[node name="RETOUR" type="Button" parent="." unique_id=1577728257]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Menu principal"
+icon = ExtResource("6_mah5v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="RETOUR" to="." method="_on_retour_pressed"]
