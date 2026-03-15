@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://yti7dsiieph2"]
 
 [ext_resource type="Script" uid="uid://b7uenp3mtbjv5" path="res://scenes/title_screen.gd" id="1_3yumr"]
+[ext_resource type="Texture2D" uid="uid://crl2e6tdee8jm" path="res://assets_definitif/texture_papier.png" id="2_x64qd"]
 [ext_resource type="Texture2D" uid="uid://do5l23pxxqrfa" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-1.png" id="3_d7hws"]
-[ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets_alice/background_temp.png" id="3_t3qhn"]
 [ext_resource type="Texture2D" uid="uid://ds7ytgjchbxfs" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-1.png" id="3_ve8tt"]
 [ext_resource type="Texture2D" uid="uid://dqiv3o8kdg4l5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-2.png" id="4_cwyqm"]
 [ext_resource type="Texture2D" uid="uid://kjtp7n1awrat" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-2.png" id="4_v0fpi"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bqjfwgm6q3ae" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-5.png" id="7_x2goh"]
 [ext_resource type="Texture2D" uid="uid://jq4vg5jobhgx" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-6.png" id="8_1a42j"]
 [ext_resource type="Texture2D" uid="uid://bw5sg4vqus5ie" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-6.png" id="8_5f42m"]
-[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="8_frs5l"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="8_frs5l"]
 [ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="8_ib7db"]
 [ext_resource type="Texture2D" uid="uid://cuhyil2s7rcq4" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-7.png" id="9_ch8py"]
 [ext_resource type="Texture2D" uid="uid://bum0kmfitkn8i" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-7.png" id="9_f35m0"]
@@ -178,7 +178,7 @@
 [ext_resource type="Texture2D" uid="uid://df0nsytha5po6" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-84.png" id="86_mpex6"]
 [ext_resource type="Texture2D" uid="uid://jbkatfvx5ilr" path="res://assets_definitif/AnimationTitre/Chère Gammère 1/Illustration_sans_titre-84.png" id="86_r7iod"]
 [ext_resource type="Texture2D" uid="uid://du7c73ykra7a5" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-85.png" id="87_ajbxl"]
-[ext_resource type="Texture2D" uid="uid://b5tgt08jam0yp" path="res://assets_definitif/AnimationTitre/AnimationTitre_fond.png" id="88_388bl"]
+[ext_resource type="Texture2D" uid="uid://b7a1t5s5kqwtc" path="res://assets_definitif/AnimationTitre/AnimationTitre_fond.png" id="88_388bl"]
 [ext_resource type="Texture2D" uid="uid://wn8waap8s726" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-86.png" id="88_ugec1"]
 [ext_resource type="Texture2D" uid="uid://j55whrmkak21" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-87.png" id="89_b8ebi"]
 [ext_resource type="Texture2D" uid="uid://cynfxs7ppg1ra" path="res://assets_definitif/AnimationTitre/Chère Gras mère Animation 2/Chère_Gras_Mère_Animation_2-88.png" id="90_wao5u"]
@@ -1043,9 +1043,18 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Fond_Titre" type="Sprite2D" parent="Control" unique_id=396419574]
+texture_filter = 1
 position = Vector2(479, 266)
-scale = Vector2(1.2594737, 1.326271)
-texture = ExtResource("3_t3qhn")
+scale = Vector2(2.1107445, 2.2226896)
+texture = ExtResource("2_x64qd")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1034082724]
+layout_mode = 0
+offset_left = -10.0
+offset_right = 350.0
+offset_bottom = 200.0
+scale = Vector2(2.7258754, 2.7258754)
+color = Color(0.5565, 0.7, 0.41300002, 0.27450982)
 
 [node name="Title" type="Node2D" parent="Control" unique_id=1115281880]
 top_level = true
@@ -1053,6 +1062,7 @@ position = Vector2(647, 281)
 scale = Vector2(0.27637482, 0.27637482)
 
 [node name="AnimationTitreFond_1" type="Sprite2D" parent="Control/Title" unique_id=577157395]
+texture_filter = 1
 position = Vector2(-119.16675, -526.32025)
 rotation = -0.2500601
 scale = Vector2(5, 5)
@@ -1065,6 +1075,7 @@ animation = &"static"
 script = ExtResource("5_e54dn")
 
 [node name="AnimationTitreFond_2" type="Sprite2D" parent="Control/Title" unique_id=1780435377]
+texture_filter = 1
 position = Vector2(-59.583252, -213.5072)
 rotation = -0.25675714
 scale = Vector2(5, 5)
@@ -1077,6 +1088,7 @@ animation = &"static"
 script = ExtResource("100_7itg5")
 
 [node name="AnimationTitreFond_3" type="Sprite2D" parent="Control/Title" unique_id=1148909781]
+texture_filter = 1
 position = Vector2(-27.830856, 191.2815)
 rotation = -0.31456456
 scale = Vector2(5, 5)
