@@ -1,138 +1,229 @@
-[gd_scene load_steps=6 format=3 uid="uid://s3vka4yk4gjc"]
+[gd_scene format=3 uid="uid://s3vka4yk4gjc"]
 
 [ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://dc4yrga50fmit" path="res://scenes/credits.gd" id="1_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://b4av8n4lidf8v" path="res://assets_alice/icon.svg" id="2_2ckv8"]
-[ext_resource type="Texture2D" uid="uid://2xoh7k6wjmjc" path="res://assets_alice/background_temp.png" id="3_0ctdu"]
+[ext_resource type="LabelSettings" uid="uid://cogkqhwe5gu4r" path="res://scenes/noms.tres" id="3_8gwij"]
+[ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="4_2fbfq"]
+[ext_resource type="Texture2D" uid="uid://qam46rqwvqwo" path="res://assets_definitif/sprite_bouton.png" id="6_mah5v"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_yeqti"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyhnv"]
+content_margin_left = 10.0
+content_margin_top = 10.0
 
-[node name="Credits" type="Node2D"]
+[node name="Credits" type="Node2D" unique_id=1760564455]
 script = ExtResource("1_2fbfq")
 
-[node name="Roles" type="Node2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1676165520]
+offset_left = 179.0
+offset_right = 219.0
+offset_bottom = 40.0
+scale = Vector2(7.6800003, 13.6)
+color = Color(0.64705884, 0.8117647, 0.48235294, 0.5882353)
+
+[node name="Roles" type="Node2D" parent="." unique_id=295999797]
 position = Vector2(155, 0)
 
-[node name="Scientifiques" type="Node2D" parent="Roles"]
+[node name="Scientifiques" type="Node2D" parent="Roles" unique_id=49496734]
 position = Vector2(100, 55)
 
-[node name="Scientifiques__titre" type="Label" parent="Roles/Scientifiques"]
+[node name="Scientifiques__titre" type="Label" parent="Roles/Scientifiques" unique_id=1152054611]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Scientifiques"
 label_settings = ExtResource("1_0bpdh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Noms" type="Node2D" parent="Roles/Scientifiques"]
+[node name="Noms" type="Node2D" parent="Roles/Scientifiques" unique_id=716038559]
 position = Vector2(30, 30)
 
-[node name="Scientifiques__noms" type="Label" parent="Roles/Scientifiques/Noms"]
+[node name="Scientifiques__noms" type="Label" parent="Roles/Scientifiques/Noms" unique_id=899995746]
 offset_right = 226.0
 offset_bottom = 75.0
 text = "Arnaud Moysan
 Claire Doquet
 "
-label_settings = SubResource("LabelSettings_yeqti")
+label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
 
-[node name="GameDesigner" type="Node2D" parent="Roles"]
+[node name="GameDesigner" type="Node2D" parent="Roles" unique_id=264602709]
 position = Vector2(100, 155)
 
-[node name="GameDesigner__titre" type="Label" parent="Roles/GameDesigner"]
+[node name="GameDesigner__titre" type="Label" parent="Roles/GameDesigner" unique_id=946691044]
 offset_right = 141.0
 offset_bottom = 27.0
 text = "Game Designer"
 label_settings = ExtResource("1_0bpdh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Noms" type="Node2D" parent="Roles/GameDesigner"]
+[node name="Noms" type="Node2D" parent="Roles/GameDesigner" unique_id=1357540237]
 position = Vector2(30, 30)
 
-[node name="GameDesigner__noms" type="Label" parent="Roles/GameDesigner/Noms"]
+[node name="GameDesigner__noms" type="Label" parent="Roles/GameDesigner/Noms" unique_id=888200218]
 offset_right = 262.0
 offset_bottom = 49.0
 text = "Célia Jaunet"
-label_settings = SubResource("LabelSettings_yeqti")
+label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
 
-[node name="Devs" type="Node2D" parent="Roles"]
+[node name="Devs" type="Node2D" parent="Roles" unique_id=1720396239]
 position = Vector2(100, 235)
 
-[node name="Devs__titre" type="Label" parent="Roles/Devs"]
+[node name="Devs__titre" type="Label" parent="Roles/Devs" unique_id=877246418]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Développeuses"
 label_settings = ExtResource("1_0bpdh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Noms" type="Node2D" parent="Roles/Devs/Devs__titre"]
+[node name="Noms" type="Node2D" parent="Roles/Devs/Devs__titre" unique_id=699917087]
 position = Vector2(30, 30)
 
-[node name="Devs__noms" type="Label" parent="Roles/Devs/Devs__titre/Noms"]
+[node name="Devs__noms" type="Label" parent="Roles/Devs/Devs__titre/Noms" unique_id=1210177994]
 offset_right = 262.0
 offset_bottom = 49.0
 text = "Anne-Sophie Koch
 Alice Massart"
-label_settings = SubResource("LabelSettings_yeqti")
+label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
 
-[node name="SoundDesigner" type="Node2D" parent="Roles"]
+[node name="SoundDesigner" type="Node2D" parent="Roles" unique_id=763599958]
 position = Vector2(100, 335)
 
-[node name="SoundDesigner__titre" type="Label" parent="Roles/SoundDesigner"]
+[node name="SoundDesigner__titre" type="Label" parent="Roles/SoundDesigner" unique_id=2053282609]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Sound Designer"
 label_settings = ExtResource("1_0bpdh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Noms" type="Node2D" parent="Roles/SoundDesigner/SoundDesigner__titre"]
+[node name="Noms" type="Node2D" parent="Roles/SoundDesigner/SoundDesigner__titre" unique_id=1668857214]
 position = Vector2(30, 30)
 
-[node name="SoundDesigner__noms" type="Label" parent="Roles/SoundDesigner/SoundDesigner__titre/Noms"]
+[node name="SoundDesigner__noms" type="Label" parent="Roles/SoundDesigner/SoundDesigner__titre/Noms" unique_id=1864525973]
 offset_right = 262.0
 offset_bottom = 49.0
 text = "Aurélie Moiroud"
-label_settings = SubResource("LabelSettings_yeqti")
+label_settings = ExtResource("3_8gwij")
 metadata/_edit_use_anchors_ = true
 
-[node name="Artistes" type="Node2D" parent="Roles"]
+[node name="Artistes" type="Node2D" parent="Roles" unique_id=173214034]
 position = Vector2(100, 405)
 
-[node name="Artistes__titre" type="Label" parent="Roles/Artistes"]
+[node name="Artistes__titre" type="Label" parent="Roles/Artistes" unique_id=899318466]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Artistes"
 label_settings = ExtResource("1_0bpdh")
 
-[node name="Noms" type="Node2D" parent="Roles/Artistes/Artistes__titre"]
+[node name="Noms" type="Node2D" parent="Roles/Artistes/Artistes__titre" unique_id=1593032221]
 position = Vector2(30, 30)
 
-[node name="Artistes__noms" type="Label" parent="Roles/Artistes/Artistes__titre/Noms"]
+[node name="Artistes__noms" type="Label" parent="Roles/Artistes/Artistes__titre/Noms" unique_id=1191261881]
 offset_right = 262.0
 offset_bottom = 49.0
+scale = Vector2(1, 0.99542177)
 text = "Mosa Breton
 Lucie Nussbaum"
-label_settings = SubResource("LabelSettings_yeqti")
+label_settings = ExtResource("3_8gwij")
 
-[node name="Illustration" type="Node2D" parent="."]
-position = Vector2(685, 250)
+[node name="Illustration" type="Node2D" parent="." unique_id=1135688223]
 
-[node name="Sprite2D" type="Sprite2D" parent="Illustration"]
+[node name="Sprite2D" type="Sprite2D" parent="Illustration" unique_id=1290459289]
+position = Vector2(50.772472, 188.87912)
+scale = Vector2(0.5745699, 0.5745699)
 texture = ExtResource("2_2ckv8")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="Illustration" unique_id=40472577]
+position = Vector2(130.77248, 138.8791)
+scale = Vector2(0.5762361, 0.5762361)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Illustration" unique_id=1945221952]
+position = Vector2(50.772472, 288.87912)
+scale = Vector2(0.57456964, 0.57456964)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Illustration" unique_id=378549777]
+position = Vector2(130.77248, 238.87912)
+scale = Vector2(0.5745694, 0.5745694)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Illustration" unique_id=724481179]
+position = Vector2(50.772472, 388.87912)
+scale = Vector2(0.57456964, 0.57456964)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Illustration" unique_id=1731490213]
+position = Vector2(130.77248, 338.87912)
+scale = Vector2(0.57456964, 0.57456964)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Illustration" unique_id=891770095]
+position = Vector2(50.772472, 488.87912)
+scale = Vector2(0.5745694, 0.5745694)
+texture = ExtResource("2_2ckv8")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Illustration" unique_id=1479206626]
+position = Vector2(130.77248, 438.87912)
+scale = Vector2(0.5745694, 0.5745694)
+texture = ExtResource("2_2ckv8")
+
+[node name="Background" type="Node2D" parent="." unique_id=1819566210]
 show_behind_parent = true
-position = Vector2(480, 270)
 
-[node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("3_0ctdu")
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1001879154]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(24.257881, 13.777882)
+color = Color(0.8156863, 0.90588236, 0.8666667, 1)
 
-[node name="RETOUR" type="Button" parent="."]
-offset_left = 24.0
-offset_top = 19.0
-offset_right = 85.0
-offset_bottom = 50.0
-text = "Retour"
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=979910036]
+position = Vector2(780, 316)
+texture = ExtResource("4_2fbfq")
+
+[node name="RETOUR" type="Button" parent="." unique_id=1046205165]
+offset_left = 23.000002
+offset_top = 10.999999
+offset_right = 94.0
+offset_bottom = 82.0
+scale = Vector2(0.8801006, 0.8801006)
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+theme_override_colors/font_focus_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+theme_override_colors/font_pressed_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+theme_override_colors/font_hover_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_kyhnv")
+text = "<"
+icon = ExtResource("6_mah5v")
+flat = true
+icon_alignment = 1
+
+[node name="Remerciements" type="Node2D" parent="." unique_id=1950705355]
+position = Vector2(515, 55)
+
+[node name="Remerciements_titre" type="Label" parent="Remerciements" unique_id=1542590369]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Remerciements"
+label_settings = ExtResource("1_0bpdh")
+metadata/_edit_use_anchors_ = true
+
+[node name="noms" type="Node2D" parent="Remerciements" unique_id=732425238]
+position = Vector2(30, 0)
+
+[node name="Remerciements_noms" type="Label" parent="Remerciements/noms" unique_id=1446134084]
+offset_top = 32.0
+offset_right = 353.0
+offset_bottom = 159.0
+text = "La Science entre en Jeu ;
+Ghislain, Pol, Solenne ;
+Anne Le Maître, Morgane MAUDET, 
+Jonathan Lafont et David \"Blackmagic\"​ Elahee ;
+"
+label_settings = ExtResource("3_8gwij")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="RETOUR" to="." method="_on_retour_pressed"]

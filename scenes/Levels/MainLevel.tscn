@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cupbwy5slbmun"]
 
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
+[ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
+[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="6_nwet0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="8_4cowq"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
+[ext_resource type="PackedScene" uid="uid://dkc80paeltley" path="res://scenes/Levels/tile_map_tuto_panel.tscn" id="11_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
@@ -53,7 +54,6 @@ tile_map_data = PackedByteArray()
 tile_map_data = PackedByteArray()
 
 [node name="TitleScreen" parent="." unique_id=706204540 instance=ExtResource("6_nwet0")]
-visible = false
 position = Vector2(-160, 1)
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("7_gvr7s")]
@@ -76,38 +76,39 @@ position = Vector2(331, 403)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("12_xfaxn")]
 
-[node name="Label" type="Label" parent="." unique_id=1649487922]
-offset_left = 2280.0
-offset_top = 437.0
-offset_right = 2385.0
-offset_bottom = 486.0
-text = "Panneau tuto
-Echelle"
+[node name="TutoPanels" type="Node2D" parent="." unique_id=2007244592]
 
-[node name="Label" type="Label" parent="Label" unique_id=520868977]
-layout_mode = 0
-offset_left = -1065.0
-offset_top = -331.0
-offset_right = -960.0
-offset_bottom = -282.0
-text = "Panneau tuto
-Effacer texte"
+[node name="TileMap_tutoPanel" parent="TutoPanels" unique_id=511015820 instance=ExtResource("11_pgkmv")]
 
-[node name="Label2" type="Label" parent="Label" unique_id=1453582376]
-layout_mode = 0
-offset_left = -1647.0
-offset_top = -94.0
-offset_right = -1542.0
-offset_bottom = -45.0
+[node name="Label3" type="Label" parent="TutoPanels" unique_id=1453582376]
+offset_left = 623.0
+offset_top = 266.0
+offset_right = 728.0
+offset_bottom = 315.0
 text = "Panneau tuto
 Touche E"
 
-[node name="Label3" type="Label" parent="Label" unique_id=569368470]
-layout_mode = 0
-offset_left = 543.0
-offset_top = -372.0
-offset_right = 657.0
-offset_bottom = -323.0
+[node name="Label2" type="Label" parent="TutoPanels" unique_id=520868977]
+offset_left = 1197.0
+offset_top = 76.0
+offset_right = 1302.0
+offset_bottom = 125.0
+text = "Panneau tuto
+Effacer texte"
+
+[node name="Label" type="Label" parent="TutoPanels" unique_id=1649487922]
+offset_left = 2225.0
+offset_top = 397.0
+offset_right = 2330.0
+offset_bottom = 446.0
+text = "Panneau tuto
+Echelle"
+
+[node name="Label4" type="Label" parent="TutoPanels" unique_id=569368470]
+offset_left = 2794.0
+offset_top = 76.0
+offset_right = 2908.0
+offset_bottom = 125.0
 text = "Panneau tuto
 Objectif du jeu"
 
