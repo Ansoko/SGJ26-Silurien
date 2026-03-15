@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dcrr4fx7b1qhj" path="res://assets_temp/fond lettre.png" id="10_d62ht"]
 [ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="10_qyl73"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_um0j2"]
-[ext_resource type="AudioStream" uid="uid://e2pry1a6kwd2" path="res://audio/music/Ambiance_Outro.wav" id="11_fix67"]
-[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="11_ilt1u"]
+[ext_resource type="AudioStream" uid="uid://e2pry1a6kwd2" path="res://audio/Ambiance/Ambiance_Outro.wav" id="11_fix67"]
+[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="11_ilt1u"]
 
 [node name="EndScreen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_6e1uj")
