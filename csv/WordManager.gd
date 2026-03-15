@@ -3,10 +3,14 @@ extends Node
 var nouns: Array = []
 var verbs: Array = []
 var conjunctions: Array = []
+var adjectives: Array = []
+var punctuation: Array = []
 
 var csv_noun: String = "res://csv/nom.csv"
 var csv_verb: String = "res://csv/verbe.csv"
 var csv_conjunction: String = "res://csv/conjonction.csv"
+var csv_adjectifs: String = "res://csv/adjectiv.csv"
+var csv_punctuation: String = "res://csv/ponctuation.csv"
 
 signal add_word(word: String)
 var letterText = ""
@@ -17,6 +21,8 @@ func _ready():
 	nouns = loadCSVAsArray(csv_noun)
 	verbs = loadCSVAsArray(csv_verb)
 	conjunctions = loadCSVAsArray(csv_conjunction)
+	adjectives = loadCSVAsArray(csv_adjectifs)
+	punctuation = loadCSVAsArray(csv_punctuation)
 	
 func get_random_noun() -> String:
 	return nouns.pick_random()
@@ -26,6 +32,12 @@ func get_random_verb() -> String:
 
 func get_random_conjunction() -> String:
 	return conjunctions.pick_random()
+
+func get_random_adjective() -> String:
+	return adjectives.pick_random()
+
+func get_random_punctuation() -> String:
+	return punctuation.pick_random()
 
 func loadCSVAsArray(csv_path: String) -> Array:
 	var list: Array = []

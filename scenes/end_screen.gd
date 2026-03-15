@@ -33,7 +33,7 @@ func _lancer_dialogue():
 	await SignalManager.end_outro
 
 func _afficher_fenetre_finale():
-	letterLabel.text = WordManager.letterText
+	letterLabel.text = WordManager.letterText+"\n \n\tClaire"
 	fenetre_finale.show()
 	
 	# Animation d'apparition

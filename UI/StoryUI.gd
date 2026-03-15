@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var SFXerasure: Array[AudioStream] = []
+
 func _ready() -> void:
 	WordManager.add_word.connect(addNewWordToStory)
 	WordManager.saveText.connect(saveStoryText)
@@ -39,6 +41,8 @@ func removeLastWord():
 	var debut = storyLabel.text.substr(0, dernier.get_start())
 	var fin = storyLabel.text.substr(dernier.get_end())
 	storyLabel.text = debut + "[s]" + dernier.get_string() + "[/s]" + fin
+	
+	AudioManager.play_SFX.emit(SFXerasure.pick_random())
 	scrollToEnd.call_deferred()
 
 func scrollToEnd():

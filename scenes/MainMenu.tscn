@@ -4,10 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="2_mipys"]
 [ext_resource type="Texture2D" uid="uid://7obiwymyp6hw" path="res://assets_alice/autotile_tileset.png" id="2_ucygd"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_2wh52"]
+[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="3_7la6k"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="5_l72w3"]
 [ext_resource type="PackedScene" path="res://audio/sound_scene.tscn" id="6_826wr"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="7_ucygd"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="8_mipys"]
+[ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="9_8a8k8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ucygd"]
 
@@ -83,6 +85,8 @@ sources/0 = SubResource("TileSetAtlasSource_mipys")
 [node name="Parallax" parent="." unique_id=348623257 instance=ExtResource("1_mipys")]
 
 [node name="TitleScreen" parent="." unique_id=2020015590 instance=ExtResource("2_mipys")]
+music_menu = ExtResource("3_7la6k")
+music_game = ExtResource("3_7la6k")
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("8_mipys")]
 
@@ -105,3 +109,6 @@ tile_set = SubResource("TileSet_mipys")
 
 [node name="TileMap_Ladder" parent="." unique_id=1181425679 instance=ExtResource("7_ucygd")]
 tile_map_data = PackedByteArray("AAAFAAYAAAAAAAEAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAEAAAAJAAUAAAABAAAAAAAKAAUAAAABAAAAAAA=")
+
+[node name="SpawnerWord" parent="." unique_id=1404252508 instance=ExtResource("9_8a8k8")]
+position = Vector2(442, 417)

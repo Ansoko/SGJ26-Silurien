@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://ctwttu4wng606"]
 
 [ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
-[ext_resource type="AudioStream" uid="uid://cwaki2kpt4ogg" path="res://audio/sound_placeholder.mp3" id="2_quu0c"]
+[ext_resource type="AudioStream" uid="uid://x663h5djgvt" path="res://audio/UI/UI_Bouton_Mots_01.wav" id="2_55dp5"]
+[ext_resource type="AudioStream" uid="uid://cjmct0lvun51n" path="res://audio/UI/UI_Bouton_Mots_02.wav" id="3_y2kgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmps"]
 size = Vector2(68.5, 22)
 
 [node name="SpawnerWord" type="Node2D" unique_id=1404252508]
 script = ExtResource("1_lxmps")
-sound_pickup = ExtResource("2_quu0c")
+SFXcollect = Array[AudioStream]([ExtResource("2_55dp5"), ExtResource("3_y2kgv")])
 
 [node name="Label" type="Label" parent="." unique_id=2032079686]
 offset_right = 69.0

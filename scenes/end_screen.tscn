@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="5_4j4el"]
 [ext_resource type="Script" uid="uid://sgt5h48jnml4" path="res://audio/SoundPlayer.gd" id="6_wke0n"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_ground.tscn" id="7_plosh"]
+[ext_resource type="Script" uid="uid://dn3of88xipmoh" path="res://UI/PressePapier.gd" id="8_um0j2"]
+[ext_resource type="AudioStream" uid="uid://devgdi7esyhhw" path="res://audio/UI/UI_Boutons_01.wav" id="9_fix67"]
+[ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="10_qyl73"]
 
 [node name="EndScreen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_6e1uj")
@@ -38,7 +41,6 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("5_4j4el")]
-follow_viewport_enabled = false
 
 [node name="Sound" type="Node" parent="." unique_id=58030761]
 
@@ -77,5 +79,16 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "ouais"
+
+[node name="Button" type="Button" parent="CanvaLettre/Panel" unique_id=1934716126]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 387.0
+offset_right = 482.0
+offset_bottom = 418.0
+text = "Copier dans le presse papier"
+script = ExtResource("8_um0j2")
+son_hover = ExtResource("10_qyl73")
+son_click = ExtResource("9_fix67")
 
 [connection signal="pressed" from="RESTART" to="." method="_on_restart_pressed"]
