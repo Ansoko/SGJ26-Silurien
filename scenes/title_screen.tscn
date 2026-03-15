@@ -1,165 +1,46 @@
 [gd_scene format=3 uid="uid://yti7dsiieph2"]
 
 [ext_resource type="Script" uid="uid://b7uenp3mtbjv5" path="res://scenes/title_screen.gd" id="1_3yumr"]
-[ext_resource type="Texture2D" uid="uid://dccp0jym0jte3" path="res://assets_alice/titleAnim_1.png" id="1_dc4i4"]
-[ext_resource type="Texture2D" uid="uid://bbd2ufr0r2nlq" path="res://assets_alice/titleAnim_2.png" id="2_e54dn"]
-[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="2_ib7db"]
-[ext_resource type="Texture2D" uid="uid://pgiralnbwkag" path="res://assets_alice/titleAnim_3.png" id="3_3yumr"]
-[ext_resource type="Texture2D" uid="uid://djjjn7v3ynymv" path="res://assets_alice/titleStatic_1.png" id="4_cs5ya"]
-[ext_resource type="Script" uid="uid://dlu3xrn5l26a3" path="res://scenes/title__animated_sprite_2d.gd" id="5_e54dn"]
-[ext_resource type="Script" uid="uid://cxt8brg3ecx2g" path="res://audio/UI/UIButton.gd" id="7_u26n3"]
-[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="8_frs5l"]
+[ext_resource type="Texture2D" uid="uid://dlcrwia0naayq" path="res://assets_definitif/fond intro.png" id="4_e8tpv"]
+[ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="5_4qe4i"]
+[ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="6_p07av"]
+[ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="11_lrxh4"]
+[ext_resource type="AudioStream" uid="uid://e2pry1a6kwd2" path="res://audio/music/Ambiance_Outro.wav" id="12_neciy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fgkus"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_dc4i4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_e54dn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_3yumr")
-}],
-"loop": false,
-"name": &"animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_cs5ya")
-}],
-"loop": true,
-"name": &"static",
-"speed": 5.0
-}]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
-bg_color = Color(0.47058824, 0.40784314, 0.5137255, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 20
-shadow_color = Color(0, 0, 0, 0.22800002)
-shadow_size = 1
-shadow_offset = Vector2(0, 1)
-anti_aliasing_size = 0.01
-
-[node name="TitleScreen" type="Node2D" unique_id=1554427074]
+[node name="title_screen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_3yumr")
-music_menu = ExtResource("2_ib7db")
-music_game = ExtResource("2_ib7db")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=119539054]
+[node name="Background" type="Node2D" parent="." unique_id=1805845758]
+show_behind_parent = true
+position = Vector2(480, 270)
 
-[node name="Title" type="Node2D" parent="CanvasLayer" unique_id=218026018]
-top_level = true
-position = Vector2(661, 163)
-scale = Vector2(0.335391, 0.335391)
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=667423739]
+position = Vector2(593, 38)
+scale = Vector2(2, 2)
+texture = ExtResource("4_e8tpv")
 
-[node name="Title__AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Title" unique_id=987536876]
-scale = Vector2(3.26008, 3.26008)
-sprite_frames = SubResource("SpriteFrames_fgkus")
-animation = &"static"
-script = ExtResource("5_e54dn")
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=445147735]
+position = Vector2(-1327, 38)
+scale = Vector2(2, 2)
+texture = ExtResource("4_e8tpv")
 
-[node name="Boutons" type="Node2D" parent="CanvasLayer" unique_id=228344737]
-position = Vector2(13, 158)
+[node name="Player" parent="." unique_id=1527853081 instance=ExtResource("5_4qe4i")]
+position = Vector2(591, 117)
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Boutons" unique_id=451065660]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(6.7999973, 5.480003)
-theme_override_styles/panel = SubResource("StyleBoxFlat_mykxm")
-metadata/_edit_use_anchors_ = true
+[node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("6_p07av")]
+position = Vector2(479, 269)
+limit_left = -161
+limit_top = -498
+limit_right = 1382
+limit_bottom = 617
+limit_smoothed = true
+editor_draw_limits = true
 
-[node name="START" type="Button" parent="CanvasLayer/Boutons" unique_id=232034570]
-offset_right = 102.0
-offset_bottom = 31.000015
-scale = Vector2(2.6452022, 2.640394)
-theme_override_font_sizes/font_size = 11
-text = "Commencer"
-icon = ExtResource("8_frs5l")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_u26n3")
-metadata/_edit_use_anchors_ = true
+[node name="EndPos" type="Node2D" parent="." unique_id=316759008]
+position = Vector2(2, 117)
 
-[node name="CREDITS" type="Button" parent="CanvasLayer/Boutons" unique_id=501484111]
-offset_left = 21.0
-offset_top = 79.0
-offset_right = 122.99997
-offset_bottom = 110.0
-scale = Vector2(2.2397218, 2.2356508)
-theme_override_font_sizes/font_size = 11
-text = "Crédits"
-icon = ExtResource("8_frs5l")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_u26n3")
-metadata/_edit_use_anchors_ = true
+[node name="Sound" parent="." unique_id=261311265 instance=ExtResource("11_lrxh4")]
 
-[node name="QUIT" type="Button" parent="CanvasLayer/Boutons" unique_id=1081561958]
-offset_left = 21.0
-offset_top = 146.0
-offset_right = 122.99997
-offset_bottom = 177.0
-scale = Vector2(2.2397218, 2.2356508)
-theme_override_font_sizes/font_size = 11
-text = "Quitter"
-icon = ExtResource("8_frs5l")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_u26n3")
-metadata/_edit_use_anchors_ = true
-
-[node name="VolumeController" type="Control" parent="." unique_id=366024681]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 218.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VolumeController" unique_id=625262888]
-layout_mode = 0
-offset_right = 159.0
-offset_bottom = 40.0
-
-[node name="HBoxContainerMusique" type="HBoxContainer" parent="VolumeController/VBoxContainer" unique_id=987793498]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VolumeController/VBoxContainer/HBoxContainerMusique" unique_id=835130882]
-layout_mode = 2
-text = "Musique"
-
-[node name="HSlider" type="HSlider" parent="VolumeController/VBoxContainer/HBoxContainerMusique" unique_id=1530660171]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-max_value = 1.0
-step = 0.1
-value = 1.0
-
-[node name="HBoxContainerSFX" type="HBoxContainer" parent="VolumeController/VBoxContainer" unique_id=1616147915]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VolumeController/VBoxContainer/HBoxContainerSFX" unique_id=1089968689]
-layout_mode = 2
-text = "Sons    "
-
-[node name="HSlider" type="HSlider" parent="VolumeController/VBoxContainer/HBoxContainerSFX" unique_id=799656761]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-max_value = 1.0
-step = 0.1
-value = 1.0
-
-[connection signal="animation_finished" from="CanvasLayer/Title/Title__AnimatedSprite2D" to="CanvasLayer/Title/Title__AnimatedSprite2D" method="_on_animation_finished"]
-[connection signal="pressed" from="CanvasLayer/Boutons/START" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/Boutons/CREDITS" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/Boutons/QUIT" to="CanvasLayer/Boutons/QUIT" method="_on_pressed"]
+[node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=592619856]
+stream = ExtResource("12_neciy")
+bus = &"Music"

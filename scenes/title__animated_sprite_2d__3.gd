@@ -1,8 +1,12 @@
 extends AnimatedSprite2D
 
 func _ready():
-	play("animation")
-	var fond = $"../AnimationTitreFond_1"
+	hide()
+	$"../AnimationTitreFond_3".hide()
+
+func _on_title__animated_sprite_2d__2_animation_finished():
+	show()
+	var fond = $"../AnimationTitreFond_3"
 	fond.show()
 	fond.modulate.a = 0.0
 
@@ -11,9 +15,7 @@ func _ready():
 
 	play("animation")
 
-	
 
 func _on_animation_finished():
 	if animation == "animation":
 		play("static")
-		
