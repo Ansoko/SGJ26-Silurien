@@ -13,6 +13,8 @@ func _on_credits_pressed():
 
 func _on_start_pressed():
 	$".".hide()
-	$CanvasLayer.hide()
 	AudioManager.play_music.emit(music_game)
 	SignalManager.start_game.emit()
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

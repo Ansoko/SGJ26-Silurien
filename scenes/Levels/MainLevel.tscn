@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="8_4cowq"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
+[ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="12_n7cjv"]
 [ext_resource type="AudioStream" uid="uid://6y4c3o77cska" path="res://audio/music/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
@@ -59,9 +60,6 @@ tile_map_data = PackedByteArray("AABBAQEAAAABAAAAAABCAQEAAAABAAAAAABDAQEAAAABAAA
 [node name="Sprite2D" type="Sprite2D" parent="TileMaps" unique_id=1021184007]
 position = Vector2(366, 363)
 texture = ExtResource("6_p0b77")
-
-[node name="TitleScreen" parent="." unique_id=706204540 instance=ExtResource("6_nwet0")]
-position = Vector2(-160, 1)
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("7_gvr7s")]
 position = Vector2(-305, 119)
@@ -627,6 +625,10 @@ position = Vector2(2855, -618)
 position = Vector2(2047, -112)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("12_xfaxn")]
+
+[node name="TitleScreen" parent="CanvaUI" unique_id=706204540 instance=ExtResource("6_nwet0")]
+music_menu = ExtResource("12_n7cjv")
+music_game = ExtResource("12_n7cjv")
 
 [node name="Sound" parent="." unique_id=261311265 instance=ExtResource("10_gvr7s")]
 
