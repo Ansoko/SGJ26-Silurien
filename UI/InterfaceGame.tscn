@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b7eljl5oq8wjw" path="res://assets_definitif/characters/tête_claire.png" id="6_bo5uv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfs4r"]
-bg_color = Color(0.64705884, 0.8117647, 0.48235294, 1)
+bg_color = Color(0.57240003, 0.72, 0.42480004, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
