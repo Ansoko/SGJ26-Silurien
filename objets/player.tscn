@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://0cmq3ncaxwb" path="res://audio/player/Footsteps_Bois-004.wav" id="14_61xml"]
 [ext_resource type="AudioStream" uid="uid://cv80e0x53mus3" path="res://audio/player/Footsteps_Bois-005.wav" id="15_rv3vl"]
 [ext_resource type="AudioStream" uid="uid://bltenvylricmn" path="res://audio/player/Footsteps_Bois-006.wav" id="16_16p4b"]
-[ext_resource type="Texture2D" uid="uid://bkx4bou3umls4" path="res://assets_definitif/characters/sprite.png" id="18_2k2ek"]
+[ext_resource type="Texture2D" uid="uid://bqxe7x1y5a8sj" path="res://assets_definitif/characters/sprite.png" id="18_2k2ek"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkc08"]
 atlas = ExtResource("18_2k2ek")
@@ -68,10 +68,6 @@ region = Rect2(673, 226, 81, 137)
 [sub_resource type="AtlasTexture" id="AtlasTexture_oqogf"]
 atlas = SubResource("CompressedTexture2D_r7f6y")
 region = Rect2(754, 226, 81, 137)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6tx4"]
-atlas = ExtResource("18_2k2ek")
-region = Rect2(20, 152, 99, 152)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5s36"]
 atlas = ExtResource("18_2k2ek")
@@ -143,9 +139,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c6tx4")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_a5s36")
 }, {
 "duration": 1.0,
@@ -183,7 +176,7 @@ SFXLadder = Array[AudioStream]([ExtResource("11_r7f6y"), ExtResource("12_f4a0r")
 z_index = 2
 position = Vector2(480, 270)
 sprite_frames = SubResource("SpriteFrames_ucygd")
-animation = &"jump"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1211012521]
 position = Vector2(480, 280.5)

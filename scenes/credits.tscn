@@ -15,12 +15,28 @@
 [node name="Credits" type="Node2D" unique_id=1760564455]
 script = ExtResource("1_2fbfq")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1676165520]
+[node name="Background_block" type="Node2D" parent="." unique_id=1474776095]
+
+[node name="vert" type="ColorRect" parent="Background_block" unique_id=1676165520]
 offset_left = 179.0
 offset_right = 219.0
 offset_bottom = 40.0
 scale = Vector2(7.6800003, 13.6)
-color = Color(0.64705884, 0.8117647, 0.48235294, 0.5882353)
+color = Color(0.64705884, 0.8117647, 0.48235294, 1)
+
+[node name="violet" type="ColorRect" parent="Background_block" unique_id=1892165151]
+offset_left = 179.0
+offset_right = 219.0
+offset_bottom = 40.000008
+scale = Vector2(0.24000621, 13.6)
+color = Color(0.47058824, 0.40784314, 0.5137255, 1)
+
+[node name="violet2" type="ColorRect" parent="Background_block" unique_id=1110365106]
+offset_left = 477.0
+offset_right = 517.0
+offset_bottom = 40.000004
+scale = Vector2(0.24000621, 13.6)
+color = Color(0.47058824, 0.40784314, 0.5137255, 1)
 
 [node name="Roles" type="Node2D" parent="." unique_id=295999797]
 position = Vector2(155, 0)
