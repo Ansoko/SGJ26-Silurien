@@ -3,24 +3,47 @@
 [ext_resource type="Script" uid="uid://dlwkg22w8pfoh" path="res://objets/spawnerWord.gd" id="1_lxmps"]
 [ext_resource type="AudioStream" uid="uid://x663h5djgvt" path="res://audio/UI/UI_Bouton_Mots_01.wav" id="2_55dp5"]
 [ext_resource type="AudioStream" uid="uid://cjmct0lvun51n" path="res://audio/UI/UI_Bouton_Mots_02.wav" id="3_y2kgv"]
+[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="4_y2kgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmps"]
-size = Vector2(68.5, 22)
+size = Vector2(122.5, 25)
 
 [node name="SpawnerWord" type="Node2D" unique_id=1404252508]
 script = ExtResource("1_lxmps")
 SFXcollect = Array[AudioStream]([ExtResource("2_55dp5"), ExtResource("3_y2kgv")])
 
-[node name="Label" type="Label" parent="." unique_id=2032079686]
-offset_right = 69.0
-offset_bottom = 23.0
-text = "test"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Area2D" type="Area2D" parent="." unique_id=652347245]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1874193259]
 physics_interpolation_mode = 2
-position = Vector2(34.75, 11)
+position = Vector2(61.75, 12.5)
 shape = SubResource("RectangleShape2D_lxmps")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/CollisionShape2D" unique_id=1309155317]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.75
+offset_top = -23.5
+offset_right = 61.25
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_y2kgv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Area2D/CollisionShape2D/TextureRect" unique_id=2032079686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = -9.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "testtesttestte sttesttestttest"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

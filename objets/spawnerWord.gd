@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var label = $Label
+@onready var label = $Area2D/CollisionShape2D/TextureRect/Label
 
 @export_group("Type (0=random, 1=noun, 2=verb, 3=liaison, 4=adjectif, 5=ponctuation)")
 @export var wordType = 0
@@ -9,6 +9,9 @@ extends Node2D
 var joueur_present: bool = false
 
 func _ready() -> void:
+	label.add_theme_constant_override("line_spacing", -5)
+	label.add_theme_color_override("font_outline_color", Color("ffffffff"))
+	label.add_theme_constant_override("outline_size", 1)
 	createWord()
 	$Area2D.body_entered.connect(_on_body_entered)
 	$Area2D.body_exited.connect(_on_body_exited)

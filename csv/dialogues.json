@@ -3,74 +3,74 @@
 		{
 			"character": "CLAIRE",
 			"line": "Papaaaaaa ? Je peux aller jouer dehors ?",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Intro_01.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ?",
-			"audio": "res://audio/voix/Arnaud_R1.mp3"
+			"audio": "res://audio/voix/Arnaud_R1_01.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois.",
-			"audio":"res://audio/voix/Arnaud_R1.mp3"
+			"audio":"res://audio/voix/Arnaud_R1_02.wav"
 		},
 		{
 			"character": "CLAIRE",
 			"line": "Ha bah oui, zut. J’avais oublié. Mais ça va, j’ai le temps !",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Intro_02.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Pas vraiment, non. La levée du courrier est dans 5 minutes. Si tu veux écrire ta lettre, c’est maintenant ou jamais.",
-			"audio":"res://audio/voix/Arnaud_R2.mp3"
+			"audio":"res://audio/voix/Arnaud_R2.wav"
 		},
 		{
 			"character": "CLAIRE",
 			"line": "Haaaaan ! Mais comment je vais faire ?!",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Intro_03.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Ne t’en fais pas. Tu vas y arriver, n’oublies pas que l’écriture est une aventure.",
-			"audio":"res://audio/voix/Arnaud_R3.mp3"
+			"audio":"res://audio/voix/Arnaud_R3_01.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Pars à la rencontre des mots, laisse-toi porter.",
-			"audio":"res://audio/voix/Arnaud_R3.mp3"
+			"audio":"res://audio/voix/Arnaud_R3_02-001.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Et surtout, l’erreur fait partie de la vie.",
-			"audio":"res://audio/voix/Arnaud_R3.mp3"
+			"audio":"res://audio/voix/Arnaud_R3_02-002.wav"
 		},
 		{
 			"character": "CLAIRE",
 			"line": "Ha ouais. C’est trop bizarre c’que tu dis, papa. Bon bah moi je vais écrire ma lettre pour mamie, salut.",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Intro_04.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Reviens à temps pour le dîner, Claire !",
-			"audio":"res://audio/voix/Arnaud_R4.mp3"
+			"audio":"res://audio/voix/Arnaud_R4.wav"
 		}
 	],
 	"outro":[
 		{
 			"character": "CLAIRE",
 			"line": "Papaaa ! J’ai fini ma lettre, regarde !",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Outro_take01.wav"
 		},
 		{
 			"character": "ARNAUD",
 			"line": "Ouah, c’est super ! Ta plume est magnifique. Une lettre digne des plus grandes écrivaines. Je vais la poster tout de suite.",
-			"audio":"res://audio/voix/Arnaud_R5_outro.mp3"
+			"audio":"res://audio/voix/Arnaud_R5_Outro.wav"
 		},
 		{
 			"character": "CLAIRE",
 			"line": "C’est toujours aussi bizarre c’que tu dis papa.",
-			"audio":"res://audio/placeholder.mp3"
+			"audio":"res://audio/voix/Claire_Outro_take02.wav"
 		}
 	]
 }

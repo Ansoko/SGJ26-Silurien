@@ -17,7 +17,7 @@ func _ready() -> void:
 var list_words: Array = [{0:"Chère",1: false}, {0:"Mamie,", 1:false}] #word + bool barré
 
 func addNewWordToStory(newWord: String):
-	storyLabel.text += " "+newWord;
+	storyLabel.text += newWord if (newWord.contains(".") or newWord.contains(",")) else " "+newWord;
 	list_words.append({0:newWord, 1:false})
 	scrollToEnd.call_deferred()
 

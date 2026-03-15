@@ -37,7 +37,10 @@ func get_random_adjective() -> String:
 	return adjectives.pick_random()
 
 func get_random_punctuation() -> String:
-	return punctuation.pick_random()
+	var regex_guillemets = RegEx.new()
+	regex_guillemets.compile("\"")
+	var texte = regex_guillemets.sub(punctuation.pick_random(), "", true)
+	return texte
 
 func loadCSVAsArray(csv_path: String) -> Array:
 	var list: Array = []

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="8_4cowq"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
-[ext_resource type="Texture2D" uid="uid://c6o6vpfus4dyd" path="res://assets_definitif/sprites_menu.png" id="12_pgkmv"]
+[ext_resource type="Texture2D" uid="uid://bpibdyp6mknai" path="res://assets_definitif/sprites_menu.png" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0b77"]
