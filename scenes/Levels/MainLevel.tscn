@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://6y4c3o77cska" path="res://audio/music/Ambiance_Foret_Jeu.wav" id="12_p0b77"]
 [ext_resource type="PackedScene" uid="uid://thckph8dnnsa" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
+[ext_resource type="AudioStream" uid="uid://bmi5rabgsoc2k" path="res://audio/music/Musique_Jeu_Relax_Ultraviolet.wav" id="13_7ik1l"]
 
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
 
@@ -628,7 +629,7 @@ position = Vector2(2047, -112)
 
 [node name="TitleScreen" parent="CanvaUI" unique_id=706204540 instance=ExtResource("6_nwet0")]
 music_menu = ExtResource("12_n7cjv")
-music_game = ExtResource("12_n7cjv")
+music_game = ExtResource("13_7ik1l")
 
 [node name="Sound" parent="." unique_id=261311265 instance=ExtResource("10_gvr7s")]
 

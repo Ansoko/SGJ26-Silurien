@@ -2,8 +2,8 @@ extends Node2D
 
 @onready var joueur = $Player
 @onready var end_pos = $EndPos
-@onready var fenetre_finale = $CanvaLettre/Panel
-@onready var letterLabel = $CanvaLettre/Panel/RichTextLabel
+@onready var fenetre_finale = $Player/Camera/CanvaLettre
+@onready var letterLabel = $Player/Camera/CanvaLettre/TextureRect/RichTextLabel
 
 @export var SFXVictory: AudioStream
 @export var SFXpaper: AudioStream

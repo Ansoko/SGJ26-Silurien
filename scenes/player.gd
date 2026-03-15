@@ -70,7 +70,7 @@ func _physics_process(delta):
 		direction -= 1
 	
 	if sur_echelle:
-		if not can_climb and Input.is_action_pressed("climb_up"):
+		if not can_climb and (Input.is_action_pressed("climb_up") or Input.is_action_pressed("climb_down")):
 			can_climb = true
 			
 		if can_climb:
