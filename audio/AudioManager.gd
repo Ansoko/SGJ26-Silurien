@@ -4,7 +4,9 @@ const BUS_MUSIC = "Music"
 const BUS_SFX = "SFX"
 
 signal play_music(stream: AudioStream)
+signal play_ambiance(stream: AudioStream)
 signal play_SFX(stream: AudioStream)
+signal play_footstep(stream: AudioStream)
 
 func set_volume_musique(volume: float):
 	AudioServer.set_bus_volume_db(

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://thckph8dnnsa"]
 
-[ext_resource type="Texture2D" uid="uid://c6o6vpfus4dyd" path="res://assets_definitif/sprites_menu.png" id="1_84rn8"]
-[ext_resource type="FontFile" uid="uid://cspqe71urix8p" path="res://font/KGMidnightMemories.ttf" id="2_kvo88"]
+[ext_resource type="Texture2D" uid="uid://bpibdyp6mknai" path="res://assets_definitif/sprites_menu.png" id="1_84rn8"]
+[ext_resource type="FontFile" uid="uid://cu5stosx3w3vm" path="res://font/KGMidnightMemories.ttf" id="2_kvo88"]
 [ext_resource type="Texture2D" uid="uid://ddlibu7x1smkc" path="res://assets_definitif/TutoPanel/TutoPanel_echelle.png" id="3_umbtm"]
 [ext_resource type="Texture2D" uid="uid://bwjuiwqr4kn1q" path="res://assets_definitif/TutoPanel/TutoPanel_effacer.png" id="4_s5kvr"]
 [ext_resource type="Texture2D" uid="uid://dve14sypkyoqk" path="res://assets_definitif/TutoPanel/TutoPanel_prendre.png" id="5_kvo88"]

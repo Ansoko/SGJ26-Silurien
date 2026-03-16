@@ -62,7 +62,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and currentNbJumps>0:
 		currentNbJumps -= 1
 		velocity.y = JUMP_POWER
-		AudioManager.play_SFX.emit(SFXJumps.pick_random())
+		AudioManager.play_footstep.emit(SFXJumps.pick_random())
 	
 	if Input.is_action_pressed("move_right"):
 		direction += 1
@@ -125,11 +125,11 @@ func playSFXFootprint(delta):
 	timer_pas += delta
 	if timer_pas >= INTERVALLE_PAS:
 		timer_pas = 0.0
-		AudioManager.play_SFX.emit(SFXFootsteps.pick_random())
+		AudioManager.play_footstep.emit(SFXFootsteps.pick_random())
 		
 func playSFXLadder(delta):
 	timer_pas = 0
 	timer_ladder += delta
 	if timer_ladder >= INTERVALLE_LADDER:
 		timer_ladder = 0.0
-		AudioManager.play_SFX.emit(SFXLadder.pick_random())
+		AudioManager.play_footstep.emit(SFXLadder.pick_random())

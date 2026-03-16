@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://x83q6kxchhwr" path="res://scenes/end_screen.gd" id="1_6e1uj"]
 [ext_resource type="AudioStream" uid="uid://by51sm5j24aaf" path="res://audio/UI/UI_Victoire.wav" id="2_7ycdd"]
+[ext_resource type="AudioStream" uid="uid://c082o05snlp2n" path="res://audio/music/Musique_Jeu_Stress_CalmThougts.wav" id="2_ilt1u"]
 [ext_resource type="AudioStream" uid="uid://oiji1tt72asu" path="res://audio/UI/UI_Lettre_Ouvre.wav" id="3_d62ht"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_vj8vg"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="4_plosh"]
@@ -12,11 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://dcrr4fx7b1qhj" path="res://assets_temp/fond lettre.png" id="10_d62ht"]
 [ext_resource type="AudioStream" uid="uid://cf8jwa0rmjfaj" path="res://audio/UI/UI_Boutons_Over_01.wav" id="10_qyl73"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_um0j2"]
-[ext_resource type="AudioStream" uid="uid://e2pry1a6kwd2" path="res://audio/Ambiance/Ambiance_Outro.wav" id="11_fix67"]
-[ext_resource type="Texture2D" uid="uid://dknropdwh3pe3" path="res://assets_definitif/bouton.png" id="11_ilt1u"]
+[ext_resource type="AudioStream" uid="uid://r7r28t6ee203" path="res://audio/Ambiance/Ambiance_Outro.wav" id="11_fix67"]
+[ext_resource type="Texture2D" uid="uid://q4eo1asvbcal" path="res://assets_definitif/bouton.png" id="11_ilt1u"]
 
 [node name="EndScreen" type="Node2D" unique_id=531770442]
 script = ExtResource("1_6e1uj")
+musicOutro = ExtResource("2_ilt1u")
+ambianceOutro = ExtResource("11_fix67")
 SFXVictory = ExtResource("2_7ycdd")
 SFXpaper = ExtResource("3_d62ht")
 
@@ -117,9 +120,5 @@ son_click = ExtResource("9_fix67")
 position = Vector2(2, 117)
 
 [node name="Sound" parent="." unique_id=261311265 instance=ExtResource("10_um0j2")]
-
-[node name="Ambiance" type="AudioStreamPlayer" parent="." unique_id=592619856]
-stream = ExtResource("11_fix67")
-bus = &"Music"
 
 [connection signal="pressed" from="Player/Camera/CanvaLettre/RESTART" to="." method="_on_restart_pressed"]

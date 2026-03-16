@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://jo4lnvtnov4c"
+uid="uid://di0rq0mwiqrg1"
 path="res://.godot/imported/Ambiance_Foret_Jeu.wav-1b309009e74dae59cba3e9439852cdce.sample"
 
 [deps]
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

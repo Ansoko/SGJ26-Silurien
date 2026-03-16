@@ -5,12 +5,18 @@ extends Node2D
 @onready var fenetre_finale = $Player/Camera/CanvaLettre
 @onready var letterLabel = $Player/Camera/CanvaLettre/TextureRect/RichTextLabel
 
+@export var musicOutro: AudioStream
+@export var ambianceOutro: AudioStream
 @export var SFXVictory: AudioStream
 @export var SFXpaper: AudioStream
 
 func _ready() -> void:
 	fenetre_finale.hide()
 	lancer_sequence_fin.call_deferred()
+	var stb := func():
+		AudioManager.play_music.emit(musicOutro)
+		AudioManager.play_ambiance.emit(ambianceOutro)
+	stb.call_deferred()
 
 func lancer_sequence_fin():
 	await _deplacer_joueur_vers_spawn()
