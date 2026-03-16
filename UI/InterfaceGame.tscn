@@ -124,10 +124,10 @@ flip_h = true
 
 [node name="nameCharacter" type="RichTextLabel" parent="Dialog/Panel" unique_id=1260615161]
 layout_mode = 0
-offset_left = 139.0
-offset_top = 22.0
-offset_right = 566.0
-offset_bottom = 47.0
+offset_left = 140.0
+offset_top = 17.0
+offset_right = 567.0
+offset_bottom = 36.0
 bbcode_enabled = true
 text = "[b]Claire[/b]"
 scroll_active = false
@@ -138,12 +138,22 @@ layout_mode = 0
 offset_left = 170.0
 offset_top = 36.0
 offset_right = 543.0
-offset_bottom = 107.0
+offset_bottom = 97.0
 bbcode_enabled = true
 text = "Si tu veux, Claire. Mais, tu ne voulais pas écrire une lettre pour Mamie ? Tu sais que ça lui ferait plaisir. Il s’en est passé des choses, depuis la dernière fois."
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Dialog/Panel" unique_id=329237623]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 98.0
+offset_right = 460.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 12
+text = "[Espace pour continuer]"
+horizontal_alignment = 1
 
 [node name="Timer_elements" type="Control" parent="." unique_id=513658622]
 layout_mode = 3

@@ -28,7 +28,12 @@ func _process(delta):
 	if timer.get_time_left() < 12.0:
 		if not alarmPlayed and timer.get_time_left() < 11.0:
 			alarmPlayed = true
-			AudioManager.play_SFX.emit(SFXTimer)
+			var p = AudioStreamPlayer.new()
+			p.bus = "SFX"
+			add_child(p)
+			p.stream = SFXTimer
+			p.play()
+			p.finished.connect(p.queue_free)
 		if fmod(timer.get_time_left(), 1.0) < delta * 2:
 			var tween = create_tween()
 			tween.tween_property($Texts/Timer_label, "scale", Vector2.ONE * 1.15, 0.08)

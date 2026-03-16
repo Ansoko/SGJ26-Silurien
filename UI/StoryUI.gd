@@ -90,7 +90,7 @@ func start_intro():
 	currentState = "intro"
 	isInDialogMode = true
 	dialogPanel.show()
-	show_next_line()
+	show_next_line.call_deferred()
 	
 func start_outro():
 	index_courant = -1
@@ -123,9 +123,9 @@ func show_next_line():
 			SignalManager.end_outro.emit()
 		return
 	
-	if(line[index_courant]["audio"] != ""):
-		AudioManager.play_SFX.emit(load(line[index_courant]["audio"]))
-		
+	AudioManager.play_SFX.emit(load(line[index_courant]["audio"]))
+	nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
+	var texte_complet = line[index_courant]["line"]
 	match line[index_courant]["character"]:
 		"ARNAUD":
 			characterChild.hide()
@@ -133,8 +133,6 @@ func show_next_line():
 		"CLAIRE":
 			characterDad.hide()
 			characterChild.show()
-	nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
-	var texte_complet = line[index_courant]["line"]
 		
 	speaking = true
 	tween = create_tween()

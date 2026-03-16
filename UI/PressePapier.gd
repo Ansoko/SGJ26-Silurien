@@ -13,8 +13,31 @@ func _on_hover():
 func _on_click():
 	AudioManager.play_SFX.emit(son_click)
 	var texte = WordManager.letterText
-	texte = remplacer_balises_barre(texte)
-	DisplayServer.clipboard_set(texte)
+	
+	if OS.get_name() == "Web":
+		var bytes = texte.to_utf8_buffer()
+		var b64 = Marshalls.raw_to_base64(bytes)
+		JavaScriptBridge.eval("""
+            (function() {
+                var b64 = '%s';
+                var binary = atob(b64);
+                var bytes = new Uint8Array(binary.length);
+                for (var i = 0; i < binary.length; i++) {
+                    bytes[i] = binary.charCodeAt(i);
+                }
+                var text = new TextDecoder('utf-8').decode(bytes);
+                
+                text = text.replace(/\\[s\\](.*?)\\[\\/s\\]/g, function(match, contenu) {
+                    return contenu.split('').join('\\u0336') + '\\u0336';
+                });
+                
+                navigator.clipboard.writeText(text).catch(console.error);
+            })();
+		""" % b64)
+	else:
+		# Version desktop — utilise ta fonction GDScript existante
+		DisplayServer.clipboard_set(remplacer_balises_barre(texte))
+		
 	text = "Copié !" 
 	await get_tree().create_timer(2.0).timeout
 	text = "Copier dans le presse-papier"
