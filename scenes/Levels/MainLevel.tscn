@@ -640,7 +640,6 @@ position = Vector2(2855, -618)
 position = Vector2(2052, -108)
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("12_xfaxn")]
-visible = false
 
 [node name="TitleScreen" parent="CanvaUI" unique_id=706204540 instance=ExtResource("6_nwet0")]
 music_menu = ExtResource("12_n7cjv")
