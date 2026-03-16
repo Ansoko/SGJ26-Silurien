@@ -13,7 +13,7 @@ func _ready():
 	timerCanva.hide()
 
 func start_timer():
-	$Texts.show()
+	timerCanva.show()
 	timer.wait_time = TIME
 	timer.start()
 	alarmPlayed = false
@@ -22,10 +22,19 @@ func _on_timer_timeout() -> void:
 	WordManager.saveText.emit()
 	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 
-func _process(_delta):
+func _process(delta):
 	if !timer.is_stopped():
-		$Texts/Timer_label.text = "encore "+str(int(timer.get_time_left())) + "s"
-	if not alarmPlayed and timer.get_time_left() <= 10.0:
-		alarmPlayed = true
-		AudioManager.play_SFX.emit(SFXTimer)
+		$Texts/Timer_label.text = formater_temps(timer.get_time_left())
+	if timer.get_time_left() < 12.0:
+		if not alarmPlayed and timer.get_time_left() < 11.0:
+			alarmPlayed = true
+			AudioManager.play_SFX.emit(SFXTimer)
+		if fmod(timer.get_time_left(), 1.0) < delta * 2:
+			var tween = create_tween()
+			tween.tween_property($Texts/Timer_label, "scale", Vector2.ONE * 1.15, 0.08)
+			tween.tween_property($Texts/Timer_label, "scale", Vector2.ONE, 0.08)
 	
+func formater_temps(secondes: float) -> String:
+	var minutes = int(secondes) / 60
+	var secs = int(secondes) % 60
+	return "%d:%02d" % [minutes, secs]

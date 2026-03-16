@@ -5,11 +5,11 @@
 [ext_resource type="AudioStream" uid="uid://c8kc071ogda6" path="res://audio/UI/UI_Rature_02.wav" id="3_nei81"]
 [ext_resource type="Script" uid="uid://r8vshrc0aeg2" path="res://UI/timer.gd" id="3_qbaqg"]
 [ext_resource type="Texture2D" uid="uid://xunftlwaq21c" path="res://assets_definitif/bulle dialogue.png" id="4_8pnaq"]
-[ext_resource type="Texture2D" uid="uid://02d084uydcxx" path="res://assets_definitif/ui_backgrounds.png" id="4_bo5uv"]
+[ext_resource type="Texture2D" uid="uid://rmc6va47koxw" path="res://assets_definitif/ui_backgrounds.png" id="4_bo5uv"]
 [ext_resource type="AudioStream" uid="uid://dia20fdqpkhp8" path="res://audio/Timer_Analogue.wav" id="4_bv2us"]
 [ext_resource type="Texture2D" uid="uid://cn2jwd3niyf8d" path="res://assets_definitif/characters/tête_arnaud.png" id="5_8pnaq"]
 [ext_resource type="Texture2D" uid="uid://b7eljl5oq8wjw" path="res://assets_definitif/characters/tête_claire.png" id="6_bo5uv"]
-[ext_resource type="Texture2D" uid="uid://shpykd74oghf" path="res://assets_definitif/ui_backgrounds_timer.png" id="10_7uovm"]
+[ext_resource type="Texture2D" uid="uid://h3e5txrs00lm" path="res://assets_definitif/ui_backgrounds_timer.png" id="10_7uovm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo5uv"]
 texture = ExtResource("4_bo5uv")
@@ -147,9 +147,12 @@ vertical_alignment = 1
 
 [node name="Timer_elements" type="Control" parent="." unique_id=513658622]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
 offset_bottom = 40.0
+grow_horizontal = 0
 script = ExtResource("3_qbaqg")
 TIME = 180
 SFXTimer = ExtResource("4_bv2us")
@@ -160,22 +163,36 @@ one_shot = true
 autostart = true
 
 [node name="Texts" type="Control" parent="Timer_elements" unique_id=494914982]
-anchors_preset = 0
-offset_left = 870.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -93.0
 offset_top = 15.0
-offset_right = 910.0
-offset_bottom = 55.0
+offset_right = -37.0
+offset_bottom = 42.0
+grow_horizontal = 0
 
 [node name="Timer_bkg" type="Sprite2D" parent="Timer_elements/Texts" unique_id=1788997681]
 texture_filter = 1
-position = Vector2(28, 12)
+position = Vector2(28, 13)
 texture = ExtResource("10_7uovm")
 
 [node name="Timer_label" type="Label" parent="Timer_elements/Texts" unique_id=1496277742]
-layout_mode = 0
-offset_left = -7.0
-offset_top = 1.0
-offset_right = 33.0
-offset_bottom = 24.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -9.5
+offset_right = 14.0
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Timer_elements/Timer" to="Timer_elements" method="_on_timer_timeout"]

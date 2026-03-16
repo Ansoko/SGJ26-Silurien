@@ -15,7 +15,7 @@ script = ExtResource("1_iwa34")
 typeSound = 1
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=927394272]
-max_polyphony = 5
+max_polyphony = 10
 bus = &"SFX"
 script = ExtResource("1_iwa34")
 typeSound = 2

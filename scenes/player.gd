@@ -98,7 +98,7 @@ func update_animation(delta: float):
 	else:
 		$AnimatedSprite2D.stop()
 
-	if velocity.x != 0 and velocity.y == 0:
+	if velocity.x != 0 and velocity.y == 0 and not sur_echelle:
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 		playSFXFootprint(delta)
@@ -110,7 +110,7 @@ func update_animation(delta: float):
 	elif velocity.y < 0:
 		$AnimatedSprite2D.animation = "jump"
 	
-	else:
+	elif not sur_echelle and not can_climb:
 		$AnimatedSprite2D.animation = "idle"
 		
 func playAnimationEnd():

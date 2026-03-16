@@ -9,7 +9,7 @@ func _ready() -> void:
 		1:
 			AudioManager.play_ambiance.connect(playPlayer)
 		2:
-			AudioManager.play_music.connect(playPlayer)
+			AudioManager.play_SFX.connect(playPlayer)
 		_:
 			AudioManager.play_footstep.connect(playPlayer)
 

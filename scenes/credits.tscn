@@ -2,7 +2,7 @@
 
 [ext_resource type="LabelSettings" uid="uid://0ixt354kar50" path="res://scenes/role.tres" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://dc4yrga50fmit" path="res://scenes/credits.gd" id="1_2fbfq"]
-[ext_resource type="LabelSettings" uid="uid://cogkqhwe5gu4r" path="res://scenes/noms.tres" id="3_8gwij"]
+[ext_resource type="LabelSettings" path="res://scenes/noms.tres" id="3_8gwij"]
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="4_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://bur34xyfolb4h" path="res://assets_definitif/CREDITS/célia.png" id="5_qbfqv"]
 [ext_resource type="Texture2D" uid="uid://bmwjhepayl341" path="res://assets_definitif/CREDITS/anne-so.png" id="6_x5q3x"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c0bu85oia3ybp" path="res://assets_definitif/bouton2.png" id="11_c6kru"]
 
 [node name="Credits" type="Node2D" unique_id=1760564455]
+z_index = 2
 script = ExtResource("1_2fbfq")
 
 [node name="Background_block" type="Node2D" parent="." unique_id=1474776095]

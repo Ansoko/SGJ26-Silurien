@@ -5,6 +5,8 @@ extends Node2D
 @export var music_game : AudioStream
 @export var ambiance_game : AudioStream
 
+var creditScene = load("res://scenes/credits.tscn")
+
 func _ready() -> void:
 	var stb := func():
 		AudioManager.play_music.emit(music_menu)
@@ -12,7 +14,8 @@ func _ready() -> void:
 	stb.call_deferred()
 
 func _on_credits_pressed():
-	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+	var instance = creditScene.instantiate()
+	add_child(instance)
 
 func _on_start_pressed():
 	$".".hide()
