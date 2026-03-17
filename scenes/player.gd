@@ -68,6 +68,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		direction -= 1
 	
+	if Input.is_action_pressed("climb_down"):
+		_goThroughPlatform()
+		
 	if sur_echelle:
 		if not can_climb and (Input.is_action_pressed("climb_up") or Input.is_action_pressed("climb_down")):
 			can_climb = true
@@ -84,11 +87,16 @@ func _physics_process(delta):
 	
 	var acceleration = ACCELERATION_SOL if is_on_floor() else AIR_CONTROL
 	velocity.x = move_toward(velocity.x, direction * speed, acceleration)
-	#velocity.x = direction * speed
 	velocity.y += currentGravity * delta
 
 	move_and_slide()
 	update_animation(delta)
+	
+func _goThroughPlatform():
+	if is_on_floor():
+		set_collision_mask_value(2, false)
+		await get_tree().create_timer(0.3).timeout
+		set_collision_mask_value(2, true)
 
 func update_animation(delta: float):
 

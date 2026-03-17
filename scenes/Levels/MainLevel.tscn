@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5hjmc7md3jk6" path="res://assets_definitif/fond.png" id="2_p0b77"]
 [ext_resource type="PackedScene" uid="uid://b17of16l6os5e" path="res://scenes/Levels/tile_map_ground.tscn" id="3_n7cjv"]
-[ext_resource type="PackedScene" uid="uid://p5bgd3uonref" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/tile_map_grass.tscn" id="4_7ik1l"]
 [ext_resource type="PackedScene" uid="uid://c0wo685pf5qgm" path="res://objets/tilemaps/tile_map_ladder.tscn" id="4_i5ud2"]
 [ext_resource type="PackedScene" uid="uid://b1aunp26wu2en" path="res://objets/tilemaps/tile_map_oneway.tscn" id="5_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://chaayiekc3yh3" path="res://objets/tilemaps/tile_map_deco.tscn" id="6_awij6"]
@@ -66,6 +66,7 @@ texture = ExtResource("6_p0b77")
 
 [node name="Player" parent="." unique_id=1527853081 instance=ExtResource("7_gvr7s")]
 position = Vector2(-305, 119)
+collision_mask = 3
 
 [node name="Camera" parent="Player" unique_id=208823770 instance=ExtResource("8_4cowq")]
 position = Vector2(477, 328)

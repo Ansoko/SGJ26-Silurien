@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://thckph8dnnsa"]
 
 [ext_resource type="Texture2D" uid="uid://bpibdyp6mknai" path="res://assets_definitif/sprites_menu.png" id="1_84rn8"]
-[ext_resource type="FontFile" uid="uid://cu5stosx3w3vm" path="res://font/KGMidnightMemories.ttf" id="2_kvo88"]
+[ext_resource type="FontFile" uid="uid://cspqe71urix8p" path="res://font/KGMidnightMemories.ttf" id="2_kvo88"]
 [ext_resource type="Texture2D" uid="uid://ddlibu7x1smkc" path="res://assets_definitif/TutoPanel/TutoPanel_echelle.png" id="3_umbtm"]
 [ext_resource type="Texture2D" uid="uid://bwjuiwqr4kn1q" path="res://assets_definitif/TutoPanel/TutoPanel_effacer.png" id="4_s5kvr"]
 [ext_resource type="Texture2D" uid="uid://dve14sypkyoqk" path="res://assets_definitif/TutoPanel/TutoPanel_prendre.png" id="5_kvo88"]
@@ -52,7 +52,19 @@ offset_bottom = 32.660255
 theme_override_fonts/font = ExtResource("2_kvo88")
 theme_override_font_sizes/font_size = 30
 text = "S
-↓"
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="S2" type="Label" parent="TileMap_panel/TutoPanel_echelle" unique_id=232861462]
+offset_left = 98.32158
+offset_top = -40.22245
+offset_right = 203.32158
+offset_bottom = 33.77755
+rotation = 1.5707964
+theme_override_fonts/font = ExtResource("2_kvo88")
+theme_override_font_sizes/font_size = 30
+text = "->"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -66,8 +78,20 @@ offset_right = -15.667313
 offset_bottom = 32.66028
 theme_override_fonts/font = ExtResource("2_kvo88")
 theme_override_font_sizes/font_size = 30
-text = "↑
+text = "
 Z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Z2" type="Label" parent="TileMap_panel/TutoPanel_echelle" unique_id=1562637773]
+offset_left = -107.259834
+offset_top = 25.69767
+offset_right = -2.2598343
+offset_bottom = 99.69767
+rotation = -1.5707964
+theme_override_fonts/font = ExtResource("2_kvo88")
+theme_override_font_sizes/font_size = 30
+text = "->"
 horizontal_alignment = 1
 vertical_alignment = 1
 
