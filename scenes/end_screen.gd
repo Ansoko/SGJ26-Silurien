@@ -25,9 +25,9 @@ func lancer_sequence_fin():
 
 
 func _deplacer_joueur_vers_spawn():
-	joueur.set_physics_process(false)
+	#joueur.set_physics_process(false)
 	$Player/AnimatedSprite2D.flip_h = true
-	$Player/AnimatedSprite2D.animation = "walk"
+	$Player/AnimatedSprite2D.play("walk")
 	
 	var tween = create_tween()
 	tween.tween_property(
@@ -38,6 +38,7 @@ func _deplacer_joueur_vers_spawn():
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 	await tween.finished  # attend la fin du déplacement
+	$Player/AnimatedSprite2D.play("idle")
 
 func _lancer_dialogue():
 	SignalManager.start_outro.emit()
