@@ -115,10 +115,6 @@ func update_animation(delta: float):
 		
 func playAnimationEnd():
 	canMove=false
-	$AnimatedSprite2D.flip_h = true
-	$AnimatedSprite2D.play("walk")
-	await get_tree().create_timer(2).timeout
-	$AnimatedSprite2D.play("idle")
 
 func playSFXFootprint(delta):
 	timer_ladder = 0

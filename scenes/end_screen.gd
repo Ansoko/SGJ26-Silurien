@@ -26,6 +26,8 @@ func lancer_sequence_fin():
 
 func _deplacer_joueur_vers_spawn():
 	joueur.set_physics_process(false)
+	$Player/AnimatedSprite2D.flip_h = true
+	$Player/AnimatedSprite2D.animation = "walk"
 	
 	var tween = create_tween()
 	tween.tween_property(
