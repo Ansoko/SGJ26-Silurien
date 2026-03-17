@@ -30,7 +30,6 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	add_to_group("player")
 	SignalManager.end_intro.connect(unlockMovement)
-	#SignalManager.start_outro.connect(playAnimationEnd)
 	
 	echelle_detector.body_entered.connect(_on_echelle_entered)
 	echelle_detector.body_exited.connect(_on_echelle_exited)
@@ -93,6 +92,11 @@ func _physics_process(delta):
 
 func update_animation(delta: float):
 
+	var direction = Input.get_axis("move_left", "move_right")
+
+	if direction != 0:
+		$AnimatedSprite2D.flip_h = direction < 0
+
 	if velocity.length() > 0:
 		$AnimatedSprite2D.play()
 	else:
@@ -100,10 +104,9 @@ func update_animation(delta: float):
 
 	if velocity.x != 0 and velocity.y == 0 and not sur_echelle:
 		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_h = velocity.x < 0
 		playSFXFootprint(delta)
 
-	elif (velocity.y!=0 or velocity.x!=0) && can_climb:
+	elif (velocity.y != 0 or velocity.x != 0) && can_climb:
 		playSFXLadder(delta)
 		$AnimatedSprite2D.animation = "climb"
 
@@ -112,9 +115,6 @@ func update_animation(delta: float):
 	
 	elif not sur_echelle and not can_climb:
 		$AnimatedSprite2D.animation = "idle"
-
-#func playAnimationEnd():
-	#canMove = true
 
 func playSFXFootprint(delta):
 	timer_ladder = 0
