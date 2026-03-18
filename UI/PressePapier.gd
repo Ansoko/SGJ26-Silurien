@@ -13,29 +13,49 @@ func _on_hover():
 func _on_click():
 	AudioManager.play_SFX.emit(son_click)
 	var texte = WordManager.letterText
-	
 	if OS.get_name() == "Web":
+		#texte = JSON.stringify(texte)
+		#texte = remplacer_balises_barre(texte)
+		#
+		#JavaScriptBridge.eval("window._texteToCopy = %s;" %texte)
+		#JavaScriptBridge.eval("""
+			#navigator.clipboard.writeText(window._texteToCopy).catch(console.error);
+		#""")
+		
+		texte = remplacer_balises_barre(texte)
 		var bytes = texte.to_utf8_buffer()
 		var b64 = Marshalls.raw_to_base64(bytes)
 		JavaScriptBridge.eval("""
             (function() {
-                var b64 = '%s';
-                var binary = atob(b64);
+                var binary = atob('%s');
                 var bytes = new Uint8Array(binary.length);
                 for (var i = 0; i < binary.length; i++) {
                     bytes[i] = binary.charCodeAt(i);
                 }
                 var text = new TextDecoder('utf-8').decode(bytes);
                 
-                text = text.replace(/\\[s\\](.*?)\\[\\/s\\]/g, function(match, contenu) {
-                    return contenu.split('').join('\\u0336') + '\\u0336';
-                });
+                function fallbackCopy(t) {
+                    var ta = document.createElement('textarea');
+                    ta.value = t;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.focus();
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                }
                 
-                navigator.clipboard.writeText(text).catch(console.error);
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).catch(function() {
+                        fallbackCopy(text);
+                    });
+                } else {
+                    fallbackCopy(text);
+                }
             })();
 		""" % b64)
 	else:
-		# Version desktop — utilise ta fonction GDScript existante
 		DisplayServer.clipboard_set(remplacer_balises_barre(texte))
 		
 	text = "Copié !" 
