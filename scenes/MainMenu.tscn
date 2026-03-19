@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cbf4sjdguasyq" path="res://UI/parallax.tscn" id="1_mipys"]
 [ext_resource type="PackedScene" uid="uid://yti7dsiieph2" path="res://scenes/title_screen.tscn" id="2_mipys"]
-[ext_resource type="Texture2D" uid="uid://7obiwymyp6hw" path="res://assets_alice/autotile_tileset.png" id="2_ucygd"]
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="3_2wh52"]
 [ext_resource type="AudioStream" uid="uid://bsexck0tsq5vw" path="res://audio/music/Musique_Menu.wav" id="3_7la6k"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="5_l72w3"]
@@ -14,7 +13,6 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ucygd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mipys"]
-texture = ExtResource("2_ucygd")
 separation = Vector2i(10, 10)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -85,7 +83,6 @@ sources/0 = SubResource("TileSetAtlasSource_mipys")
 [node name="Parallax" parent="." unique_id=348623257 instance=ExtResource("1_mipys")]
 
 [node name="TitleScreen" parent="." unique_id=2020015590 instance=ExtResource("2_mipys")]
-music_menu = ExtResource("3_7la6k")
 music_game = ExtResource("3_7la6k")
 
 [node name="CanvaUI" parent="." unique_id=1976557452 instance=ExtResource("8_mipys")]
