@@ -12,8 +12,17 @@ func _ready() -> void:
 	SignalManager.start_outro.connect(start_outro)
 	SignalManager.start_outro.connect(hideStory)
 	SignalManager.end_intro.connect(showStory)
+
+func _input(event):
+	if event.is_action_pressed("erase"):
+		if isInDialogMode:
+			skipDialogue()
+		else:
+			removeLastWord()
+	if isInDialogMode && event.is_action_pressed("jump"):
+			show_next_line()
 	
-# --- Story line at the top ---
+#region current letter (at the top)
 @onready var storyLabel = $Control/ScrollContainer/RichTextLabel
 @onready var scrollContainer = $Control/ScrollContainer
 @onready var storyPanel = $Control
@@ -21,17 +30,24 @@ func _ready() -> void:
 var list_words: Array = [{0:"Chère",1: false}, {0:"Mamie,", 1:false}] #word + bool barré
 
 func addNewWordToStory(newWord: String):
-	storyLabel.text += newWord if (newWord.contains(".") or newWord.contains(",")) else " "+newWord;
+	if(getLastWord() in [".", "!", "?"]):
+		newWord = premiere_majuscule(newWord)
+		
 	list_words.append({0:newWord, 1:false})
+	
+	if(newWord not in [".",","]):
+		storyLabel.text += " "
+	storyLabel.text += newWord
+
 	scrollToEnd.call_deferred()
 
+func premiere_majuscule(texte: String) -> String:
+	if texte.is_empty():
+		return texte
+	return texte[0].to_upper() + texte.substr(1)
+
 func removeLastWord():
-	var lastWord;
-	for i in range(list_words.size()-1, -1, -1):
-		if not list_words[i][1]:
-			list_words[i][1] = true
-			lastWord = list_words[i][0]
-			break
+	var lastWord = getLastWord()
 	if lastWord == null:
 		return
 	
@@ -48,6 +64,15 @@ func removeLastWord():
 	
 	AudioManager.play_SFX.emit(SFXerasure.pick_random())
 	scrollToEnd.call_deferred()
+	
+func getLastWord() -> String:
+	var lastWord = "";
+	for i in range(list_words.size()-1, -1, -1):
+		if not list_words[i][1]:
+			list_words[i][1] = true
+			lastWord = list_words[i][0]
+			break
+	return lastWord
 
 func scrollToEnd():
 	var stb := func():
@@ -60,17 +85,11 @@ func hideStory():
 func showStory():
 	storyPanel.show()
 
-func _input(event):
-	if event.is_action_pressed("erase"):
-			removeLastWord()
-	if isInDialogMode:
-		if event.is_action_pressed("jump"):
-			show_next_line()
-
 func saveStoryText():
 	WordManager.letterText = storyLabel.text
+#endregion
 
-#--- dialog system ---
+#region dialog system
 @onready var nameLabel = $Dialog/Panel/nameCharacter
 @onready var dialogLabel = $Dialog/Panel/line
 @onready var characterDad = $Dialog/Panel/characterArnaud
@@ -101,7 +120,6 @@ func start_outro():
 	
 func show_next_line():
 	index_courant += 1
-	dialogLabel.text = ""
 	var line = allLignes.get(currentState)
 		
 	if tween:
@@ -111,21 +129,17 @@ func show_next_line():
 		speaking = false
 		index_courant -= 1
 		nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
-		dialogLabel.text = "[shake rate=3 level=5]"+line[index_courant]["line"]+"[/shake]"
+		dialogLabel.visible_ratio = 1.0
 		return
 		
 	if(index_courant >= line.size()):
-		isInDialogMode = false
-		dialogPanel.hide()
-		if currentState == "intro" :
-			SignalManager.end_intro.emit()
-		else:
-			SignalManager.end_outro.emit()
+		skipDialogue()
 		return
 	
 	AudioManager.play_SFX.emit(load(line[index_courant]["audio"]))
 	nameLabel.text = "[b]"+line[index_courant]["character"]+"[/b]"
-	var texte_complet = line[index_courant]["line"]
+	dialogLabel.text = "[shake rate=3 level=5]"+line[index_courant]["line"]+"[/shake]"
+	dialogLabel.visible_ratio = 0
 	match line[index_courant]["character"]:
 		"ARNAUD":
 			characterChild.hide()
@@ -136,15 +150,22 @@ func show_next_line():
 		
 	speaking = true
 	tween = create_tween()
-	for caractere in texte_complet:
-		tween.tween_callback(_ajouter_caractere.bind(caractere)).set_delay(vitesse_texte)
+	tween.tween_property(dialogLabel, "visible_ratio", 1.0, line[index_courant]["line"].length()*vitesse_texte)
 	tween.tween_callback(endTween)
-
-func _ajouter_caractere(caractere: String):
-	dialogLabel.text += caractere
 	
 func endTween():
-	speaking = false	
+	speaking = false
+	
+func skipDialogue():
+	if tween:
+		tween.kill()
+	speaking = false
+	isInDialogMode = false
+	dialogPanel.hide()
+	if currentState == "intro":
+		SignalManager.end_intro.emit()
+	else:
+		SignalManager.end_outro.emit()
 	
 func load_json(chemin: String) -> Dictionary:
 	var file = FileAccess.open(chemin, FileAccess.READ)
@@ -154,3 +175,4 @@ func load_json(chemin: String) -> Dictionary:
 	var json = JSON.new()
 	json.parse(file.get_as_text())
 	return json.get_data()
+#endregion

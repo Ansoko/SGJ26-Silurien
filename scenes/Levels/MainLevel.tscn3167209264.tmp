@@ -11,20 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://vp8rvdwlxio7" path="res://objets/player.tscn" id="7_gvr7s"]
 [ext_resource type="PackedScene" uid="uid://bg6ndnr4lqr72" path="res://objets/cameraGame.tscn" id="8_4cowq"]
 [ext_resource type="PackedScene" uid="uid://dverjkr2lbvg0" path="res://audio/sound_scene.tscn" id="10_gvr7s"]
-[ext_resource type="Material" uid="uid://da846flpvek6s" path="res://shaders/fog_material.tres" id="10_n7cjv"]
 [ext_resource type="PackedScene" uid="uid://ctwttu4wng606" path="res://objets/spawnerWord.tscn" id="11_6r8n1"]
 [ext_resource type="PackedScene" uid="uid://thckph8dnnsa" path="res://scenes/Levels/tile_map_tutopanels.tscn" id="12_pgkmv"]
 [ext_resource type="PackedScene" uid="uid://biqof76pf325b" path="res://UI/InterfaceGame.tscn" id="12_xfaxn"]
-
-[sub_resource type="Gradient" id="Gradient_7ik1l"]
-colors = PackedColorArray(1, 1, 1, 0, 0.8123448, 0.87369627, 0.9347252, 0.8745098)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_nwet0"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_awij6"]
-noise = SubResource("FastNoiseLite_nwet0")
-color_ramp = SubResource("Gradient_7ik1l")
-seamless = true
 
 [node name="MainMenu" type="Node2D" unique_id=1244251774]
 
@@ -88,19 +77,6 @@ limit_right = 22720
 limit_bottom = 704
 limit_smoothed = true
 editor_draw_limits = true
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=483700596]
-z_index = 10
-scroll_scale = Vector2(1.3, 1.3)
-repeat_size = Vector2(512, 0)
-autoscroll = Vector2(-25, 0)
-repeat_times = 2
-
-[node name="FogSprite" type="Sprite2D" parent="Parallax2D" unique_id=1795988821]
-modulate = Color(1, 1, 1, 0.81960785)
-material = ExtResource("10_n7cjv")
-position = Vector2(755, 450)
-texture = SubResource("NoiseTexture2D_awij6")
 
 [node name="SpawnerWords" type="Node" parent="." unique_id=1336349515]
 

@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bisrwgytmuh1p" path="res://assets_definitif/characters/echelle1.png" id="17_r7f6y"]
 [ext_resource type="Texture2D" uid="uid://dorg62ndwjcwi" path="res://assets_definitif/characters/saut1.png" id="18_2k2ek"]
 [ext_resource type="Texture2D" uid="uid://criggot7dyh4d" path="res://assets_definitif/characters/marche1.png" id="18_r7f6y"]
+[ext_resource type="Texture2D" uid="uid://dicwhnwg8n4e5" path="res://assets_temp/particule.png" id="20_f4a0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34iwm"]
 atlas = ExtResource("17_r7f6y")
@@ -357,3 +358,25 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EchelleDetector" unique_id=1991348061]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_afxg2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=942358320]
+position = Vector2(486, 324)
+emitting = false
+amount = 10
+texture = ExtResource("20_f4a0r")
+explosiveness = 0.31
+randomness = 1.0
+lifetime_randomness = 0.19
+fract_delta = false
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 5.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 20)
+initial_velocity_max = 31.74
+linear_accel_min = -18.78
+scale_amount_max = 2.0
+color = Color(1, 1, 1, 0.8980392)
+hue_variation_min = -0.1
+hue_variation_max = 0.15
+anim_offset_max = 0.1058

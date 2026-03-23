@@ -186,6 +186,7 @@
 [ext_resource type="Texture2D" uid="uid://bups6b5qy4o3h" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-59.png" id="159_sp5e3"]
 [ext_resource type="Texture2D" uid="uid://dhavf3rijy7wt" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-60.png" id="160_ga745"]
 [ext_resource type="Texture2D" uid="uid://dkvw7e0davvwa" path="res://assets_definitif/AnimationTitre/Chère Mamie Animation 3/Chère_Mamie_Animation_3-61.png" id="161_2l6aj"]
+[ext_resource type="AudioStream" uid="uid://h6yleruoefvl" path="res://audio/UI/UI_Intro_Ecriture_Titre.wav" id="187_b8ebi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_388bl"]
 animations = [{
@@ -1119,6 +1120,11 @@ script = ExtResource("7_u26n3")
 son_hover = ExtResource("8_ib7db")
 son_click = ExtResource("9_frs5l")
 metadata/_edit_use_anchors_ = true
+
+[node name="IntroAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=97610543]
+stream = ExtResource("187_b8ebi")
+autoplay = true
+bus = &"SFX"
 
 [connection signal="animation_finished" from="Control/Title/Title__AnimatedSprite2D__1" to="Control/Title/Title__AnimatedSprite2D__1" method="_on_animation_finished"]
 [connection signal="animation_finished" from="Control/Title/Title__AnimatedSprite2D__1" to="Control/Title/Title__AnimatedSprite2D__2" method="_on_title__animated_sprite_2d__1_animation_finished"]

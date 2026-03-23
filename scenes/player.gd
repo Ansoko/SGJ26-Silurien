@@ -25,6 +25,7 @@ var timer_ladder: float = 0.0
 var currentGravity = 1200
 
 @onready var echelle_detector = $EchelleDetector
+@onready var particule = $CPUParticles2D
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -113,16 +114,20 @@ func update_animation(delta: float):
 	if velocity.x != 0 and velocity.y == 0 and not sur_echelle:
 		$AnimatedSprite2D.animation = "walk"
 		playSFXFootprint(delta)
+		particule.emitting = true
 
 	elif (velocity.y != 0 or velocity.x != 0) && can_climb:
 		playSFXLadder(delta)
 		$AnimatedSprite2D.animation = "climb"
+		particule.emitting = false
 
 	elif velocity.y < 0:
 		$AnimatedSprite2D.animation = "jump"
+		particule.emitting = false
 	
 	elif not sur_echelle and not can_climb:
 		$AnimatedSprite2D.animation = "idle"
+		particule.emitting = false
 
 func playSFXFootprint(delta):
 	timer_ladder = 0
